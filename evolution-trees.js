@@ -448,10 +448,12 @@
           "</div>"
         : "") +
       '<div class="tree-diagram-wrap">' +
+      '<div class="tree-diagram-scale" data-tree-scale>' +
       '<div class="tree-stage-headings" data-tree-stage-headings></div>' +
       '<div class="tree-diagram" data-tree-diagram>' +
       '<svg class="tree-diagram__lines" data-tree-lines aria-hidden="true"></svg>' +
       '<div class="tree-diagram__nodes" data-tree-nodes></div>' +
+      "</div>" +
       "</div>" +
       "</div>";
 
@@ -481,6 +483,7 @@
     var stageHeadings = target.querySelector("[data-tree-stage-headings]");
     var diagram = target.querySelector("[data-tree-diagram]");
     var diagramWrap = target.querySelector(".tree-diagram-wrap");
+    var scaleLayer = target.querySelector("[data-tree-scale]");
     var lineSvg = target.querySelector("[data-tree-lines]");
     var nodesLayer = target.querySelector("[data-tree-nodes]");
 
@@ -493,6 +496,7 @@
     stageHeadings.style.gridTemplateColumns = "repeat(" + stageLabels.length + ", " + tree.columnWidth + "px)";
     stageHeadings.style.columnGap = tree.columnGap + "px";
     lineSvg.setAttribute("viewBox", "0 0 " + tree.width + " " + tree.height);
+    scaleLayer.style.width = tree.width + "px";
 
     for (edgeIndex = 0; edgeIndex < tree.edges.length; edgeIndex += 1) {
       var edge = tree.edges[edgeIndex];
@@ -568,6 +572,15 @@
 
     lineSvg.innerHTML = lineMarkup;
     nodesLayer.innerHTML = nodeMarkup;
+
+    window.requestAnimationFrame(function () {
+      var contentHeight = scaleLayer.scrollHeight;
+      var wrapWidth = diagramWrap.clientWidth || tree.width;
+      var scale = Math.min(1, wrapWidth / tree.width);
+
+      scaleLayer.style.setProperty("--tree-scale", scale);
+      diagramWrap.style.height = contentHeight * scale + "px";
+    });
   }
 
   function renderSelectionPrompt(title, copy) {
