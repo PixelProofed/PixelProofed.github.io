@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixel Proofed | Bot Info</title>
+    <meta
+      name="description"
+      content="Reference page for your bot's identity, behavior, prompts, and operating notes."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="bot-info">
+    <div class="site-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar__inner">
+          <a class="brand" href="index.html">
+            <span class="brand__eyebrow">World Hub</span>
+            <span class="brand__title">Pixel Proofed</span>
+          </a>
+
+          <nav class="sidebar__nav" aria-label="Primary">
+            <a class="nav-link" data-nav-page="home" href="index.html">Home</a>
+            <a class="nav-link" data-nav-page="setting" href="setting.html">Setting</a>
+            <a class="nav-link" data-nav-page="bot-info" href="bot-info.html">Bot Info</a>
+          </nav>
+
+          <div class="sidebar__section">
+            <p class="sidebar__label">Setting Index</p>
+            <div class="sidebar__subnav">
+              <a href="setting.html#background">Background</a>
+              <a href="setting.html#professions">Professions</a>
+              <a href="setting.html#locations">Locations</a>
+              <a href="setting.html#dungeons">Dungeons</a>
+              <a href="setting.html#religions">Religions</a>
+              <a href="setting.html#system">System</a>
+              <a href="setting.html#characters">Characters</a>
+              <a href="setting.html#races">Races</a>
+              <a href="setting.html#monsters">Monsters</a>
+              <a href="setting.html#skills">Skills</a>
+              <a href="setting.html#traits">Traits</a>
+              <a href="setting.html#stats">Stats</a>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <div class="backdrop" id="backdrop"></div>
+
+      <main class="content">
+        <header class="topbar">
+          <button
+            class="menu-button"
+            type="button"
+            id="menu-button"
+            aria-expanded="false"
+            aria-controls="sidebar"
+          >
+            Menu
+          </button>
+        </header>
+
+        <section class="page-intro">
+          <p class="eyebrow">Bot Info</p>
+          <h1>Keep your bot's identity and rules easy to reference.</h1>
+          <p class="page-intro__text">
+            This page is a clean starting place for documenting how your bot
+            should behave, what it knows, and how you want to maintain it.
+          </p>
+        </section>
+
+        <section class="section-grid">
+          <article class="card">
+            <p class="card__label">Core Identity</p>
+            <h2>Name, role, and purpose</h2>
+            <p>
+              Add the bot name, what it helps with, and the tone or perspective
+              it should consistently maintain.
+            </p>
+          </article>
+
+          <article class="card">
+            <p class="card__label">Prompt Notes</p>
+            <h2>Behavior and boundaries</h2>
+            <p>
+              Record key instructions, writing style preferences, content limits,
+              and any hard rules you do not want drifting over time.
+            </p>
+          </article>
+
+          <article class="card">
+            <p class="card__label">Operational Notes</p>
+            <h2>Tools, sources, and maintenance</h2>
+            <p>
+              Keep track of approved sources, update cadence, command examples,
+              or notes about how the bot is expected to evolve.
+            </p>
+          </article>
+        </section>
+
+        <section class="card note-block">
+          <p class="card__label">Starter Template</p>
+          <h2>A simple format you can expand later</h2>
+          <div class="template-block">
+            <p><strong>Bot Name:</strong> Add the bot's name here.</p>
+            <p><strong>Primary Role:</strong> Describe what it is for.</p>
+            <p><strong>Tone:</strong> Friendly, serious, analytical, playful, or other.</p>
+            <p><strong>Knowledge Scope:</strong> What it should know or prioritize.</p>
+            <p><strong>Rules:</strong> Key instructions it should always follow.</p>
+            <p><strong>Update Notes:</strong> Keep a short log of important changes.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
