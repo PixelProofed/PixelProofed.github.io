@@ -90,8 +90,7 @@
 
         <section class="quick-links card">
           <p class="card__label">Jump To</p>
-          <div class="pill-links">
-            <a href="#monster-overview" data-hash-target="overview">Overview</a>
+          <div class="pill-links pill-links--monster">
             <a href="#undead-line" data-hash-target="undead-line">Undead</a>
             <a href="#goblin-line" data-hash-target="goblin-line">Goblin</a>
             <a href="#fire-elemental-line" data-hash-target="fire-elemental-line">Fire</a>
@@ -300,6 +299,7 @@
 
           link.addEventListener("click", function (event) {
             var slug = this.dataset.hashTarget;
+            var isActive = this.classList.contains("is-active");
 
             event.preventDefault();
 
@@ -307,6 +307,12 @@
               if (window.location.hash) {
                 window.location.hash = "monster-overview";
               }
+              showOverview();
+              return;
+            }
+
+            if (isActive) {
+              window.location.hash = "monster-overview";
               showOverview();
               return;
             }
