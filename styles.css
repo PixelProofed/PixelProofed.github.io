@@ -609,10 +609,12 @@ h2 {
   }
 
   .pill-links--monster {
-    grid-auto-flow: column;
+    grid-template-columns: none;
     grid-template-rows: repeat(2, minmax(0, 1fr));
+    grid-auto-flow: column;
     grid-auto-columns: minmax(5.4rem, 1fr);
     gap: 0.55rem;
+    width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
     padding-bottom: 0.3rem;
