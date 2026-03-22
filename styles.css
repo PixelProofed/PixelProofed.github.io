@@ -162,6 +162,7 @@ h2 {
 .nav-link:hover,
 .sidebar__subnav a:hover,
 .nav-link.is-active,
+.sidebar__subnav a.is-active,
 .sidebar__subnav a:focus-visible,
 .nav-link:focus-visible {
   background: var(--accent-soft);
@@ -196,10 +197,10 @@ h2 {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(18rem, 0.85fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
   align-items: stretch;
-  padding: 2rem 0 1.5rem;
+  padding: 0.5rem 0 1.5rem;
 }
 
 .hero__copy,
@@ -207,11 +208,27 @@ h2 {
   padding: 1.4rem 0;
 }
 
+.hero__copy {
+  grid-column: span 2;
+}
+
+.hero__panel {
+  grid-column: span 1;
+}
+
 .hero__text,
 .page-intro__text {
   margin-top: 1.2rem;
+  font-size: 0.8rem;
+  text-align: justify;
+}
+
+.hero__text {
+  max-width: none;
+}
+
+.page-intro__text {
   max-width: 60ch;
-  font-size: 1.0rem;
 }
 
 .hero__actions {
@@ -234,7 +251,8 @@ h2 {
 }
 
 .button:hover,
-.pill-links a:hover {
+.pill-links a:hover,
+.pill-links a.is-active {
   transform: translateY(-1px);
 }
 
@@ -247,6 +265,12 @@ h2 {
 .pill-links a {
   background: var(--bg-strong);
   border: 1px solid var(--line);
+  color: var(--text);
+}
+
+.pill-links a.is-active {
+  background: var(--accent-soft);
+  border-color: rgba(42, 122, 114, 0.28);
   color: var(--text);
 }
 
@@ -294,7 +318,29 @@ h2 {
   margin: 1rem 0 0;
   padding-left: 1.1rem;
   color: var(--text-soft);
-  line-height: 1.9;
+  line-height: 1.6;
+    font-size: 0.8rem;
+}
+
+.feature-list li + li {
+  margin-top: 0.9rem;
+}
+
+.feature-list__title,
+.feature-list__subtext {
+  display: block;
+}
+
+.feature-list__title {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.feature-list__subtext {
+  margin-top: 0.2rem;
+  color: var(--text-soft);
+  font-size: 0.7rem;
+  line-height: 1.55;
 }
 
 .text-link {
@@ -320,6 +366,122 @@ h2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
   padding-bottom: 2rem;
+}
+
+.monster-overview-grid,
+.monster-card-grid {
+  width: min(100%, 78rem);
+  margin-inline: auto;
+}
+
+.monster-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  padding-bottom: 1.3rem;
+}
+
+.monster-overview-card--lead {
+  grid-column: span 3;
+}
+
+.monster-stat-card h2,
+.monster-overview-card h2,
+.monster-entry h3,
+.monster-line-hero h2 {
+  color: var(--text);
+}
+
+.monster-detail {
+  width: min(100%, 78rem);
+  margin: 0 auto 2rem;
+}
+
+.monster-line-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: start;
+  margin-bottom: 1rem;
+}
+
+.monster-line-hero__text {
+  margin-top: 0.65rem;
+  max-width: 62ch;
+}
+
+.monster-line-hero__stats {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.monster-count-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: 0.55rem 0.95rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.monster-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.monster-entry {
+  min-height: 100%;
+}
+
+.monster-entry h3 {
+  margin-top: 0.45rem;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  line-height: 1.15;
+}
+
+.monster-entry__meta {
+  display: grid;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.monster-entry__meta-row {
+  display: grid;
+  gap: 0.32rem;
+}
+
+.monster-entry__meta-row dt,
+.monster-entry__description-label {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.monster-entry__meta-row dd {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.monster-entry__description {
+  margin-top: 1rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+}
+
+.monster-entry__description p + p {
+  margin-top: 0.35rem;
 }
 
 .note-block {
@@ -391,8 +553,22 @@ h2 {
   }
 
   .section-grid,
-  .topic-grid {
+  .topic-grid,
+  .monster-overview-grid,
+  .monster-card-grid {
     grid-template-columns: 1fr;
+  }
+
+  .monster-overview-card--lead {
+    grid-column: span 1;
+  }
+
+  .monster-line-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .monster-line-hero__stats {
+    justify-content: flex-start;
   }
 }
 

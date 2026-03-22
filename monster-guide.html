@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixel Proofed | Monster Guide</title>
+    <meta
+      name="description"
+      content="Reference page for monster evolution lines and non-evolution monsters."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="monster-guide">
+    <div class="site-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar__inner">
+          <a class="brand" href="index.html">
+            <span class="brand__eyebrow">Testing</span>
+            <span class="brand__title">Pixel Proofed</span>
+          </a>
+
+          <nav class="sidebar__nav" aria-label="Primary">
+            <a class="nav-link" data-nav-page="home" href="index.html">Home</a>
+            <a class="nav-link" data-nav-page="setting" href="setting.html">Setting</a>
+            <a class="nav-link" data-nav-page="monster-guide" href="monster-guide.html">Monster Guide</a>
+            <a class="nav-link" data-nav-page="bot-info" href="bot-info.html">Bot Info</a>
+          </nav>
+
+          <div class="sidebar__section">
+            <p class="sidebar__label">Monster Index</p>
+            <div class="sidebar__subnav">
+              <a href="#monster-overview" data-hash-target="overview">Overview</a>
+              <a href="#undead-line" data-hash-target="undead-line">Undead Line</a>
+              <a href="#goblin-line" data-hash-target="goblin-line">Goblin Line</a>
+              <a href="#fire-elemental-line" data-hash-target="fire-elemental-line">Fire Elemental Line</a>
+              <a href="#earth-elemental-line" data-hash-target="earth-elemental-line">Earth Elemental Line</a>
+              <a href="#water-elemental-line" data-hash-target="water-elemental-line">Water Elemental Line</a>
+              <a href="#wind-elemental-line" data-hash-target="wind-elemental-line">Wind Elemental Line</a>
+              <a href="#slime-line" data-hash-target="slime-line">Slime Line</a>
+              <a href="#phantom-line" data-hash-target="phantom-line">Phantom Line</a>
+              <a href="#plant-line" data-hash-target="plant-line">Plant Line</a>
+              <a href="#demon-line" data-hash-target="demon-line">Demon Line</a>
+              <a href="#wolf-line" data-hash-target="wolf-line">Wolf Line</a>
+              <a href="#draconic-line" data-hash-target="draconic-line">Draconic Line</a>
+              <a href="#spider-line" data-hash-target="spider-line">Spider Line</a>
+              <a href="#fox-line" data-hash-target="fox-line">Fox Line</a>
+              <a href="#bird-line" data-hash-target="bird-line">Bird Line</a>
+              <a href="#angel-line" data-hash-target="angel-line">Angel Line</a>
+              <a href="#rabbit-line" data-hash-target="rabbit-line">Rabbit Line</a>
+              <a href="#cat-line" data-hash-target="cat-line">Cat Line</a>
+              <a href="#insect-line" data-hash-target="insect-line">Insect Line</a>
+              <a href="#equine-line" data-hash-target="equine-line">Equine Line</a>
+              <a href="#primate-line" data-hash-target="primate-line">Primate Line</a>
+              <a href="#non-evo-monsters" data-hash-target="non-evo-monsters">Non-Evo Monsters</a>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <div class="backdrop" id="backdrop"></div>
+
+      <main class="content">
+        <header class="topbar">
+          <button
+            class="menu-button"
+            type="button"
+            id="menu-button"
+            aria-expanded="false"
+            aria-controls="sidebar"
+          >
+            Menu
+          </button>
+        </header>
+
+        <section class="page-intro" data-monster-intro>
+          <p class="eyebrow">Monster Guide</p>
+          <h1>Evolution Lines</h1>
+          <p class="page-intro__text">
+            Browse the monster guide by evolution line or jump straight to the
+            standalone entries. Select a tag to swap between the overview and
+            each line's monster cards.
+          </p>
+        </section>
+
+        <section class="quick-links card">
+          <p class="card__label">Jump To</p>
+          <div class="pill-links">
+            <a href="#monster-overview" data-hash-target="overview">Overview</a>
+            <a href="#undead-line" data-hash-target="undead-line">Undead</a>
+            <a href="#goblin-line" data-hash-target="goblin-line">Goblin</a>
+            <a href="#fire-elemental-line" data-hash-target="fire-elemental-line">Fire</a>
+            <a href="#earth-elemental-line" data-hash-target="earth-elemental-line">Earth</a>
+            <a href="#water-elemental-line" data-hash-target="water-elemental-line">Water</a>
+            <a href="#wind-elemental-line" data-hash-target="wind-elemental-line">Wind</a>
+            <a href="#slime-line" data-hash-target="slime-line">Slime</a>
+            <a href="#phantom-line" data-hash-target="phantom-line">Phantom</a>
+            <a href="#plant-line" data-hash-target="plant-line">Plant</a>
+            <a href="#demon-line" data-hash-target="demon-line">Demon</a>
+            <a href="#wolf-line" data-hash-target="wolf-line">Wolf</a>
+            <a href="#draconic-line" data-hash-target="draconic-line">Draconic</a>
+            <a href="#spider-line" data-hash-target="spider-line">Spider</a>
+            <a href="#fox-line" data-hash-target="fox-line">Fox</a>
+            <a href="#bird-line" data-hash-target="bird-line">Bird</a>
+            <a href="#angel-line" data-hash-target="angel-line">Angel</a>
+            <a href="#rabbit-line" data-hash-target="rabbit-line">Rabbit</a>
+            <a href="#cat-line" data-hash-target="cat-line">Cat</a>
+            <a href="#insect-line" data-hash-target="insect-line">Insect</a>
+            <a href="#equine-line" data-hash-target="equine-line">Equine</a>
+            <a href="#primate-line" data-hash-target="primate-line">Primate</a>
+            <a href="#non-evo-monsters" data-hash-target="non-evo-monsters">Non-Evo</a>
+          </div>
+        </section>
+
+        <section class="monster-overview-grid" data-monster-overview>
+          <article class="card monster-overview-card monster-overview-card--lead">
+            <p class="card__label">Overview</p>
+            <h2>Monster Guide Reference</h2>
+            <p>
+              Use the tags above or the sidebar index to switch between monster
+              lines. Each line opens into entry cards with name, origin, rarity,
+              and a placeholder description block.
+            </p>
+          </article>
+
+          <article class="card monster-stat-card">
+            <p class="card__label">Evolution Lines</p>
+            <h2>21 Lines</h2>
+            <p>Distinct evolution groupings pulled from the monster guide.</p>
+          </article>
+
+          <article class="card monster-stat-card">
+            <p class="card__label">Standalone Entries</p>
+            <h2>30 Monsters</h2>
+            <p>Includes the full Non-Evo monster section as its own tag.</p>
+          </article>
+
+          <article class="card monster-stat-card">
+            <p class="card__label">Current Build</p>
+            <h2>250 Monsters</h2>
+            <p>Descriptions are intentionally left as <strong>---</strong> for now.</p>
+          </article>
+        </section>
+
+        <section class="monster-detail" data-monster-detail hidden>
+          <article class="card monster-line-hero">
+            <div class="monster-line-hero__copy">
+              <h2 data-monster-current-title>---</h2>
+              <p class="monster-line-hero__text" data-monster-current-subtext>
+                ---
+              </p>
+            </div>
+            <div class="monster-line-hero__stats">
+              <span class="monster-count-pill" data-monster-current-count>0 Entries</span>
+            </div>
+          </article>
+
+          <section class="monster-card-grid" data-monster-cards></section>
+        </section>
+      </main>
+    </div>
+
+    <script src="monster-guide-data.js"></script>
+    <script>
+      (function () {
+        var data = window.monsterGuideData;
+        var introSection = document.querySelector("[data-monster-intro]");
+        var overviewSection = document.querySelector("[data-monster-overview]");
+        var detailSection = document.querySelector("[data-monster-detail]");
+        var currentLabel = document.querySelector("[data-monster-current-label]");
+        var currentTitle = document.querySelector("[data-monster-current-title]");
+        var currentSubtext = document.querySelector("[data-monster-current-subtext]");
+        var currentCount = document.querySelector("[data-monster-current-count]");
+        var monsterCards = document.querySelector("[data-monster-cards]");
+        var hashTargets = document.querySelectorAll("[data-hash-target]");
+
+        function escapeHtml(value) {
+          return String(value)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/\"/g, "&quot;")
+            .replace(/'/g, "&#39;");
+        }
+
+        function getLine(slug) {
+          var index;
+
+          if (!data || !data.length) {
+            return null;
+          }
+
+          for (index = 0; index < data.length; index += 1) {
+            if (data[index].slug === slug) {
+              return data[index];
+            }
+          }
+
+          return null;
+        }
+
+        function setActiveLink(slug) {
+          var index;
+
+          for (index = 0; index < hashTargets.length; index += 1) {
+            var link = hashTargets[index];
+            link.classList.toggle("is-active", link.dataset.hashTarget === slug);
+          }
+        }
+
+        function renderLine(line) {
+          var markup = "";
+          currentTitle.textContent = line.name;
+          currentSubtext.textContent = "---";
+          currentCount.textContent = line.monsters.length + " Entries";
+
+          var index;
+
+          for (index = 0; index < line.monsters.length; index += 1) {
+            var monster = line.monsters[index];
+            markup +=
+              '<article class="card monster-entry">' +
+              "<h3>" + escapeHtml(monster.name) + "</h3>" +
+              '<dl class="monster-entry__meta">' +
+              '<div class="monster-entry__meta-row">' +
+              "<dt>Origin</dt>" +
+              "<dd>" + escapeHtml(monster.origin) + "</dd>" +
+              "</div>" +
+              '<div class="monster-entry__meta-row">' +
+              "<dt>Rarity</dt>" +
+              "<dd>" + escapeHtml(monster.rarity) + "</dd>" +
+              "</div>" +
+              "</dl>" +
+              '<div class="monster-entry__description">' +
+              '<p class="monster-entry__description-label">Description</p>' +
+              "<p>---</p>" +
+              "</div>" +
+              "</article>";
+          }
+
+          monsterCards.innerHTML = markup;
+        }
+
+        function showOverview() {
+          if (!overviewSection || !detailSection || !introSection) {
+            return;
+          }
+
+          setActiveLink("overview");
+          introSection.hidden = false;
+          introSection.style.display = "";
+          overviewSection.hidden = false;
+          overviewSection.style.display = "grid";
+          detailSection.hidden = true;
+          detailSection.style.display = "none";
+        }
+
+        function showLine(slug) {
+          var line = getLine(slug);
+
+          if (!line || !overviewSection || !detailSection || !introSection) {
+            showOverview();
+            return;
+          }
+
+          setActiveLink(slug);
+          introSection.hidden = true;
+          introSection.style.display = "none";
+          overviewSection.hidden = true;
+          overviewSection.style.display = "none";
+          detailSection.hidden = false;
+          detailSection.style.display = "block";
+          renderLine(line);
+        }
+
+        function syncFromHash() {
+          var slug = window.location.hash.replace(/^#/, "");
+
+          if (!slug || slug === "monster-overview") {
+            showOverview();
+            return;
+          }
+
+          showLine(slug);
+        }
+
+        if (!data || !data.length) {
+          return;
+        }
+
+        var linkIndex;
+
+        for (linkIndex = 0; linkIndex < hashTargets.length; linkIndex += 1) {
+          var link = hashTargets[linkIndex];
+
+          link.addEventListener("click", function (event) {
+            var slug = this.dataset.hashTarget;
+
+            event.preventDefault();
+
+            if (slug === "overview") {
+              if (window.location.hash) {
+                window.location.hash = "monster-overview";
+              }
+              showOverview();
+              return;
+            }
+
+            window.location.hash = slug;
+            showLine(slug);
+          });
+        }
+
+        syncFromHash();
+        window.addEventListener("hashchange", syncFromHash);
+      })();
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

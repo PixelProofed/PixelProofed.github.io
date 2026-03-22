@@ -47,6 +47,16 @@ if (backdrop) {
   backdrop.addEventListener("click", closeSidebar);
 }
 
+if (sidebar) {
+  sidebar.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth <= 960) {
+        closeSidebar();
+      }
+    });
+  });
+}
+
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeSidebar();
