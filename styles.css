@@ -609,14 +609,32 @@ h2 {
   }
 
   .pill-links--monster {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    grid-auto-columns: minmax(5.4rem, 1fr);
+    gap: 0.55rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 0.3rem;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
   }
 
   .pill-links--monster a {
-    min-height: 3.35rem;
-    padding: 0.6rem 0.45rem;
+    min-height: 2.95rem;
+    padding: 0.5rem 0.4rem;
     border-radius: 0.9rem;
-    font-size: 0.78rem;
+    font-size: 0.76rem;
+    scroll-snap-align: start;
+  }
+
+  .pill-links--monster::-webkit-scrollbar {
+    height: 0.45rem;
+  }
+
+  .pill-links--monster::-webkit-scrollbar-thumb {
+    background: var(--line);
+    border-radius: 999px;
   }
 
   h1 {
