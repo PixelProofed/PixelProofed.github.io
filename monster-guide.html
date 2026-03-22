@@ -79,13 +79,7 @@
         </header>
 
         <section class="page-intro" data-monster-intro>
-          <p class="eyebrow">Monster Guide</p>
-          <h1>Evolution Lines</h1>
-          <p class="page-intro__text">
-            Browse the monster guide by evolution line or jump straight to the
-            standalone entries. Select a tag to swap between the overview and
-            each line's monster cards.
-          </p>
+          <h1>MONSTER GUIDE</h1>
         </section>
 
         <section class="quick-links">
@@ -117,31 +111,26 @@
 
         <section class="monster-overview-grid" data-monster-overview>
           <article class="card monster-overview-card monster-overview-card--lead">
-            <p class="card__label">Overview</p>
-            <h2>Monster Guide Reference</h2>
+            <p class="card__label">About Monsters</p>
             <p>
-              Use the tags above or the sidebar index to switch between monster
-              lines. Each line opens into entry cards with name, origin, rarity,
-              and a placeholder description block.
+---
             </p>
           </article>
 
           <article class="card monster-stat-card">
             <p class="card__label">Evolution Lines</p>
-            <h2>21 Lines</h2>
-            <p>Distinct evolution groupings pulled from the monster guide.</p>
+            <p>Browse the interactive evolution path charts for each playable line.</p>
+            <a class="text-link" href="evolution-trees.html">Open evolution trees</a>
           </article>
 
           <article class="card monster-stat-card">
-            <p class="card__label">Standalone Entries</p>
-            <h2>30 Monsters</h2>
-            <p>Includes the full Non-Evo monster section as its own tag.</p>
+            <p class="card__label">In-Progress</p>
+            <p>---</p>
           </article>
 
           <article class="card monster-stat-card">
-            <p class="card__label">Current Build</p>
-            <h2>250 Monsters</h2>
-            <p>Descriptions are intentionally left as <strong>---</strong> for now.</p>
+            <p class="card__label">Updates</p>
+            <p>---</p>
           </article>
         </section>
 
@@ -250,8 +239,6 @@
           }
 
           setActiveLink("overview");
-          introSection.hidden = false;
-          introSection.style.display = "";
           overviewSection.hidden = false;
           overviewSection.style.display = "grid";
           detailSection.hidden = true;
@@ -267,8 +254,6 @@
           }
 
           setActiveLink(slug);
-          introSection.hidden = true;
-          introSection.style.display = "none";
           overviewSection.hidden = true;
           overviewSection.style.display = "none";
           detailSection.hidden = false;

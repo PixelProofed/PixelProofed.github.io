@@ -3,6 +3,36 @@ const sidebar = document.getElementById("sidebar");
 const menuButton = document.getElementById("menu-button");
 const backdrop = document.getElementById("backdrop");
 const currentPage = body.dataset.page;
+const root = document.documentElement;
+
+const measureScrollbarWidth = () => {
+  const probe = document.createElement("div");
+
+  probe.style.position = "absolute";
+  probe.style.top = "-9999px";
+  probe.style.width = "120px";
+  probe.style.height = "120px";
+  probe.style.overflow = "scroll";
+  probe.style.visibility = "hidden";
+
+  document.body.appendChild(probe);
+
+  const width = probe.offsetWidth - probe.clientWidth;
+
+  probe.remove();
+
+  return Math.max(0, width);
+};
+
+const syncScrollbarReserve = () => {
+  if (!root) {
+    return;
+  }
+
+  root.style.setProperty("--scrollbar-reserve", `${measureScrollbarWidth()}px`);
+};
+
+syncScrollbarReserve();
 
 document.querySelectorAll("[data-nav-page]").forEach((link) => {
   if (link.dataset.navPage === currentPage) {
@@ -64,6 +94,8 @@ document.addEventListener("keydown", (event) => {
 });
 
 window.addEventListener("resize", () => {
+  syncScrollbarReserve();
+
   if (window.innerWidth > 960) {
     closeSidebar();
   }

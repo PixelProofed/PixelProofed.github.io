@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html class="page-surface-plain" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Pixel Proofed | Evolution Trees</title>
+    <meta
+      name="description"
+      content="Interactive evolution path charts for each monster line."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="page-surface-plain" data-page="monster-guide">
+    <div class="site-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar__inner">
+          <a class="brand" href="index.html">
+            <span class="brand__eyebrow">Testing</span>
+            <span class="brand__title">Pixel Proofed</span>
+          </a>
+
+          <nav class="sidebar__nav" aria-label="Primary">
+            <a class="nav-link" data-nav-page="home" href="index.html">Home</a>
+            <a class="nav-link" data-nav-page="setting" href="setting.html">Setting</a>
+            <a class="nav-link" data-nav-page="monster-guide" href="monster-guide.html">Monster Guide</a>
+            <a class="nav-link" data-nav-page="bot-info" href="bot-info.html">Bot Info</a>
+          </nav>
+
+          <div class="sidebar__section">
+            <p class="sidebar__label">Tree Index</p>
+            <div class="sidebar__subnav">
+              <a href="#all" data-tree-sidebar-target="all">All Lines</a>
+              <a href="#undead-line" data-tree-sidebar-target="undead-line">Undead Line</a>
+              <a href="#goblin-line" data-tree-sidebar-target="goblin-line">Goblin Line</a>
+              <a href="#fire-elemental-line" data-tree-sidebar-target="fire-elemental-line">Fire Elemental Line</a>
+              <a href="#earth-elemental-line" data-tree-sidebar-target="earth-elemental-line">Earth Elemental Line</a>
+              <a href="#water-elemental-line" data-tree-sidebar-target="water-elemental-line">Water Elemental Line</a>
+              <a href="#wind-elemental-line" data-tree-sidebar-target="wind-elemental-line">Wind Elemental Line</a>
+              <a href="#slime-line" data-tree-sidebar-target="slime-line">Slime Line</a>
+              <a href="#phantom-line" data-tree-sidebar-target="phantom-line">Phantom Line</a>
+              <a href="#plant-line" data-tree-sidebar-target="plant-line">Plant Line</a>
+              <a href="#demon-line" data-tree-sidebar-target="demon-line">Demon Line</a>
+              <a href="#wolf-line" data-tree-sidebar-target="wolf-line">Wolf Line</a>
+              <a href="#draconic-line" data-tree-sidebar-target="draconic-line">Draconic Line</a>
+              <a href="#spider-line" data-tree-sidebar-target="spider-line">Spider Line</a>
+              <a href="#fox-line" data-tree-sidebar-target="fox-line">Fox Line</a>
+              <a href="#bird-line" data-tree-sidebar-target="bird-line">Bird Line</a>
+              <a href="#angel-line" data-tree-sidebar-target="angel-line">Angel Line</a>
+              <a href="#rabbit-line" data-tree-sidebar-target="rabbit-line">Rabbit Line</a>
+              <a href="#cat-line" data-tree-sidebar-target="cat-line">Cat Line</a>
+              <a href="#insect-line" data-tree-sidebar-target="insect-line">Insect Line</a>
+              <a href="#equine-line" data-tree-sidebar-target="equine-line">Equine Line</a>
+              <a href="#primate-line" data-tree-sidebar-target="primate-line">Primate Line</a>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <div class="backdrop" id="backdrop"></div>
+
+      <main class="content">
+        <header class="topbar">
+          <button
+            class="menu-button"
+            type="button"
+            id="menu-button"
+            aria-expanded="false"
+            aria-controls="sidebar"
+          >
+            Menu
+          </button>
+        </header>
+
+        <section class="page-intro">
+          <p class="eyebrow">Monster Guide</p>
+          <h1>Evolution Trees</h1>
+          <p class="page-intro__text">
+            Select an evolution line, then click any node on a branch to preview that route and load the chosen monsters below.
+          </p>
+        </section>
+
+        <section class="quick-links">
+          <div class="pill-links pill-links--monster">
+            <a href="#all" data-tree-line-target="all">All</a>
+            <a href="#undead-line" data-tree-line-target="undead-line">Undead</a>
+            <a href="#goblin-line" data-tree-line-target="goblin-line">Goblin</a>
+            <a href="#fire-elemental-line" data-tree-line-target="fire-elemental-line">Fire</a>
+            <a href="#earth-elemental-line" data-tree-line-target="earth-elemental-line">Earth</a>
+            <a href="#water-elemental-line" data-tree-line-target="water-elemental-line">Water</a>
+            <a href="#wind-elemental-line" data-tree-line-target="wind-elemental-line">Wind</a>
+            <a href="#slime-line" data-tree-line-target="slime-line">Slime</a>
+            <a href="#phantom-line" data-tree-line-target="phantom-line">Phantom</a>
+            <a href="#plant-line" data-tree-line-target="plant-line">Plant</a>
+            <a href="#demon-line" data-tree-line-target="demon-line">Demon</a>
+            <a href="#wolf-line" data-tree-line-target="wolf-line">Wolf</a>
+            <a href="#draconic-line" data-tree-line-target="draconic-line">Draconic</a>
+            <a href="#spider-line" data-tree-line-target="spider-line">Spider</a>
+            <a href="#fox-line" data-tree-line-target="fox-line">Fox</a>
+            <a href="#bird-line" data-tree-line-target="bird-line">Bird</a>
+            <a href="#angel-line" data-tree-line-target="angel-line">Angel</a>
+            <a href="#rabbit-line" data-tree-line-target="rabbit-line">Rabbit</a>
+            <a href="#cat-line" data-tree-line-target="cat-line">Cat</a>
+            <a href="#insect-line" data-tree-line-target="insect-line">Insect</a>
+            <a href="#equine-line" data-tree-line-target="equine-line">Equine</a>
+            <a href="#primate-line" data-tree-line-target="primate-line">Primate</a>
+          </div>
+        </section>
+
+        <section class="tree-workspace">
+          <section class="card tree-chart">
+            <div class="tree-chart__header">
+              <div>
+                <p class="card__label" data-tree-current-title>---</p>
+              </div>
+              <div class="tree-chart__stats">
+                <p class="card__label" data-tree-current-count>0 Paths</p>
+              </div>
+            </div>
+
+            <div class="tree-chart__content" data-tree-chart-content></div>
+          </section>
+
+          <aside class="tree-sidebar">
+            <section class="card tree-selection">
+              <p class="card__label" data-tree-selection-title>Selected Path</p>
+              <p data-tree-selection-copy>
+                Click any monster node in the chart to load that branch up to the selected stage.
+              </p>
+            </section>
+          </aside>
+        </section>
+
+        <section class="tree-selected-grid" data-tree-selected-cards></section>
+      </main>
+    </div>
+
+    <script src="monster-guide-data.js"></script>
+    <script src="evolution-trees-data.js"></script>
+    <script src="script.js"></script>
+    <script src="evolution-trees.js"></script>
+  </body>
+</html>
