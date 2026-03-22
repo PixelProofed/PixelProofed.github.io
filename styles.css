@@ -41,6 +41,11 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -53,6 +58,9 @@ body {
     linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0)),
     var(--bg);
   min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body::before {
@@ -100,6 +108,7 @@ h2 {
 .site-shell {
   display: flex;
   min-height: 100vh;
+  min-width: 0;
 }
 
 .sidebar {
@@ -180,6 +189,7 @@ h2 {
   flex: 1;
   margin-left: var(--sidebar-width);
   padding: 1.5rem;
+  min-width: 0;
 }
 
 .topbar {
@@ -193,6 +203,8 @@ h2 {
 .quick-links {
   width: min(100%, 78rem);
   margin-inline: auto;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .hero {
@@ -286,6 +298,8 @@ h2 {
     var(--bg-strong);
   backdrop-filter: blur(14px);
   box-shadow: var(--shadow-soft);
+  min-width: 0;
+  max-width: 100%;
 }
 
 .card::after,
@@ -359,6 +373,8 @@ h2 {
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-top: 1rem;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .pill-links--monster {
@@ -389,6 +405,8 @@ h2 {
 .monster-card-grid {
   width: min(100%, 78rem);
   margin-inline: auto;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .monster-overview-grid {
@@ -412,6 +430,8 @@ h2 {
 .monster-detail {
   width: min(100%, 78rem);
   margin: 0 auto 2rem;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .monster-line-hero {
@@ -420,6 +440,7 @@ h2 {
   gap: 1rem;
   align-items: start;
   margin-bottom: 1rem;
+  min-width: 0;
 }
 
 .monster-line-hero__text {
@@ -594,13 +615,17 @@ h2 {
 }
 
 @media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+
   .content,
   .sidebar {
-    padding: 1rem;
+    padding: 0.85rem;
   }
 
   .sidebar {
-    width: min(21rem, 92vw);
+    width: min(20rem, 90vw);
   }
 
   .hero__actions {
@@ -608,38 +633,54 @@ h2 {
     align-items: stretch;
   }
 
+  .sidebar__inner,
+  .card,
+  .topic-card {
+    padding: 1.1rem;
+  }
+
+  .topbar {
+    padding: 0.2rem 0 0.7rem;
+  }
+
+  .menu-button {
+    min-height: 2.55rem;
+    padding: 0.58rem 0.9rem;
+  }
+
   .pill-links--monster {
-    grid-template-columns: none;
+    grid-template-columns: repeat(11, minmax(0, 1fr));
     grid-template-rows: repeat(2, minmax(0, 1fr));
-    grid-auto-flow: column;
-    grid-auto-columns: minmax(5.4rem, 1fr);
-    gap: 0.55rem;
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    gap: 0.28rem;
     width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding-bottom: 0.3rem;
-    scroll-snap-type: x proximity;
-    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+    overflow: hidden;
+    padding-bottom: 0;
   }
 
   .pill-links--monster a {
-    min-height: 2.95rem;
-    padding: 0.5rem 0.4rem;
-    border-radius: 0.9rem;
-    font-size: 0.76rem;
-    scroll-snap-align: start;
-  }
-
-  .pill-links--monster::-webkit-scrollbar {
-    height: 0.45rem;
-  }
-
-  .pill-links--monster::-webkit-scrollbar-thumb {
-    background: var(--line);
-    border-radius: 999px;
+    min-height: 1.42rem;
+    padding: 0.12rem 0.08rem;
+    border-radius: 0.52rem;
+    font-size: clamp(0.28rem, 1.1vw, 0.42rem);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
   }
 
   h1 {
-    font-size: clamp(2.2rem, 13vw, 3.5rem);
+    font-size: clamp(2rem, 11vw, 3rem);
+  }
+
+  h2 {
+    font-size: clamp(1.25rem, 6vw, 1.75rem);
+  }
+
+  p {
+    line-height: 1.65;
   }
 }
