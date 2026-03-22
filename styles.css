@@ -302,6 +302,8 @@ h2 {
   max-width: 100%;
 }
 
+
+
 .card::after,
 .topic-card::after {
   content: "";
@@ -365,7 +367,7 @@ h2 {
 }
 
 .quick-links {
-  margin-bottom: 1.3rem;
+  margin-bottom: 1.0rem;
 }
 
 .pill-links {
@@ -380,18 +382,27 @@ h2 {
 .pill-links--monster {
   display: grid;
   grid-template-columns: repeat(11, minmax(0, 1fr));
-  gap: 0.7rem;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  grid-auto-flow: row;
+  gap: clamp(0.28rem, 0.55vw, 0.7rem);
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .pill-links--monster a {
   width: 100%;
-  min-height: 1rem;
-  padding: 0.7rem 0.45rem;
-  border-radius: 0.5rem;
+  min-height: clamp(1.42rem, 2.4vw, 2.7rem);
+  padding: clamp(0.12rem, 0.35vw, 0.4rem) clamp(0.08rem, 0.3vw, 0.32rem);
+  border-radius: clamp(0.52rem, 0.7vw, 0.95rem);
   text-align: center;
-  line-height: 1.15;
-  font-size: 0.82rem;
+  line-height: 1.05;
+  font-size: clamp(0.28rem, 0.85vw, 0.78rem);
   font-weight: 600;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
 }
 
 .topic-grid {
@@ -609,9 +620,6 @@ h2 {
     justify-content: flex-start;
   }
 
-  .pill-links--monster {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
 }
 
 @media (max-width: 640px) {
@@ -646,30 +654,6 @@ h2 {
   .menu-button {
     min-height: 2.55rem;
     padding: 0.58rem 0.9rem;
-  }
-
-  .pill-links--monster {
-    grid-template-columns: repeat(11, minmax(0, 1fr));
-    grid-template-rows: repeat(2, minmax(0, 1fr));
-    grid-auto-flow: row;
-    grid-auto-columns: auto;
-    gap: 0.28rem;
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-    padding-bottom: 0;
-  }
-
-  .pill-links--monster a {
-    min-height: 1.42rem;
-    padding: 0.12rem 0.08rem;
-    border-radius: 0.52rem;
-    font-size: clamp(0.28rem, 1.1vw, 0.42rem);
-    line-height: 1.05;
-    letter-spacing: -0.01em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: clip;
   }
 
   h1 {
