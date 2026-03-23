@@ -12,6 +12,7 @@
   var selectionCopy = document.querySelector("[data-tree-selection-copy]");
   var selectionCards = document.querySelector("[data-tree-selected-cards]");
   var stageLabels = ["Origin", "First Stage", "Second Stage", "Third Stage"];
+  var monsterCardUtils = window.monsterCardUtils || {};
   var currentLineSlug = "";
   var selectedNodeKey = "";
   var resizeFrame = 0;
@@ -597,31 +598,11 @@
   }
 
   function buildMonsterCardMarkup(monster) {
-    return (
-      '<article class="card monster-entry">' +
-      "<h3>" +
-      escapeHtml(monster.name) +
-      "</h3>" +
-      '<dl class="monster-entry__meta">' +
-      '<div class="monster-entry__meta-row">' +
-      "<dt>Origin</dt>" +
-      "<dd>" +
-      escapeHtml(monster.origin) +
-      "</dd>" +
-      "</div>" +
-      '<div class="monster-entry__meta-row">' +
-      "<dt>Rarity</dt>" +
-      "<dd>" +
-      escapeHtml(monster.rarity) +
-      "</dd>" +
-      "</div>" +
-      "</dl>" +
-      '<div class="monster-entry__description">' +
-      '<p class="monster-entry__description-label">Description</p>' +
-      "<p>---</p>" +
-      "</div>" +
-      "</article>"
-    );
+    if (monsterCardUtils.buildMonsterCardMarkup) {
+      return monsterCardUtils.buildMonsterCardMarkup(monster);
+    }
+
+    return "";
   }
 
   function renderSelectedPathCards(line, pathIndex, stepIndex) {
@@ -632,8 +613,11 @@
     for (index = 0; index < path.length; index += 1) {
       var monster = getMonster(line.slug, path[index]) || {
         name: path[index],
-        origin: "---",
         rarity: "---",
+        commonality: "---",
+        tags: [],
+        origin: "---",
+        description: "---",
       };
 
       markup += buildMonsterCardMarkup(monster);

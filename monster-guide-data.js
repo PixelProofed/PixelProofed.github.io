@@ -213,117 +213,123 @@ window.monsterGuideData = [
     slug: "bird-line",
     name: "Bird Line",
     monsters: [
-      ["Nestling", "Born", "Very Common"],
-      ["Firebird", "Spawned or Evolved: First Stage", "Uncommon"],
-      ["Phoenix", "Evolved: Second Stage", "Very Rare"],
-      ["Benu", "Evolved: Third Stage", "Extremely Rare"],
-      ["Karura", "Evolved: Third Stage", "Extremely Rare"],
-      ["Thunderbird", "Spawned or Evolved: First Stage", "Uncommon"],
-      ["Roc", "Evolved: Second Stage", "Rare"],
-      ["Ziz", "Evolved: Third Stage", "Extremely Rare"],
-      ["Harpy", "Born, Spawned, or Evolved: First Stage", "Common"],
-      ["Siren", "Born or Evolved: Second Stage", "Very Uncommon"],
-      ["Avoral", "Evolved: Third Stage", "Extremely Rare"],
-      ["Strix", "Evolved: Third Stage", "Extremely Rare"],
-      ["Owlbear", "Born or Evolved: First Stage", "Common"],
-      ["Gryphon", "Born or Evolved: Second Stage", "Rare"],
-      ["Anzu", "Evolved: Third Stage", "Extremely Rare"],
+      ["Nestling", "Born", "Very Common", ["Terrestrial", "Feathers", "Wings", "Flight", "Beast", "Talons"]],
+      ["Firebird", "Spawned or Evolved: First Stage", "Uncommon", ["Terrestrial", "Feathers", "Wings", "Flight", "Beast", "Talons", "Fire Affinity"]],
+      ["Phoenix", "Evolved: Second Stage", "Very Rare", ["Terrestrial", "Feathers", "Wings", "Flight", "Beast", "Talons", "Fire Affinity"]],
+      ["Benu", "Evolved: Third Stage", "Extremely Rare", ["Terrestrial", "Feathers", "Wings", "Flight", "Beast", "Talons", "Fire Affinity"]],
+      ["Karura", "Evolved: Third Stage", "Extremely Rare", ["Terrestrial", "Feather Hide", "Wings", "Flight", "Humanoid", "Fire Affinity", "Despises Draconic"]],
+      ["Thunderbird", "Spawned or Evolved: First Stage", "Uncommon", ["Terrestrial", "Feathers", "Wings", "Flight", "Beast", "Lightning Affinity"]],
+      ["Roc", "Evolved: Second Stage", "Rare", ["Terrestrial", "Feathers", "Wings", "Flight", "Beast", "Talons", "Lightning Affinity"]],
+      ["Ziz", "Evolved: Third Stage", "Extremely Rare", ["Terrestrial", "Feathers", "Wings", "Flight", "Beast", "Talons", "Lightning Affinity"]],
+      ["Harpy", "Born, Spawned, or Evolved: First Stage", "Common", ["Terrestrial", "Feather Hide", "Wings", "Flight", "Semi-Humanoid", "Talons"]],
+      ["Siren", "Born or Evolved: Second Stage", "Very Uncommon", ["Terrestrial", "Feather Hide", "Wings", "Flight", "Humanoid", "Talons"]],
+      ["Avoral", "Evolved: Third Stage", "Extremely Rare", ["Terrestrial", "Feather Hide", "Wings", "Flight", "Humanoid", "Talons"]],
+      ["Strix", "Evolved: Third Stage", "Extremely Rare", ["Terrestrial", "Hide", "Wings", "Flight", "Humanoid", "Talons"]],
+      ["Owlbear", "Born or Evolved: First Stage", "Common", ["Terrestrial", "Feather Fur", "Fur", "Small Wings", "Beast", "Claws"]],
+      ["Gryphon", "Born or Evolved: Second Stage", "Rare", ["Terrestrial", "Feather Fur", "Wings", "Flight", "Beast", "Talons", "Claws"]],
+      ["Anzu", "Evolved: Third Stage", "Extremely Rare", ["Terrestrial", "Feather Hide", "Wings", "Flight", "Humanoid", "Claws"]],
     ],
   },
   {
     slug: "angel-line",
     name: "Angel Line",
     monsters: [
-      ["Cherub", "Born or Spawned", "Very Common"],
-      ["Angel", "Born, Spawned, or Evolved: First Stage", "Common"],
-      ["Virtue", "Spawned or Evolved: Second Stage", "Rare"],
-      ["Archangel", "Evolved: Second Stage", "Rare"],
-      ["Principality", "Evolved: Third Stage", "Extremely Rare"],
-      ["Seraphim", "Evolved: Third Stage", "Extremely Rare"],
-      ["Power", "Born, Spawned, or Evolved: First Stage", "Uncommon"],
-      ["Dominion", "Evolved: Second Stage", "Rare"],
-      ["Throne", "Evolved: Third Stage", "Extremely Rare"],
+      ["Cherub", "Born or Spawned", "Very Common", ["Terrestrial", "Hide", "Wings", "Flight", "Humanoid", "Claws", "Holy Affinity"]],
+      ["Angel", "Born, Spawned, or Evolved: First Stage", "Common", ["Terrestrial", "Hide", "Wings", "Flight", "Humanoid", "Claws", "Holy"]],
+      ["Virtue", "Spawned or Evolved: Second Stage", "Rare", ["Terrestrial", "Hide", "Wings", "Flight", "Humanoid", "Claws", "Holy"]],
+      ["Archangel", "Evolved: Second Stage", "Rare", ["Terrestrial", "Hide", "Flight", "Wings", "Humanoid", "Claws", "Holy"]],
+      ["Principality", "Evolved: Third Stage", "Extremely Rare", ["Terrestrial", "Hide", "Wings", "Flight", "Humanoid", "Claws", "Holy"]],
+      ["Seraphim", "Evolved: Third Stage", "Extremely Rare", ["Terrestrial", "Hide", "Flight", "Humanoid", "Holy"]],
+      ["Power", "Born, Spawned, or Evolved: First Stage", "Uncommon", ["Terrestrial", "Hide", "Wings",  "Flight", "Humanoid", "Claws", "Holy"]],
+      ["Dominion", "Evolved: Second Stage", "Rare", ["Terrestrial", "Hide", "Flight", "Humanoid", "Claws", "Holy"]],
+      ["Throne", "Evolved: Third Stage", "Extremely Rare", ["Terrestrial", "Hide", "Wings", "Flight", "Humanoid", "Claws", "Holy"]],
     ],
   },
   {
     slug: "rabbit-line",
     name: "Rabbit Line",
     monsters: [
-      ["Horned Rabbit", "Born", "Very Common"],
-      ["Split-Horned Rabbit", "Born or Evolved: First Stage", "Uncommon"],
-      ["Wolpen", "Born or Evolved: Second Stage", "Very Uncommon"],
-      ["Raurakl", "Evolved: Third Stage", "Extremely Rare"],
-      ["Lapine", "Born or Evolved: Second Stage", "Uncommon"],
-      ["Sylvan Hare", "Born or Evolved: First Stage", "Uncommon"],
-      ["Rabbitkin", "Born or Evolved: Third Stage", "Uncommon"],
-      ["Dire Rabbit", "Born or Evolved: First Stage", "Common"],
-      ["Dire Lapine", "Born or Evolved: Second Stage", "Uncommon"],
-      ["Warren Lord", "Evolved: Third Stage", "Extremely Rare"],
-      ["Dread Hare", "Evolved: Third Stage", "Extremely Rare"],
+      ["Horned Rabbit", "Born", "Very Common", ["Terrestrial", "Quadruped", "Fur", "Beast", "Horn", "Claws"]],
+      ["Split-Horned Rabbit", "Born or Evolved: First Stage", "Uncommon", ["Terrestrial", "Quadruped", "Fur", "Beast", "Horns", "Claws", "Wind Affinity"]],
+      ["Wolpen", "Born or Evolved: Second Stage", "Very Uncommon", ["Terrestrial", "Quadruped", "Fur", "Beast", "Small Wings", "Glide", "Horns", "Claws", "Wind"]],
+      ["Raurakl", "Evolved: Third Stage", "Extremely Rare", ["Terrestrial", "Quadruped", "Fur", "Wings", "Flight", "Beast", "Antlers", "Claws", "Wind"]],
+      ["Lapine", "Born or Evolved: Second Stage", "Uncommon", ["Terrestrial", "Biped", "Fur", "Beast", "Claws"]],
+      ["Sylvan Hare", "Born or Evolved: First Stage", "Uncommon", ["Terrestrial", "Biped", "Fur", "Semi-Huamnoid", "Claws", "Claws"]],
+      ["Rabbitkin", "Born or Evolved: Third Stage", "Uncommon", ["Terrestrial", "Biped", "Fur", "Humanoid", "Claws"]],
+      ["Dire Rabbit", "Born or Evolved: First Stage", "Common", ["Terrestrial", "Biped", "Fur", "Beast", "Claws"]],
+      ["Dire Lapine", "Born or Evolved: Second Stage", "Uncommon", ["Terrestrial", "Biped", "Fur", "Semi-Huamnoid", "Claws"]],
+      ["Warren Lord", "Evolved: Third Stage", "Extremely Rare", ["Terrestrial", "Biped", "Fur", "Semi-Humanoid", "Claws"]],
+      ["Dread Hare", "Evolved: Third Stage", "Extremely Rare", ["Terrestrial", "Biped", "Fur", "Semi-Huamnoid", "Claws"]],
     ],
   },
   {
     slug: "cat-line",
     name: "Cat Line",
     monsters: [
-      ["Felis", "Born or Spawned", "Very Common"],
-      ["Nightstalker", "Born, Spawned, or Evolved: First Stage", "Uncommon"],
-      ["Dreamstalker", "Spawned or Evolved: Second Stage", "Rare"],
-      ["Dreadstalker", "Evolved: Third Stage", "Extremely Rare"],
-      ["Cha Kla", "Spawned or Evolved: Second Stage", "Very Uncommon"],
-      ["Cait Sith", "Spawned or Evolved: First Stage", "Uncommon"],
-      ["Byakko", "Evolved: Third Stage", "Extremely Rare"],
-      ["Puk", "Spawned or Evolved: First Stage", "Very Uncommon"],
-      ["Sphinx", "Evolved: Second Stage", "Very Rare"],
-      ["Kasha", "Evolved: Third Stage", "Extremely Rare"],
-      ["Grimalkin", "Born, Spawned, or Evolved: First Stage", "Uncommon"],
-      ["Maneki", "Spawned or Evolved: Second Stage", "Rare"],
-      ["Carbuncle", "Evolved: Third Stage", "Extremely Rare"],
-      ["Mau", "Born or Spawned", "Common"],
-      ["Bastet", "Born or Evolved: Third Stage", "Very Rare"],
-      ["Marid", "Spawned or Evolved: Second Stage", "Rare"],
+      ["Felis", "Born or Spawned", "Very Common", ["Terrestrial", "Quadruped", "Fur", "Beast", "Claws"]],
+      ["Nightstalker", "Born, Spawned, or Evolved: First Stage", "Uncommon", ["Terrestrial", "Quadruped", "Fur", "Beast", "Claws"]],
+      ["Dreamstalker", "Spawned or Evolved: Second Stage", "Rare", ["Terrestrial", "Quadruped", "Fur", "Beast", "Claws", "Dreamwalker"]],
+      ["Dreadstalker", "Evolved: Third Stage", "Extremely Rare", ["Terrestrial", "Quadruped", "Fur", "Beast", "Claws", "Dreamwalker"]],
+      ["Cha Kla", "Spawned or Evolved: Second Stage", "Very Uncommon", ["Terrestrial", "Biped", "Fur", "Beast", "Claws", "Shadow"]],
+      ["Cait Sith", "Spawned or Evolved: First Stage", "Uncommon", ["Terrestrial", "Biped", "Fur", "Beast", "Claws"]],
+      ["Byakko", "Evolved: Third Stage", "Extremely Rare", ["Amphibious", "Quadruped", "Fur", "Beast", "Claws", "Water"]],
+      ["Puk", "Spawned or Evolved: First Stage", "Very Uncommon", ["Terrestrial", "Quadruped", "Fur", "Small Wings", "Beast", "Claws"]],
+      ["Sphinx", "Evolved: Second Stage", "Very Rare", ["Terrestrial", "Quadruped", "Fur", "Wings", "Glide", "Beast", "Claws"]],
+      ["Kasha", "Evolved: Third Stage", "Extremely Rare", ["Terrestrial", "Biped", "Fur", "Beast", "Claws", "Shadow", "Body Snatcher"]],
+      ["Grimalkin", "Born, Spawned, or Evolved: First Stage", "Uncommon", ["Terrestrial", "Quadruped", "Fur", "Beast", "Claws"]],
+      ["Maneki", "Spawned or Evolved: Second Stage", "Rare", ["Terrestrial", "Quadruped", "Fur", "Beast", "Claws", "Lucky"]],
+      ["Carbuncle", "Evolved: Third Stage", "Extremely Rare", ["Terrestrial", "Quadruped", "Fur", "Beast", "Claws", "Thief"]],
+      ["Mau", "Born or Spawned", "Common", ["Terrestrial", "Quadruped", "Fur", "Beast", "Claws"]],
+      ["Bastet", "Born or Evolved: Third Stage", "Very Rare", ["Terrestrial", "Biped", "Fur", "Wings", "Glide", "Humanoid", "Claws", "Light Affinity"]],
+      ["Marid", "Spawned or Evolved: Second Stage", "Rare", ["Amphibious", "Quadruped", "Fur", "Beast", "Claws", "Water"]],
     ],
   },
   {
     slug: "insect-line",
     name: "Insect Line",
     monsters: [
-      ["Grub", "Born", "Very Common"],
-      ["Giant Ant", "Born or Evolved: First Stage", "Common"],
-      ["Militant", "Born or Evolved: Second Stage", "Uncommon"],
-      ["Formic Titan", "Born or Evolved: Third Stage", "Rare"],
-      ["Ascendant", "Born or Evolved: Second Stage", "Very Uncommon"],
-      ["Formarche", "Evolved: Third Stage", "Very Rare"],
-      ["Carajaw", "Spawned or Evolved: First Stage", "Common"],
-      ["Ironclad Beetle", "Spawned or Evolved: Second Stage", "Uncommon"],
-      ["Monolith Beetle", "Evolved: Third Stage", "Extremely Rare"],
-      ["Honey Guard", "Born or Evolved: Second Stage", "Uncommon"],
-      ["Hive Warden", "Born or Evolved: Third Stage", "Rare"],
-      ["Honey Noble", "Born or Evolved: Second Stage", "Very Uncommon"],
-      ["Hive Regent", "Evolved: Third Stage", "Very Rare"],
-      ["Drone", "Born or Evolved: First Stage", "Common"],
-      ["Sorrow Moth", "Spawned or Evolved: First Stage", "Uncommon"],
-      ["Frenzy Moth", "Spawned or Evolved: Second Stage", "Very Uncommon"],
-      ["Sway", "Evolved: Third Stage", "Extremely Rare"],
+      ["Grub", "Born", "Very Common", ["Terrestrial", "Limbless", "Anthropod", "Hide", "Burrower"]],
+      ["Giant Ant", "Born or Evolved: First Stage", "Common", ["Terrestrial", "Anthropod", "Chitin", "Burrower", "Mandibles"]],
+      ["Militant", "Born or Evolved: Second Stage", "Uncommon", ["Terrestrial", "Anthropod", "Chitin", "Burrower", "Mandibles", "Sharp Legs"]],
+      ["Formic Titan", "Born or Evolved: Third Stage", "Rare", ["Terrestrial", "Biped", "Anthropod", "Chitin", "Burrower", "Mandibles", "Sharp Legs", "Acid"]],
+      ["Ascendant", "Born or Evolved: Second Stage", "Very Uncommon", ["Terrestrial", "Anthropod", "Chitin", "Wings", "Flight", "Burrower", "Mandibles"]],
+      ["Formarche", "Evolved: Third Stage", "Very Rare", ["Terrestrial", "Biped", "Anthropod", "Chitin", "Wings", "Flight", "Burrower", "Mandibles", "Egg Layer"]],
+      
+      ["Carajaw", "Spawned or Evolved: First Stage", "Common", ["Terrestrial", "Anthropod", "Chitin", "Burrower", "Mandibles", "Claws"]],
+      ["Ironclad Beetle", "Spawned or Evolved: Second Stage", "Uncommon", ["Terrestrial", "Anthropod", "Chitin", "Burrower", "Mandibles", "Claws"]],
+      ["Monolith Beetle", "Evolved: Third Stage", "Extremely Rare", ["Terrestrial", "Biped", "Wings", "Flight", "Anthropod", "Chitin", "Burrower", "Mandibles", "Claws"]],
+
+      ["Honey Guard", "Born or Evolved: Second Stage", "Uncommon", ["Terrestrial", "Semi-Humanoid", "Chitin", "Wings", "Flight", "Mandibles", "Mild Poison"]],
+      ["Hive Warden", "Born or Evolved: Third Stage", "Rare", ["Terrestrial", "Humanoid", "Chitin", "Wings", "Flight", "Mandibles", "Potent Poison"]],
+      ["Honey Noble", "Born or Evolved: Second Stage", "Very Uncommon", ["Terrestrial", "Semi-Humanoid", "Chitin", "Fur", "Wings", "Flight", "Mandibles"]],
+      ["Hive Regent", "Evolved: Third Stage", "Very Rare", ["Terrestrial", "Humanoid", "Chitin", "Fur", "Wings", "Flight", "Mandibles", "Egg Layer"]],
+      ["Drone", "Born or Evolved: First Stage", "Common", ["Terrestrial", "Semi-Humanoid", "Chitin", "Fur", "Wings", "Flight", "Mandibles"]],
+      
+      ["Sorrow Moth", "Spawned or Evolved: First Stage", "Uncommon", ["Terrestrial", "Anthropod", "Chitin", "Wings", "Flight", "Mandibles", "Dust", "Manipulator"]],
+      ["Frenzy Moth", "Spawned or Evolved: Second Stage", "Very Uncommon", ["Terrestrial", "Anthropod", "Chitin", "Wings", "Flight", "Mandibles", "Dust", "Manipulator"]],
+      ["Sway", "Evolved: Third Stage", "Extremely Rare", ["Terrestrial", "Biped", "Humanoid", "Chitin", "Wings", "Flight", "Dust", "Manipulator"]],
     ],
   },
   {
     slug: "equine-line",
     name: "Equine Line",
     monsters: [
-      ["Pooka", "Born", "Very Common"],
-      ["Unicorn", "Born or Evolved: First Stage", "Uncommon"],
-      ["Alicorn", "Spawned or Evolved: Second Stage", "Very Rare"],
-      ["Kirin", "Evolved: Third Stage", "Extremely Rare"],
-      ["Hippogryph", "Born or Evolved: Second Stage", "Very Uncommon"],
-      ["Pegasus", "Born or Evolved: First Stage", "Very Uncommon"],
-      ["Sleeth", "Evolved: Third Stage", "Extremely Rare"],
-      ["Helhest", "Spawned or Evolved: First Stage", "Uncommon"],
-      ["Sleipnir", "Spawned or Evolved: Second Stage", "Rare"],
-      ["Nuka", "Evolved: Third Stage", "Extremely Rare"],
-      ["Kelpie", "Born or Evolved: First Stage", "Common"],
-      ["Kampus", "Born or Evolved: Second Stage", "Very Uncommon"],
-      ["Nix", "Evolved: Third Stage", "Extremely Rare"],
+      ["Pooka", "Born", "Very Common", ["Terrestrial", "Quadruped", "Hide", "Beast", "Hooves"]],
+      ["Unicorn", "Born or Evolved: First Stage", "Uncommon", ["Terrestrial", "Quadruped", "Hide", "Beast", "Hooves", "Horn", "Non-Affinity Magic"]],
+      ["Alicorn", "Spawned or Evolved: Second Stage", "Very Rare", ["Terrestrial", "Quadruped", "Hide", "Wings", "Flight", "Beast", "Hooves", "Horn"]],
+      ["Kirin", "Evolved: Third Stage", "Extremely Rare", ["Terrestrial", "Quadruped", "Hide", "Wings", "Flight", "Beast", "Hooves", "Antlers"]],
+
+      ["Pegasus", "Born or Evolved: First Stage", "Very Uncommon", ["Terrestrial", "Quadruped", "Hide", "Wings", "Flight", "Beast", "Hooves"]],
+      ["Hippogryph", "Born or Evolved: Second Stage", "Very Uncommon", ["Terrestrial", "Quadruped", "Feather Hide", "Wings", "Flight", "Beast", "Talons"]],
+      ["Sleeth", "Evolved: Third Stage", "Extremely Rare", ["Terrestrial", "Quadruped", "Hide", "Beast", "Hooves", "Fear"]],
+
+      ["Helhest", "Spawned or Evolved: First Stage", "Uncommon", ["Terrestrial", "Quadruped", "Rotten Hide", "Beast", "Hooves", "Shadow", "Undead"]],
+      ["Sleipnir", "Spawned or Evolved: Second Stage", "Rare", ["Terrestrial", "Quadruped", "Hide", "Beast", "Hooves", "Shadow"]],
+      ["Nuka", "Evolved: Third Stage", "Extremely Rare", ["Terrestrial", "Centaur", "Quadruped", "Hide", "Beast", "Hooves", "Claws", "Shadow", "Disease"]],
+
+      ["Kelpie", "Born or Evolved: First Stage", "Common", ["Amphibious", "Quadruped", "Hide", "Beast", "Hooves", "Water", "Shapeshifter", "Beautiful"]],
+      ["Kampus", "Born or Evolved: Second Stage", "Very Uncommon", ["Amphibious", "Tailfin", "Hide", "Beast", "Hooves", "Water"]],
+      ["Nix", "Evolved: Third Stage", "Extremely Rare", ["Amphibious", "Quadruped", "Biped", "Hide", "Beast", "Humanoid", "Hooves", "Water", "Shapeshifter", "Beautiful"]],
     ],
   },
   {
@@ -383,6 +389,32 @@ window.monsterGuideData = [
   },
 ];
 
+function inferMonsterRarity(origin) {
+  var value = String(origin || "").toLowerCase();
+
+  if (value.indexOf("third stage") !== -1) {
+    return "Third Stage";
+  }
+
+  if (value.indexOf("second stage") !== -1) {
+    return "Second Stage";
+  }
+
+  if (value.indexOf("first stage") !== -1) {
+    return "First Stage";
+  }
+
+  return "Origin";
+}
+
+function normalizeMonsterTags(tags) {
+  if (!Array.isArray(tags) || !tags.length) {
+    return [];
+  }
+
+  return tags;
+}
+
 window.monsterGuideData = window.monsterGuideData.map(function (line) {
   return {
     slug: line.slug,
@@ -391,7 +423,12 @@ window.monsterGuideData = window.monsterGuideData.map(function (line) {
       return {
         name: monster[0],
         origin: monster[1],
-        rarity: monster[2],
+        rarity: inferMonsterRarity(monster[1]),
+        commonality: monster[2],
+        tags: normalizeMonsterTags(monster[3]),
+        tagsText: normalizeMonsterTags(monster[3]).length
+          ? normalizeMonsterTags(monster[3]).join(", ")
+          : "---",
         description: "---",
       };
     }),
