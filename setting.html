@@ -18,41 +18,7 @@
   </head>
   <body data-page="setting">
     <div class="site-shell">
-      <aside class="sidebar" id="sidebar">
-        <div class="sidebar__inner">
-          <a class="brand" href="index.html">
-            <span class="brand__eyebrow">Welcome to</span>
-            <span class="brand__title">New Game Plus</span>
-          </a>
-
-          <nav class="sidebar__nav" aria-label="Primary">
-            <a class="nav-link" data-nav-page="home" href="index.html">Home</a>
-            <a class="nav-link" data-nav-page="setting" href="setting.html">Setting</a>
-            <a class="nav-link" data-nav-page="monster-guide" href="monster-guide.html">Monster Guide</a>
-            <a class="nav-link" data-nav-page="bot-info" href="bot-info.html">Bot Info</a>
-          </nav>
-
-          <div class="sidebar__section">
-            <p class="sidebar__label">Setting Index</p>
-            <div class="sidebar__subnav">
-              <a href="#background">Background</a>
-              <a href="#professions">Professions</a>
-              <a href="#locations">Locations</a>
-              <a href="#dungeons">Dungeons</a>
-              <a href="#religions">Religions</a>
-              <a href="#system">System</a>
-              <a href="#characters">Characters</a>
-              <a href="#races">Races</a>
-              <a href="#monsters">Monsters</a>
-              <a href="#skills">Skills</a>
-              <a href="#traits">Traits</a>
-              <a href="#stats">Stats</a>
-            </div>
-          </div>
-        </div>
-      </aside>
-
-      <div class="backdrop" id="backdrop"></div>
+      <div data-sidebar-root></div>
 
       <main class="content">
         <header class="topbar">
@@ -192,6 +158,8 @@
       </main>
     </div>
 
+    <script src="formatter.js?v=2026-03-23-2"></script>
+    <script src="sidebar.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

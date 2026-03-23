@@ -18,52 +18,7 @@
   </head>
   <body data-page="monster-guide">
     <div class="site-shell">
-      <aside class="sidebar" id="sidebar">
-        <div class="sidebar__inner">
-          <a class="brand" href="index.html">
-            <span class="brand__eyebrow">Testing</span>
-            <span class="brand__title">Pixel Proofed</span>
-          </a>
-
-          <nav class="sidebar__nav" aria-label="Primary">
-            <a class="nav-link" data-nav-page="home" href="index.html">Home</a>
-            <a class="nav-link" data-nav-page="setting" href="setting.html">Setting</a>
-            <a class="nav-link" data-nav-page="monster-guide" href="monster-guide.html">Monster Guide</a>
-            <a class="nav-link" data-nav-page="bot-info" href="bot-info.html">Bot Info</a>
-          </nav>
-
-          <div class="sidebar__section">
-            <p class="sidebar__label">Monster Index</p>
-            <div class="sidebar__subnav">
-              <a href="#monster-overview" data-hash-target="overview">Overview</a>
-              <a href="#undead-line" data-hash-target="undead-line">Undead Line</a>
-              <a href="#goblin-line" data-hash-target="goblin-line">Goblin Line</a>
-              <a href="#fire-elemental-line" data-hash-target="fire-elemental-line">Fire Elemental Line</a>
-              <a href="#earth-elemental-line" data-hash-target="earth-elemental-line">Earth Elemental Line</a>
-              <a href="#water-elemental-line" data-hash-target="water-elemental-line">Water Elemental Line</a>
-              <a href="#wind-elemental-line" data-hash-target="wind-elemental-line">Wind Elemental Line</a>
-              <a href="#slime-line" data-hash-target="slime-line">Slime Line</a>
-              <a href="#phantom-line" data-hash-target="phantom-line">Phantom Line</a>
-              <a href="#plant-line" data-hash-target="plant-line">Plant Line</a>
-              <a href="#demon-line" data-hash-target="demon-line">Demon Line</a>
-              <a href="#wolf-line" data-hash-target="wolf-line">Wolf Line</a>
-              <a href="#draconic-line" data-hash-target="draconic-line">Draconic Line</a>
-              <a href="#spider-line" data-hash-target="spider-line">Spider Line</a>
-              <a href="#fox-line" data-hash-target="fox-line">Fox Line</a>
-              <a href="#bird-line" data-hash-target="bird-line">Bird Line</a>
-              <a href="#angel-line" data-hash-target="angel-line">Angel Line</a>
-              <a href="#rabbit-line" data-hash-target="rabbit-line">Rabbit Line</a>
-              <a href="#cat-line" data-hash-target="cat-line">Cat Line</a>
-              <a href="#insect-line" data-hash-target="insect-line">Insect Line</a>
-              <a href="#equine-line" data-hash-target="equine-line">Equine Line</a>
-              <a href="#primate-line" data-hash-target="primate-line">Primate Line</a>
-              <a href="#non-evo-monsters" data-hash-target="non-evo-monsters">Non-Evo Monsters</a>
-            </div>
-          </div>
-        </div>
-      </aside>
-
-      <div class="backdrop" id="backdrop"></div>
+      <div data-sidebar-root></div>
 
       <main class="content">
         <header class="topbar">
@@ -152,12 +107,16 @@
       </main>
     </div>
 
-    <script src="monster-guide-data.js"></script>
-    <script src="monster-cards.js"></script>
+    <script src="evolution-trees-data.js?v=2026-03-23-1"></script>
+    <script src="monster-guide-data.js?v=2026-03-23-2"></script>
+    <script src="monster-cards.js?v=2026-03-23-3"></script>
+    <script src="formatter.js?v=2026-03-23-2"></script>
+    <script src="sidebar.js"></script>
     <script>
       (function () {
         var data = window.monsterGuideData;
         var monsterCardUtils = window.monsterCardUtils || {};
+        var textFormatter = window.siteTextFormatter || {};
         var introSection = document.querySelector("[data-monster-intro]");
         var overviewSection = document.querySelector("[data-monster-overview]");
         var detailSection = document.querySelector("[data-monster-detail]");
@@ -209,6 +168,9 @@
           }
 
           monsterCards.innerHTML = markup;
+          if (textFormatter.apply) {
+            textFormatter.apply(detailSection);
+          }
         }
 
         function showOverview() {
@@ -285,6 +247,9 @@
         }
 
         syncFromHash();
+        if (textFormatter.apply) {
+          textFormatter.apply(document.body);
+        }
         window.addEventListener("hashchange", syncFromHash);
       })();
     </script>

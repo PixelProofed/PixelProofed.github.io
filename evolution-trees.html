@@ -16,53 +16,9 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="page-surface-plain" data-page="monster-guide">
+  <body class="page-surface-plain" data-page="monster-guide" data-sidebar="evolution-trees">
     <div class="site-shell">
-      <aside class="sidebar" id="sidebar">
-        <div class="sidebar__inner">
-          <a class="brand" href="index.html">
-            <span class="brand__eyebrow">Welcome to</span>
-            <span class="brand__title">New Game Plus</span>
-          </a>
-
-          <nav class="sidebar__nav" aria-label="Primary">
-            <a class="nav-link" data-nav-page="home" href="index.html">Home</a>
-            <a class="nav-link" data-nav-page="setting" href="setting.html">Setting</a>
-            <a class="nav-link" data-nav-page="monster-guide" href="monster-guide.html">Monster Guide</a>
-            <a class="nav-link" data-nav-page="bot-info" href="bot-info.html">Bot Info</a>
-          </nav>
-
-          <div class="sidebar__section">
-            <p class="sidebar__label">Tree Index</p>
-            <div class="sidebar__subnav">
-              <a href="#all" data-tree-sidebar-target="all">All Lines</a>
-              <a href="#undead-line" data-tree-sidebar-target="undead-line">Undead Line</a>
-              <a href="#goblin-line" data-tree-sidebar-target="goblin-line">Goblin Line</a>
-              <a href="#fire-elemental-line" data-tree-sidebar-target="fire-elemental-line">Fire Elemental Line</a>
-              <a href="#earth-elemental-line" data-tree-sidebar-target="earth-elemental-line">Earth Elemental Line</a>
-              <a href="#water-elemental-line" data-tree-sidebar-target="water-elemental-line">Water Elemental Line</a>
-              <a href="#wind-elemental-line" data-tree-sidebar-target="wind-elemental-line">Wind Elemental Line</a>
-              <a href="#slime-line" data-tree-sidebar-target="slime-line">Slime Line</a>
-              <a href="#phantom-line" data-tree-sidebar-target="phantom-line">Phantom Line</a>
-              <a href="#plant-line" data-tree-sidebar-target="plant-line">Plant Line</a>
-              <a href="#demon-line" data-tree-sidebar-target="demon-line">Demon Line</a>
-              <a href="#wolf-line" data-tree-sidebar-target="wolf-line">Wolf Line</a>
-              <a href="#draconic-line" data-tree-sidebar-target="draconic-line">Draconic Line</a>
-              <a href="#spider-line" data-tree-sidebar-target="spider-line">Spider Line</a>
-              <a href="#fox-line" data-tree-sidebar-target="fox-line">Fox Line</a>
-              <a href="#bird-line" data-tree-sidebar-target="bird-line">Bird Line</a>
-              <a href="#angel-line" data-tree-sidebar-target="angel-line">Angel Line</a>
-              <a href="#rabbit-line" data-tree-sidebar-target="rabbit-line">Rabbit Line</a>
-              <a href="#cat-line" data-tree-sidebar-target="cat-line">Cat Line</a>
-              <a href="#insect-line" data-tree-sidebar-target="insect-line">Insect Line</a>
-              <a href="#equine-line" data-tree-sidebar-target="equine-line">Equine Line</a>
-              <a href="#primate-line" data-tree-sidebar-target="primate-line">Primate Line</a>
-            </div>
-          </div>
-        </div>
-      </aside>
-
-      <div class="backdrop" id="backdrop"></div>
+      <div data-sidebar-root></div>
 
       <main class="content">
         <header class="topbar">
@@ -137,9 +93,11 @@
       </main>
     </div>
 
-    <script src="monster-guide-data.js"></script>
-    <script src="monster-cards.js"></script>
-    <script src="evolution-trees-data.js"></script>
+    <script src="evolution-trees-data.js?v=2026-03-23-1"></script>
+    <script src="monster-guide-data.js?v=2026-03-23-2"></script>
+    <script src="monster-cards.js?v=2026-03-23-3"></script>
+    <script src="formatter.js?v=2026-03-23-2"></script>
+    <script src="sidebar.js"></script>
     <script src="script.js"></script>
     <script src="evolution-trees.js"></script>
   </body>

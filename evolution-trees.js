@@ -13,6 +13,7 @@
   var selectionCards = document.querySelector("[data-tree-selected-cards]");
   var stageLabels = ["Origin", "First Stage", "Second Stage", "Third Stage"];
   var monsterCardUtils = window.monsterCardUtils || {};
+  var textFormatter = window.siteTextFormatter || {};
   var currentLineSlug = "";
   var selectedNodeKey = "";
   var resizeFrame = 0;
@@ -587,6 +588,10 @@
   function renderSelectionPrompt(title, copy) {
     selectionTitle.textContent = title;
     selectionCopy.textContent = copy;
+
+    if (textFormatter.apply) {
+      textFormatter.apply(selectionTitle.parentNode);
+    }
   }
 
   function renderSelectionDetails(line, pathIndex, stepIndex) {
@@ -595,6 +600,10 @@
 
     selectionTitle.textContent = title + " Path";
     selectionCopy.textContent = path.join(" -> ");
+
+    if (textFormatter.apply) {
+      textFormatter.apply(selectionTitle.parentNode);
+    }
   }
 
   function buildMonsterCardMarkup(monster) {
@@ -626,6 +635,10 @@
     markup += "</div>";
     selectionCards.dataset.mode = "path";
     selectionCards.innerHTML = markup;
+
+    if (textFormatter.apply) {
+      textFormatter.apply(selectionCards);
+    }
   }
 
   function getLineMonsterOrder(line) {
@@ -740,6 +753,10 @@
       selectionCards.dataset.mode = "all";
       selectionCards.innerHTML = allMonstersMarkup;
     }
+
+    if (textFormatter.apply) {
+      textFormatter.apply(selectionCards);
+    }
   }
 
   function clearSelectedCards() {
@@ -780,6 +797,10 @@
     }
 
     renderAllMonsterIndex();
+
+    if (textFormatter.apply) {
+      textFormatter.apply(treeWorkspace || document.body);
+    }
   }
 
   function renderSingleLineView(line) {
@@ -799,11 +820,18 @@
       renderSelectionPrompt(line.name, "Click any node on the tree to load that branch up to the selected stage.");
       selectionCards.dataset.mode = "line";
       selectionCards.innerHTML = buildLineMonsterIndexMarkup(line, false);
+      if (textFormatter.apply) {
+        textFormatter.apply(treeWorkspace || document.body);
+      }
       return;
     }
 
     renderSelectionDetails(line, selected.pathIndex, selected.stepIndex);
     renderSelectedPathCards(line, selected.pathIndex, selected.stepIndex);
+
+    if (textFormatter.apply) {
+      textFormatter.apply(treeWorkspace || document.body);
+    }
   }
 
   function renderCurrentView() {

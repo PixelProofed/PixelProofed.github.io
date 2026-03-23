@@ -16,6 +16,38 @@
     return tags;
   }
 
+  function formatInlineHtml(value) {
+    var html = escapeHtml(value);
+
+    html = html.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+    html = html.replace(/\*(.+?)\*/g, "<em>$1</em>");
+
+    return html;
+  }
+
+  function formatBlockHtml(value) {
+    var lines = String(value || "")
+      .replace(/\r\n/g, "\n")
+      .replace(/\r/g, "\n")
+      .split(/\\n|\/n|\n/g);
+
+    return lines
+      .map(function (line) {
+        var trimmed = line.trim();
+
+        if (!trimmed) {
+          return "";
+        }
+
+        if (/^- /.test(trimmed)) {
+          return "&#8226; " + formatInlineHtml(trimmed.replace(/^- /, ""));
+        }
+
+        return formatInlineHtml(trimmed);
+      })
+      .join("<br>");
+  }
+
   function buildMonsterCardMarkup(monster) {
     return (
       '<article class="card monster-entry">' +
@@ -26,9 +58,9 @@
       "</header>" +
       '<dl class="monster-entry__meta">' +
       '<div class="monster-entry__meta-row">' +
-      "<dt>Rarity</dt>" +
+      "<dt>Origin</dt>" +
       "<dd>" +
-      escapeHtml(monster.rarity || "---") +
+      escapeHtml(monster.origin || "---") +
       "</dd>" +
       "</div>" +
       '<div class="monster-entry__meta-row">' +
@@ -46,8 +78,14 @@
       "</dl>" +
       '<div class="monster-entry__description">' +
       '<p class="monster-entry__description-label">Description</p>' +
-      "<p>" +
-      escapeHtml(monster.description || "---") +
+      '<p data-format-skip="true">' +
+      formatBlockHtml(monster.description || "---") +
+      "</p>" +
+      "</div>" +
+      '<div class="monster-entry__description">' +
+      '<p class="monster-entry__description-label">Traits</p>' +
+      '<p data-format-skip="true">' +
+      formatBlockHtml(monster.traits || "---") +
       "</p>" +
       "</div>" +
       "</article>"

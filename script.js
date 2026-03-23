@@ -4,6 +4,7 @@ const menuButton = document.getElementById("menu-button");
 const backdrop = document.getElementById("backdrop");
 const currentPage = body.dataset.page;
 const root = document.documentElement;
+const textFormatter = window.siteTextFormatter || {};
 
 const measureScrollbarWidth = () => {
   const probe = document.createElement("div");
@@ -33,6 +34,10 @@ const syncScrollbarReserve = () => {
 };
 
 syncScrollbarReserve();
+
+if (textFormatter.apply) {
+  textFormatter.apply(document.body);
+}
 
 document.querySelectorAll("[data-nav-page]").forEach((link) => {
   if (link.dataset.navPage === currentPage) {

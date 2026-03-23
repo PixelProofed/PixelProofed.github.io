@@ -3,7 +3,7 @@
   --font-display: "Fraunces", "Times New Roman", serif;
   --font-body: "Manrope", "Segoe UI", sans-serif;
   --sidebar-width: 19rem;
-  --radius-lg: 1.5rem;
+  --radius-lg: 10px;
   --radius-md: 1rem;
   --radius-sm: 0.8rem;
   --shadow-soft: 0 20px 60px rgba(19, 24, 38, 0.12);
@@ -123,6 +123,7 @@ h2 {
 
 .site-shell {
   display: flex;
+  align-items: flex-start;
   min-height: 100vh;
   min-width: 0;
   width: calc(100vw - var(--scrollbar-reserve));
@@ -131,14 +132,14 @@ h2 {
 
 .sidebar {
   width: var(--sidebar-width);
-  position: fixed;
-  inset: 0 auto 0 0;
-  z-index: 20;
+  position: relative;
+  flex: 0 0 var(--sidebar-width);
   padding: 1.5rem;
 }
 
 .sidebar__inner {
-  height: 100%;
+  height: auto;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -168,7 +169,7 @@ h2 {
 
 .brand__title {
   font-family: var(--font-display);
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: var(--text);
 }
 
@@ -200,12 +201,12 @@ h2 {
 .sidebar__section {
   padding-top: 1rem;
   border-top: 1px solid var(--line);
-  overflow: auto;
+  overflow: visible;
 }
 
 .content {
   flex: 1;
-  margin-left: var(--sidebar-width);
+  margin-left: 0;
   padding: 1.5rem;
   padding-left: 0.2rem !important;
   min-width: 0;
@@ -396,6 +397,7 @@ h2 {
   width: 100%;
   max-width: 100%;
   overflow: hidden;
+  margin-top:0;
 }
 
 .pill-links--monster a {
@@ -565,7 +567,7 @@ h2 {
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  font-size: 0.72rem;
+  font-size: 0.6rem;
   font-weight: 700;
   color: var(--accent);
 }
@@ -573,20 +575,45 @@ h2 {
 .monster-entry__meta-row dd {
   margin: 0;
   color: var(--text);
-  font-size: 0.94rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.03rem;
   line-height: 1.45;
 }
 
 .monster-entry__description {
   display: grid;
-  gap: 0.32rem;
-  padding-top: 0.75rem;
+  gap: 0rem;
+  padding-top: 0.3rem;
   border-top: 1px solid var(--line);
 }
 
 .monster-entry__description p:last-child {
-  color: var(--text-soft);
-  line-height: 1.7;
+color: var(--text-soft);
+    line-height: 1.4;
+    font-size: 0.7rem;
+    text-align: justify;
+    letter-spacing: 0.03rem;
+}
+
+.formatted-line {
+  display: block;
+}
+
+.formatted-line--bullet {
+  position: relative;
+  padding-left: 1.1em;
+}
+
+.formatted-line--bullet::before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+  color: currentColor;
+}
+
+.formatted-break {
+  display: block;
+  height: 0.75em;
 }
 
 .tree-workspace,
@@ -927,6 +954,9 @@ h2 {
 
 @media (max-width: 960px) {
   .sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+    z-index: 20;
     transform: translateX(-110%);
     transition: transform 220ms ease;
   }
