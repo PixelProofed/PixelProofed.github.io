@@ -400,8 +400,8 @@ h2 {
 
 .pill-links--monster a {
   width: 100%;
-  min-height: clamp(1.42rem, 2.4vw, 2.7rem);
-  padding: clamp(0.12rem, 0.35vw, 0.4rem) clamp(0.08rem, 0.3vw, 0.32rem);
+  min-height: clamp(1.3rem, 2.15vw, 2.45rem);
+  padding: clamp(0.08rem, 0.28vw, 0.3rem) clamp(0.08rem, 0.3vw, 0.32rem);
   border-radius: clamp(0.58rem, 0.8vw, 1.02rem);
   border: 1px solid rgba(190, 202, 223, 0.12);
   background:
@@ -430,6 +430,7 @@ h2 {
 }
 
 .pill-links--monster a.is-active {
+  transform: none;
   border-color: rgba(119, 208, 197, 0.3);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0)),
