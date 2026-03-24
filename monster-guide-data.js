@@ -42,91 +42,99 @@ window.monsterGuideData = [
     slug: "goblin-line",
     name: "Goblin Line",
     monsters: [
-      ["Goblin", "Born", "Very Common", ["Small"], "---", "- **Opportunistic Strike** - Deals 50% more damage when getting in a sneak attack on an enemy, only at beginning of encounter."],
+      ["Goblin", "Born", "Very Common", ["Small"], "Wiry, green monsters known as the worst kind of pest, with a style of surviving through numbers rather than strength. Goblins are opportunistic and rarely commit to a fair fight, preferring ambushes, traps, theft, or harassment from cover. They adapt fast to whatever environment they live in and will make use of scraps, stolen gear, or anything they can turn into an advantage. On their own they are a nuisance, but in groups they become far more dangerous.", "- **Opportunistic Strike** - Deals 50% more damage when getting in a sneak attack on an enemy, only at beginning of encounter."],
 
-      ["Hobgoblin", "Born or First Evolution", "Common", ["Medium"], "---", "- **Pack Hunter** - Increases a chosen stat when fighting alongside other goblinoids, 10% per ally, up to 30%."],
+      ["Hobgoblin", "Born or First Evolution", "Common", ["Medium"], "A larger goblinoid that trades off speed and skittishness for raw strength and durability. Hobgoblins are more willing to fight directly than common goblins, often acting as bruisers, hunters, or the first to push into danger. They are not especially refined or disciplined, but they are meaner in a straight fight and harder to put down. Around lesser goblinoids, they often bully, intimidate, or take what they want through force.", "- **Pack Hunter** - Increases a chosen stat when fighting alongside other goblinoids, 10% per ally, up to 30%."],
 
-      ["Hobgoblin Lord", "Born or Second Evolution", "Rare", ["Medium"], "---", "- **Iron Discipline** - Provides self and allies within 5m a 1d2 resistance to all Influence and Control debuffs."],
+      ["Hobgoblin Lord", "Born or Second Evolution", "Rare", ["Medium"], "A rarer and more imposing goblinoid species born with greater size, presence, and physical ability than common hobgoblins. They are often more assertive, confrontational, and harder to cow than lesser goblinoids, which can make them stand out early even before they become truly powerful. A young Hobgoblin Lord may be little more than a rough, oversized goblinoid, while an older one would be a serious centerpiece in any goblinoid group.", "- **Iron Discipline** - Provides self and allies within 5m a 1d2 resistance to all Influence and Control debuffs."],
 
-      ["Oni", "Born or Third Evolution", "Very Rare", ["Medium"], "---", "- **Elemental Resistance** - Reduces damage taken from elemental sources by 50%."],
+      ["Oni", "Born or Third Evolution", "Very Rare", ["Medium"], "A tall goblinoid species with a humanoid build, known for its aggression, presence, and unusually developed culture compared to lesser goblinoids. Their horns vary between individuals in size, shape, and number, and are one of the clearest signs of the species. Oni are still violent by nature and quick to meet force with force, but they are not merely tribal brutes, often forming more stable social structures and systems of hierarchy.", "- **Elemental Resistance** - Reduces damage taken from elemental sources by 50%."],
       
-      ["Orc", "Born or Second Evolution", "Very Uncommon", ["Large"], "---", "- **Brutal Strength** - Increased damage by 30% with blunt melee weapons."],
+      ["Orc", "Born or Second Evolution", "Very Uncommon", ["Large"], "A tusked goblinoid known for their brutality, aggression, and overwhelming physical force. Orcs commonly place themselves above goblins and hobgoblins in the local hierarchy, ruling through fear and violence while treating weaker goblinoids as labor, fodder, or property. They are cruel, territorial, and quick to answer resistance with open force, making them a constant threat wherever they take hold. When orcs gather in number, they tend to form harsh groups built around strength, control, and the steady abuse of anything beneath them.", "- **Brutal Strength** - Increased damage by 30% with blunt melee weapons."],
 
-      ["Ogre", "Born or Third Evolution", "Rare", ["Large"], "---", "- **Staggering Blow** - 1d3 chance to inflict Stun 1 on an enemy for 1 turn from any melee attack, once per enemy."],
+      ["Ogre", "Born or Third Evolution", "Rare", ["Large"], "Defined by raw physical power and a crude but dangerous kind of persistence. Ogres are often less disciplined than orcs or hobgoblins, relying on reach, weight, and brute force to crush whatever is in front of them. They may seem slow-witted, but that should not be mistaken for harmlessness, especially when angered or cornered. Even a poorly armed ogre is a serious threat simply because it hits hard enough to break men, walls, and formations.", "- **Staggering Blow** - 1d3 chance to inflict Stun 1 on an enemy for 1 turn from any melee attack, once per enemy."],
     ],
   },
   {
-    slug: "fire-elemental-line",
-    name: "Fire Elemental Line",
+    slug: "elemental-line",
+    name: "Elemental Line",
     monsters: [
-      ["Fire Sprite", "Mana Spawn", "Common", ["Tiny"], "---", "- **Fire Spirit** - Allows one to use mana to conjure and control simple flames as if they were part of their body. The user can create and manipulate fire."],
+      ["Fire Sprite", "Mana Spawn", "Common", ["Tiny"], "An elemental formed from living flame, most often found near natural fires, lava vents, or places where heat gathers densely. Its body flickers in a loose humanoid shape, never fully stable, and it moves with quick, darting motions that make it feel like a flicker of flame. Fire Sprites are simple and instinctive, but not harmless, lashing out with heat, sparks, and small bursts of flame when disturbed. They tend to gather where fire already exists, feeding off it and becoming more active in hotter environments.", "- **Fire Spirit** - Affinity. Allows one to use mana to conjure and control simple flames as if they were part of their body."],
 
-      ["Fire Elemental", "Mana Spawn or First Evolution", "Very Uncommon", ["Small"], "---", "- **Overheat** - The elemental steadily raises the temperature in a 10m radius over 5 turns. Creatures that remain in range from the 5th turn without at least 50% Heat Resistance become afflicted with an ongoing Burn 1 that will persist until cooling down or getting out of range. Effect does not stack over multiple sources."],
+      ["Fire Elemental", "Mana Spawn or First Evolution", "Very Uncommon", ["Small"], "A larger and more developed elemental whose body holds a clearer humanoid form within moving flame. Its presence radiates constant heat, and its movement often leaves scorched ground, drifting embers, or brief trails of fire in its wake. Fire Elementals are aggressive and territorial, preferring to overwhelm enemies through direct force, heat, and relentless pressure. In areas rich with natural fire or lava, they are especially difficult to wear down.", "- **Overheat** - The elemental steadily raises the temperature in a 10m radius over 5 turns. Creatures that remain in range from the 5th turn without at least 50% Heat Resistance become afflicted with an ongoing Burn 1 that will persist until cooling down or getting out of range. Effect does not stack over multiple sources."],
 
-      ["Salamander", "Born, Mana Spawn, or Second Evolution", "Very Rare", ["Medium"], "---", "- **Molten Skin** - Coming into physical contact with a Salamander will inflict Burn 3 for 1d3 turns, once per enemy."],
+      ["Salamander", "Born, Mana Spawn, or Second Evolution", "Very Rare", ["Medium"], "A humanoid fire spirit with a nymph-like shape, pointed ears, and skin that gleams like heated metal. Its hair is living flame, and even standing near one can be dangerous, as its body gives off enough heat to scorch anything careless enough to close the distance. Salamanders are more defined in form than lesser fire elementals, but they remain highly aggressive and strongly territorial. They favor volcanic regions and other places where heat is constant, using both fire and the terrain itself to press their advantage.", "- **Molten Skin** - Coming into physical contact with a Salamander will inflict Burn 3 for 1d3 turns, once per enemy."],
 
-      ["Vulcanus", "Third Evolution", "Extremely Rare", ["Medium"], "---", "- **Fire Prestige** - The ability to manipulate and command fire effortlessly, an advanced form of an affinity. Fire Prestiges can conjure intense flames, create firestorms, and control the heat around them with unmatched power."],
-    ],
-  },
-  {
-    slug: "earth-elemental-line",
-    name: "Earth Elemental Line",
-    monsters: [
-      ["Earth Mite", "Mana Spawn", "Common", ["Tiny"], "---", "- **Earth Spirit** - Allows one to use their mana to make use earth and stone as an extension of their own body. The user can shift rocks and soil, shaping terrain or creating barriers as needed."],
+      ["Vulcanus", "Third Evolution", "Extremely Rare", ["Medium"], "A fully developed elemental with a humanoid form shaped from molten rock and flowing internal heat. Its body appears solid at a glance, but lava-like channels run through it, and its presence alone can ignite the area around it if left unchecked. Vulcanus carry a natural authority among fire spirits, often drawing lesser elemental beings toward them for protection or guidance. They are immensely dangerous in battle, wielding fire and ambient heat with control rather than simple destruction, making them feel less like a wild blaze and more like a living force of nature.", "- **Fire Prestige** - The ability to manipulate and command fire effortlessly, an advanced form of an affinity. Fire Prestiges can conjure intense flames, create firestorms, and control the heat around them with unmatched power"],
 
-      ["Earth Elemental", "Mana Spawn or First Evolution", "Very Uncommon", ["Small"], "---", "- **Grounded** - Within 10m horizontal of an Earth Elemental, the ground holds more pull, making it difficult to jump and impossible to take flight."],
+      ["Earth Mite", "Mana Spawn", "Common", ["Tiny"], "An elemental formed from packed soil, grit, and stone, usually found in caves, cliffsides, or other places where earth thrives. Its body is small and crude, often resembling a squat insect or crawling knot of rock. Earth Mites are not especially aggressive on their own, but they are stubborn, territorial, and quick to react when their ground is disturbed. They often burrow, cling to stone surfaces, or gather in areas where the terrain itself gives them cover.", "- **Earth Spirit** - Affinity. Allows one to use their mana to make use earth and stone as an extension of their own body."],
 
-      ["Gnome", "Born, Mana Spawn, or Second Evolution", "Very Rare", ["Medium"], "---", "- **Geomancer's Insight** - Detects physical traps or passages within earthen and stone environments. +3 to physical trap Find rolls. "],
+      ["Earth Elemental", "Mana Spawn or First Evolution", "Very Uncommon", ["Small"], "A compact humanoid mass of stone and hardened earth, slower than many elementals but harder to move or bring down. Its presence seems to weigh on the area around it, making the ground feel heavier and movement less free for anything nearby. Earth Elementals are steady, forceful creatures that favor direct pressure, using their mass and control over terrain to pin enemies down and restrict escape. They are most often found in caves, mountain passes, ruins, and deep stone chambers where the land itself works in their favor.", "- **Grounded** - Within 10m horizontal of an Earth Elemental, the ground holds more pull, making it difficult to jump and impossible to take flight."],
 
-      ["Gnomus", "Third Evolution", "Extremely Rare", ["Medium"], "---", "- **Earth Prestige** - The ability to manipulate and control earth and stone effortlessly, an advanced form of an affinity. They can summon and shape massive rock formations, create barriers, and sense the movements and vibrations within the ground with exceptional clarity."],
-    ],
-  },
-  {
-    slug: "water-elemental-line",
-    name: "Water Elemental Line",
-    monsters: [
-      ["Water Drop", "Mana Spawn", "Common", ["Tiny"], "---", "- **Water Spirit** - Allows one to create and shape water freely through their mana, as an extension of themselves. They can manipulate water to attack or defend by altering its form and flow."],
+      ["Gnome", "Born, Mana Spawn, or Second Evolution", "Very Rare", ["Medium"], "A humanoid elemental with a body shaped from dense stone, clay, or mineral-rich soil, often marked by crystalline growths or sharply defined earthen features. Gnomes are more aware and deliberate than lesser earth elementals, with a natural talent for sensing flaws, hollow spaces, hidden passages, and disturbances in worked stone. They are wary, territorial, and clever in how they move through earthen environments, often using tunnels, barriers, and the terrain around them to stay in control of a fight. In old ruins or underground structures, a Gnome can be especially dangerous simply because it understands the ground better than anything invading it.", "- **Geomancer's Insight** - Detects physical traps or passages within earthen and stone environments. +3 to physical trap Find rolls. "],
 
-      ["Water Elemental", "Mana Spawn or First Evolution", "Very Uncommon", ["Small"], "---", "- **River-Witness** - Water carries truth better than lies. A Water Elemental can see through any normal deception, such as spoken lies or disguises. It is considered dangerous to lie around bodies of water, as Water Elementals are known to dislike the smell of liars."],
+      ["Gnomus", "Third Evolution", "Extremely Rare", ["Medium"], "A fully developed elemental with a dense humanoid form that feels less like a creature standing on the land and more like a piece of the land itself given motion. Its control over stone and soil is precise and effortless, allowing it to raise barriers, reshape terrain, and sense movement through the ground with unusual clarity. Gnomus are patient, immovable, and difficult to pressure, often forcing enemies to fight on terrain that has already been turned against them.", "- **Earth Prestige** - The ability to manipulate and control earth and stone effortlessly, an advanced form of an affinity. They can summon and shape massive rock formations, create barriers, and sense the movements and vibrations within the ground with exceptional clarity."],
 
-      ["Undine", "Born, Mana Spawn, or Second Evolution", "Very Rare", ["Medium"], "---", "- **Deluge Shield** - Automatically generates a water shield when health drops below a certain level, absorbing a set amount of damage."],
+      ["Water Drop", "Mana Spawn", "Common", ["Tiny"], "A minor elemental formed from water and mana, most often found near ponds, streams, wetlands, or places where moisture gathers heavily. Its body is small and unstable, usually resembling a floating droplet or a shifting knot of clear water that never holds one shape for long. Water Drops are elusive and reactive, tending to slip away from danger rather than confront it directly unless cornered. They gather easily around natural water sources and often move in quiet clusters that are difficult to notice at a glance.", "- **Water Spirit** - Affinity. Allows one to create and shape water freely through their mana, as an extension of themselves."],
 
-      ["Undina", "Third Evolution", "Extremely Rare", ["Medium"], "---", "- **Water Prestige** - The ability to manipulate and control water effortlessly, an advanced form of an affinity. They can summon tidal waves or create protective water barriers all while maintaining precise control over the moisture and currents around them."],
-    ],
-  },
-  {
-    slug: "wind-elemental-line",
-    name: "Wind Elemental Line",
-    monsters: [
-      ["Wind Wisp", "Mana Spawn", "Common", ["Tiny"], "---", "- **Wind Spirit** - Allows one to use their mana to control air currents freely as an extension of themselves, enabling the user to create offensive gusts or use the wind for rapid movement and evasion."],
+      ["Water Elemental", "Mana Spawn or First Evolution", "Very Uncommon", ["Small"], "A humanoid mass of flowing water with a body that shifts constantly but still holds a clear shape when at rest. It moves with an unnatural smoothness and is often anywhere water is abundant enough to support it. Water Elementals are watchful and difficult to deceive, with a strange natural sensitivity to dishonest intent that makes lying in their presence especially dangerous. In battle, they favor fluid defense and control, using their water magic to wear enemies down rather than meeting force with force.", "- **River-Witness** - Water carries truth better than lies. A Water Elemental can see through any normal deception, such as spoken lies or disguises. It is considered dangerous to lie around bodies of water, as Water Elementals are known to dislike the smell of liars."],
 
-      ["Wind Elemental", "Mana Spawn or First Evolution", "Very Uncommon", ["Small"], "---", "- **Breeze Sense** - One can detect subtle changes in air currents, granting heightened awareness of movement and nearby threats."],
+      ["Undine", "Born, Mana Spawn, or Second Evolution", "Very Rare", ["Medium"], "A water elemental with a refined humanoid form, usually appearing composed even in the middle of a fight. Their body flows like living water, able to shift, recoil, and reform at speed, making them difficult to strike cleanly at times. Undines are more deliberate than lesser water elementals, often reading the situation before acting and responding as needed. They are known to bide their time in combat, saving their worst for the moment it hurts most.", "- **Deluge Shield** - Automatically generates a water shield when health drops below a certain level, absorbing a set amount of damage."],
 
-      ["Sylph", "Born, Mana Spawn, or Second Evolution", "Very Rare", ["Medium"], "---", "- **Whisper of the Winds** - One can communicate through the wind over long distances, allowing for silent, near-instantaneous communication with allies. If the response is quick enough, it will return to the user."],
+      ["Undina", "Third Evolution", "Extremely Rare", ["Medium"], "A fully developed water elemental with a refined humanoid form, often beautiful enough in feature and bearing to be mistaken for a Nymph. They often don't appear as masses of living water, instead holding a stable body that reads as natural at a glance, though still beings of water at their core. They hold a strong affinity for all places where water gathers, where they may stalk, lure, or take their prey. Undina are dangerous for the same reason deep water is dangerous-- not loud or wild by default, but fully capable of turning calm into violence the moment it suits them.", "- **Water Prestige** - An advanced form of an affinity. One can summon tidal waves or create protective water barriers all while maintaining control over the moisture and currents around them."],
 
-      ["Sylvestris", "Third Evolution", "Extremely Rare", ["Medium"], "---", "- **Wind Prestige** - The ability to manipulate and harness wind effortlessly, an advanced form of an affinity. They can generate powerful gusts, create whirlwinds or tornadoes, and move with extraordinary speed and agility, all while maintaining precise control over the air currents around them."],
+      ["Wind Wisp", "Mana Spawn", "Common", ["Tiny"], "An elemental born from moving air and loose mana, often found in open fields, cliff paths, and high places where the wind rarely settles. They are restless creatures, quick to dart, circle, and scatter, sometimes seeming playful until they start harassing travelers with sharp gusts, dust, or sudden shifts in footing. They rarely stay still for long and are difficult to pin down, preferring to wear at a target through movement and irritation rather than direct confrontation. Groups can become dangerous fast when they start moving together through the same current.", "- **Wind Spirit** - Affinity. Allows one to use their mana to control air currents freely as an extension of themselves."],
+
+      ["Wind Elemental", "Mana Spawn or First Evolution", "Very Uncommon", ["Small"], "An elemental with a clearer form and a stronger hold over the currents around them. They are alert to motion in a way few creatures are, noticing pressure shifts, movement, and approaching threats through the air long before others would. IN combat, they rely on repositioning, disruption, and control of the space around a fight, making it hard for enemies to strike cleanly or predict where pressure will come from next. They are most dangerous at high ground or places where the wind already has room to move.", "- **Breeze Sense** - One can detect subtle changes in air currents. All projectiles have a 1d2 chance to be deflected by wind"],
+
+      ["Sylph", "Born, Mana Spawn, or Second Evolution", "Very Rare", ["Medium"], "An elemental with a humanoid shape and a light presence that can make them seem less threatening than they are. They are elusive, intelligent, and often more socially aware than lower stages, using distance, timing, and the movement of air itself to stay informed and in control. Their connection to the wind allows them to carry messages across great distances to other of their kind, making them extremely effective at scouting. Even so, they remain monsters, and they can turn that same subtlety toward stalking, misdirection, and striking where others are least prepared.", "- **Whisper of the Winds** - One can communicate through the wind over long distances, allowing for silent, near-instantaneous communication with allies. If the response is quick enough, it will return to the user."],
+
+      ["Sylvestris", "Third Evolution", "Extremely Rare", ["Medium"], "A powerful elemental whose humanoid form carries all the force and instability of the sky held in living shape, appearing nymph-like despite this. They are fast without seeming hurried, able to cross ground, shift position, and seize control of a battlefield before most opponents fully understand where the threat has moved. They can dominate wide areas at once, building pressure through violent gusts, spiraling winds, and sudden changes in the air around them.", "- **Wind Prestige** - The ability to manipulate and harness wind effortlessly, an advanced form of an affinity."],
     ],
   },
   {
     slug: "slime-line",
     name: "Slime Line",
     monsters: [
-      ["Slime", "Born or Mana Spawn", "Very Common", ["Tiny"], "---", "- **Elastic Form** - Reduced physical damage from blunt attacks by 10%."],
+      ["Slime", "Born or Mana Spawn", "Very Common", ["Tiny"], "Amorphous monsters made of semi-fluid mass, commonly found out in the wild or where moisture is heavy. Their bodies are soft and rounded, shifting as they move or react to their surroundings. They are driven mostly by hunger, irritation, or simple survival instinct, feeding on anything they can fight and win again and organic scraps. While they don't look dangerous, they dislike company and will attack if bothered or hungry, often by throwing themselves hard at their enemies or trying to suffocate them.", "- **Amorphous** - Able to squeeze through tiny gaps, immune to Bind and Grapple."],
+
+      ["Sewer Slime", "Born or Mana Spawn", "Very Common", ["Tiny"], "Slimes that develop in the sewer channels beneath cities and other places where filth passes. Despite their name, they are extremely clean creatures, quietly dissolving any filth they touch. Because of this, they are generally kept around, but are still to be treated with caution. They are extremely territorial and will lash out when their feeding grounds are disturbed. Natural climbers, they are seen overhead more often than not.", "- **Cling Mass** - Able to move along walls and ceilings as effortlessly as floors."],
 
 
-      ["Acidic Slime", "First Evolution", "Rare", ["Small"], "---", "- **Corrosive Touch** - Armor and weapons of enemies slowly deteriorate upon contact. 1d3 chance to inflict Corrosion II for 1 turn on physical contact with gear."],
-      ["Caustic Slime", "Second Evolution", "Very Rare", ["Small"], "---", "- **Chemical Trail** - As it moves, it leaves behind a trail of toxic residue that persists for a short duration. Anything that touches this trail will take damage. Corrosion chance increases to 1d2 and to Rank 2."],
+      ["Static Slime", "First Evolution", "Very Uncommon", ["Tiny"], "Slimes that passively collect static as they move, storing it in their bodies as an unstable charge that flickers through them in pulses or sudden flashes. They often twitch or shudder as they move, and arcs of electricity may jump across their surfaces or into nearby metal, water, or other conductive materials. They are more erratic than most slimes, quick to lash out when threatened and especially dangerous in wet environments or tight spaces where their charge can spread.", "- **Nerve Jolt** - Contact with the slime has a 1d2 chance to inflict Slow III for 3 turns, once per enemy. Contact through water or metal gear is included."],
+
+      ["Lightning Slime", "Second Evolution", "Very Rare", ["Tiny"], "Electric slimes that have developed a true lightning affinity. Their bodies crackle with steady current and they are able to wield this electricity through magic and strike with greater speed, damage, and flexibility. They are especially lethal in wet ground, storm-heavy regions, and confined spaces where their lightning can spread easily.", "- **Lightning Affinity** - The ability to tap into Lightning magic for spellcasting and skills, making use of Lightning for speed and offense."],      
 
 
-      ["Sticky Slime", "First Evolution", "Very Uncommon", ["Small"], "---", "- **Ensnaring Emission** - Periodically releases small blobs of sticky slime in a radius around it when attacked, which adhere to the ground and can trap or slow down enemies who step on them."],
-      ["Explosive Slime", "Second Evolution", "Very Rare", ["Small"], "---", "- **Unstable Reaction** - This slime passively absorbs small amounts of ambient energy from the environment, which gradually increases its instability. After reaching a threshold, its next contact with an enemy causes a minor explosion."],
+      ["Shell Slime", "Born or First Evolution", "Uncommon", ["Tiny"], "Slimes that gather materials from their surroundings and work them into the outer layer of their bodies, gradually building a rough protective shell from whatever is available. They are often coated in bits of stone, shell, bone, scrap, or other hard debris, giving them a heavier and more uneven appearance than others. They naturally favor areas with loose material to collect, slowly reinforcing themselves. In a fight, they are persistent and difficult to wear down, using their layered bodies to absorb damage while pressing forward to attack with heavy blows or even throwing pieces of their shell.", "- **Ricochet** - Ranged attacks have a 1d2 chance to deflect harmlessly off the slime's shell if it is intact."],
+
+      ["Metal Slime", "Second Evolution", "Very Rare", ["Tiny"], "Slimes that are able to consume solid materials to take on parts of their properties for a time. Their bodies are often dense or reflective, depending on what they have fed on most recently. They are highly opportunistic feeders, drawn to mines, ruins, active combat, and scrap-heavy environments where useful material is easy to find. Many camping adventurers have lost their gear to these thieves.", "- **Assimilation** - By consuming an ingot (5 ore), a Metal Slime may take the general properties of that metal throughout their body for 1 thread. They are unable to form alloys."],
+
+
+      ["Poison Slime", "Second Evolution", "Rare", ["Tiny"], "Slimes whose internal chemistry has shifted into something especially toxic. Their bodies are often darker, cloudier, or more sickly in color than common acid strains, and mere contact can leave one poisoned. They are more dangerous over time than on impact, relying on that Potent Poison to weaken prey, wear down resistance, and make escape or retaliation steadily harder.", "- **Toxicology** - Physical contact with a Poison Slime has a 1d2 chance to inflict Potent Poison to a non-inflicted enemy, with lowered potency each time per enemy."],
+
+
+      ["Acid Slime", "Born or First Evolution", "Very Uncommon", ["Small"], "Corrosive slimes whose bodies produce a stronger digestive compound capable of eating through flesh, cloth, wood, and weaker materials on contact. They are often discolored with yellow, green, or cloudy tones, and their surfaces may hiss, smoke, or visibly eat into whatever they rest against for too long. They are more aggressive than common slimes when prey is nearby, relying on direct contact with their acid to wear targets down quickly. They are especially dangerous in enclosed spaces where avoiding their reach becomes more difficult.", "- **Corrosive Touch** - Armor and weapons of enemies slowly deteriorate upon contact. 1d3 chance to inflict Corrosion II for 1 turn on physical contact with gear."],
+
+      ["Caustic Slime", "Second Evolution", "Very Rare", ["Small"], "Highly corrosive slimes whose bodies produce an acid far stronger and more destructive than that of lesser Acid Slimes. When aggressive, their surfaces hiss, smoke, or eat into the ground beneath them, and they often leave behind lingering trails of corrosive residue as they move. Not only dangerous through direct contact, but through the way they shape the battlefield into a hazard for anything forced to cross their path. They are especially threatening in enclosed spaces, where their acid trails can turn retreat and repositioning into a risk of its own.", "- **Chemical Trail** - As it moves, it leaves behind a trail of toxic residue that persists for a short duration. Anything that touches this trail will take damage. Corrosion chance increases to 1d2 and to Rank 2."],
+
+
+      ["Sticky Slime", "Born or First Evolution", "Uncommon", ["Small"], "Slimes whose bodies produce an unusually strong binding gel that can cling to armor, limbs, weapons, and terrain. Rather than only trying to engulf prey at close range, they commonly spit globs of their own mass to pin targets in place and limit movement before closing in. They are ambush-minded monsters that do well in narrow passages, on walls, or in spaces where a stuck target has little room to recover. Once they begin landing their adhesive shots, they become far more dangerous, as escape gets harder with each hit.", "- **Ensnaring Goo** - The blobs shot up to 5m by Sticky Slimes are able to inflict Bind 3 for 2 turns, using 1 Spell Slot each."],
+
+
+      ["Explosive Slime", "Second Evolution", "Very Rare", ["Small"], "Volatile slimes able to combust portions of their own mass at will, turning their bodies into living weapons built around controlled detonation. They are often unstable in movement and appearance, with churning interiors, swelling pockets, or brief flashes that suggest a blast is about to occur. Rather than simply throwing themselves at prey, use bursts of explosions to damage, scatter, or pressure targets from short range before closing in again. They are unpredictable and highly dangerous.", "- **Unstable Reaction** - Able to ignite parts of its body in explosions of varying size, using Spell Slots. May use more slot for bigger explosions."],
 
       
-      ["Mimic Slime", "First Evolution", "Very Uncommon", ["Small"], "---", "- **Imitative Pulse** - Able to emit a low-frequency vibration that mimics nearby sounds from different directions."],
-      ["Doppelganger Slime", "Second Evolution", "Very Rare", ["Medium"], "---", "- **Copycat** - When mimicking an enemy, one can replicate a physical skill they use, repeating it in their next turn. If the slime copies the skill multiple times over an extended period, it begins to learn the technique permanently, adapting it into its own arsenal. Does not work with magic skills."],
+      ["Mimic Slime", "Born or First Evolution", "Uncommon", ["Small"], "Mimic Slimes are deceptive slimes able to change color and texture, and hold a chosen shape well enough to resemble simple objects, discarded gear, rubble, or other harmless clutter in their environment. Their bodies are usually smoother and more controlled than others, allowing them to remain still for long periods while waiting for prey to approach. They rely more on ambush, striking once something comes close enough to touch or inspect them.", "- **Imitative Pulse** - Able to change color and simple texture at will."],
+
+      ["Doppelganger Slime", "Second Evolution", "Rare", ["Medium"], "Advanced mimic slimes that can shape themselves into convincing humanoid or creature-like forms rather than merely imitating simple objects. Similar to Changelings, yet more flexible and monstrous in nature, they are far more dangerous as they'll actively use their mimicry to stalk, infiltrate, and deceive to take down their chosen prey. They rely on deception, approach, and ambush, often getting close by passing as something familiar before attacking at the moment of doubt or relaxation.", "- **Copycat** - When mimicking an enemy, one can replicate a physical skill they use, repeating it in their next turn. If the slime copies the skill multiple times, it may adapt it permanently into its own arsenal. Does not work with magic skills. (Still requires three threads)"],
 
 
-      ["Monarch Slime", "Third Evolution", "Extremely Rare", ["Large"], "---", "- **Regal Divide** - Can split into smaller slimes with independent actions and will. Information collected by the smaller slimes will be gained on reabsorption. Satellite slimes cannot learn skills."],
+      ["Monarch Slime", "Third Evolution", "Extremely Rare", ["Massive"], "Oversized slimes that retain the general nature of the slime line that led to them, while rising far beyond it in scale and threat. They are able to divide off smaller satellite slimes, which they use to scout, harry enemies, extend their reach, or overwhelm prey through numbers. They are among the most dangerous slime variants known, not only because of their size, but because fighting one often means fighting many bodies acting with a single will.", "- **Regal Divide** - Can split off up to 20 satellite slimes of 20% of their level or less, with independent actions and will. Information collected by these slimes will be gained on reabsorption. Satellite slimes cannot learn skills."],
+
+      ["Hoard Slime", "Third Evolution", "Extremely Rare", ["Large"], "Rare evolutions from Metal Slimes after long periods of feeding on valuables, equipment, and dense crafted materials. Their bodies are thick with embedded coins, gems, metal fragments, tools, and stolen objects, often making them resemble living treasure heaps more than common slimes. Unlike simpler scavenging strains, they are drawn strongly to worked goods and carried wealth, directly targeting armed or well-equipped prey specifically to add to their mass. In battle, they are durable, opportunistic monsters that use the materials within their bodies for both protection and offense.", "- **Assimilation** - The Hoard slime is able to store five different shells from its consumption and swap between them out of combat. They are also able to make shells from alloys, still requiring a full ingots worth (x5) of each ore."],
+
+      ["Chimera Slime", "Third Evolution", "Extremely Rare", ["Large"], "Powerful slimes whose bodies display the traits of two different slime lines at once, creating combinations that are rarely predictable and seldom safe to underestimate. They are usually closer to ordinary slimes in size, but make up for size with versatility and aggression. Because no two are guaranteed to develop the same way, Chimera Slimes are widely regarded as some of the most dangerous slimes to identify and fight.", "- **Merge** - Replace this trait with any one trait from a Slime evolution of second stage or lower from a path not taken."],
     ],
   },
   {
@@ -697,14 +705,71 @@ function getInheritedTraitLines(lineSlug, monsterName) {
   return [];
 }
 
-function formatInheritedTraitPrefix(lines) {
+function formatInheritedLineLabel(lineSlug, line) {
+  var groups;
+
+  if (lineSlug !== "slime-line") {
+    return line;
+  }
+
+  groups = line.split(" / ").map(function (group, index, list) {
+    var names;
+    var splitIndex;
+    var normalized;
+    var rebuilt;
+
+    splitIndex = group.lastIndexOf(", or ");
+
+    if (splitIndex !== -1) {
+      names = group
+        .slice(0, splitIndex)
+        .split(", ")
+        .concat(group.slice(splitIndex + 5));
+    } else if (group.indexOf(" or ") !== -1) {
+      names = group.split(" or ");
+    } else {
+      names = [group];
+    }
+
+    normalized = names.map(function (name, nameIndex) {
+      var cleaned = name.trim();
+
+      if (nameIndex < names.length - 1) {
+        return cleaned.replace(/\s+Slime$/, "");
+      }
+
+      return cleaned;
+    });
+
+    if (normalized.length === 1) {
+      rebuilt = normalized[0];
+    } else if (normalized.length === 2) {
+      rebuilt = normalized[0] + " or " + normalized[1];
+    } else {
+      rebuilt =
+        normalized.slice(0, -1).join(", ") +
+        ", or " +
+        normalized[normalized.length - 1];
+    }
+
+    if (index === list.length - 1 && !/\s+Slime$/.test(rebuilt)) {
+      rebuilt += " Slime";
+    }
+
+    return rebuilt;
+  });
+
+  return groups.join(" / ");
+}
+
+function formatInheritedTraitPrefix(lineSlug, lines) {
   if (!lines.length) {
     return "";
   }
 
   return lines
     .map(function (line) {
-      return "- **Traits From " + line + "**";
+      return "- **Traits From " + formatInheritedLineLabel(lineSlug, line) + "**";
     })
     .join("\n");
 }
@@ -724,10 +789,10 @@ function buildTraitsText(lineSlug, monster) {
   }
 
   if (!baseTraits || baseTraits === "---") {
-    return formatInheritedTraitPrefix(inherited);
+    return formatInheritedTraitPrefix(lineSlug, inherited);
   }
 
-  return formatInheritedTraitPrefix(inherited) + "\n" + baseTraits;
+  return formatInheritedTraitPrefix(lineSlug, inherited) + "\n" + baseTraits;
 }
 
 window.monsterGuideData = window.monsterGuideData.map(function (line) {

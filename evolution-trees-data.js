@@ -21,37 +21,40 @@ window.evolutionTreeData = [
     ],
   },
   {
-    slug: "fire-elemental-line",
-    name: "Fire Elemental Line",
-    shortName: "Fire",
-    paths: [["Fire Sprite", "Fire Elemental", "Salamander", "Vulcanus"]],
-  },
-  {
-    slug: "earth-elemental-line",
-    name: "Earth Elemental Line",
-    shortName: "Earth",
-    paths: [["Earth Mite", "Earth Elemental", "Gnome", "Gnomus"]],
-  },
-  {
-    slug: "water-elemental-line",
-    name: "Water Elemental Line",
-    shortName: "Water",
-    paths: [["Water Drop", "Water Elemental", "Undine", "Undina"]],
-  },
-  {
-    slug: "wind-elemental-line",
-    name: "Wind Elemental Line",
-    shortName: "Wind",
-    paths: [["Wind Wisp", "Wind Elemental", "Sylph", "Sylvestris"]],
+    slug: "elemental-line",
+    name: "Elemental Line",
+    shortName: "Elemental",
+    paths: [
+      ["Fire Sprite", "Fire Elemental", "Salamander", "Vulcanus"],
+      ["Earth Mite", "Earth Elemental", "Gnome", "Gnomus"],
+      ["Water Drop", "Water Elemental", "Undine", "Undina"],
+      ["Wind Wisp", "Wind Elemental", "Sylph", "Sylvestris"]
+],
   },
   {
     slug: "slime-line",
     name: "Slime Line",
     shortName: "Slime",
     paths: [
-      ["Slime", "Acidic Slime", "Caustic Slime", "Monarch Slime"],
+      ["Sewer Slime", "Shell Slime", "Metal Slime", "Hoard Slime"],
+      ["Sewer Slime", "Shell Slime", "Metal Slime", "Monarch Slime"],
+      ["Sewer Slime", "Acid Slime", "Caustic Slime", "Monarch Slime"],
+      ["Sewer Slime", "Acid Slime", "Poison Slime", "Monarch Slime"],
+
       ["Slime", "Sticky Slime", "Explosive Slime", "Monarch Slime"],
+      ["Slime", "Static Slime", "Lightning Slime", "Monarch Slime"],
+      ["Slime", "Static Slime", "Explosive Slime", "Monarch Slime"],
       ["Slime", "Mimic Slime", "Doppelganger Slime", "Monarch Slime"],
+
+      ["Sewer Slime", "Shell Slime", "Metal Slime", "Chimera Slime"],
+      ["Sewer Slime", "Shell Slime", "Metal Slime", "Chimera Slime"],
+      ["Sewer Slime", "Acid Slime", "Caustic Slime", "Chimera Slime"],
+      ["Sewer Slime", "Acid Slime", "Poison Slime", "Chimera Slime"],
+
+      ["Slime", "Sticky Slime", "Explosive Slime", "Chimera Slime"],
+      ["Slime", "Mimic Slime", "Doppelganger Slime", "Chimera Slime"],
+      ["Slime", "Static Slime", "Lightning Slime", "Chimera Slime"],
+      ["Slime", "Static Slime", "Explosive Slime", "Chimera Slime"],
     ],
   },
   {
