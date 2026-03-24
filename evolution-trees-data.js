@@ -92,8 +92,8 @@ window.evolutionTreeData = [
     name: "Demon Line",
     shortName: "Demon",
     paths: [
-      ["Imp", "Demon", "Incubus/Succubus", "Devour"],
-      ["Imp", "Demon", "Incubus/Succubus", "Desire"],
+      ["Imp", "Demon", "Succubus", "Devour"],
+      ["Imp", "Demon", "Succubus", "Desire"],
       ["Imp", "Demon", "Sin Demon", "Demon Lord"],
       ["Imp", "Demon", "Sin Demon", "Archdemon"],
       ["Imp", "Hellhound", "Cerberus", "Archdemon"],

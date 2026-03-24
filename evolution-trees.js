@@ -14,6 +14,33 @@
   var stageLabels = ["Origin", "First Stage", "Second Stage", "Third Stage"];
   var monsterCardUtils = window.monsterCardUtils || {};
   var textFormatter = window.siteTextFormatter || {};
+  var demonVariantOptions = {
+    "Sin Demon": [
+      "Sin Demon of Pride",
+      "Sin Demon of Sloth",
+      "Sin Demon of Lust",
+      "Sin Demon of Wrath",
+      "Sin Demon of Greed",
+      "Sin Demon of Gluttony",
+      "Sin Demon of Envy",
+    ],
+    "Demon Lord": [
+      "Demon Lord of Pride",
+      "Demon Lord of Sloth",
+      "Demon Lord of Lust",
+      "Demon Lord of Wrath",
+      "Demon Lord of Greed",
+      "Demon Lord of Gluttony",
+      "Demon Lord of Envy",
+    ],
+  };
+  var demonVariantState = {
+    expandedBase: "",
+    selectedByBase: {
+      "Sin Demon": "",
+      "Demon Lord": "",
+    },
+  };
   var currentLineSlug = "";
   var selectedNodeKey = "";
   var resizeFrame = 0;
@@ -123,6 +150,107 @@
     return null;
   }
 
+  function isDemonVariantBase(name) {
+    return Boolean(demonVariantOptions[name]);
+  }
+
+  function getDemonVariantSelection(baseName) {
+    return demonVariantState.selectedByBase[baseName] || "";
+  }
+
+  function getMatchingDemonVariant(baseName, sourceName) {
+    var suffix;
+
+    if (!sourceName || sourceName.indexOf(" of ") === -1) {
+      return "";
+    }
+
+    suffix = sourceName.split(" of ")[1];
+
+    if (!suffix) {
+      return "";
+    }
+
+    return baseName + " of " + suffix;
+  }
+
+  function getVariantSuffix(name) {
+    if (!name || name.indexOf(" of ") === -1) {
+      return name;
+    }
+
+    return name.split(" of ")[1];
+  }
+
+  function getDisplayNameForNode(lineSlug, logicalName) {
+    if (lineSlug === "demon-line" && isDemonVariantBase(logicalName)) {
+      return getDemonVariantSelection(logicalName) || logicalName;
+    }
+
+    return logicalName;
+  }
+
+  function getDisplayPath(line, pathIndex, stepIndex) {
+    return line.paths[pathIndex].slice(0, stepIndex + 1).map(function (name) {
+      return getDisplayNameForNode(line.slug, name);
+    });
+  }
+
+  function getNodeLabel(lineSlug, logicalName, displayName) {
+    if (
+      lineSlug === "demon-line" &&
+      demonVariantState.expandedBase === logicalName &&
+      displayName.indexOf(" of ") !== -1
+    ) {
+      return getVariantSuffix(displayName);
+    }
+
+    return displayName;
+  }
+
+  function getDisplayPaths(line) {
+    var displayPaths = line.paths.map(function (path, pathIndex) {
+      return {
+        pathIndex: pathIndex,
+        logical: path.slice(),
+        names: path.map(function (name) {
+          return getDisplayNameForNode(line.slug, name);
+        }),
+      };
+    });
+
+    if (line.slug !== "demon-line" || !demonVariantState.expandedBase) {
+      return displayPaths;
+    }
+
+    if (demonVariantState.expandedBase === "Sin Demon") {
+      return demonVariantOptions["Sin Demon"].map(function (variantName) {
+        return {
+          pathIndex: 2,
+          logical: ["Imp", "Demon", "Sin Demon"],
+          names: ["Imp", "Demon", variantName],
+        };
+      });
+    }
+
+    if (demonVariantState.expandedBase === "Demon Lord") {
+      return demonVariantOptions["Demon Lord"].map(function (variantName) {
+        return {
+          pathIndex: 2,
+          logical: ["Imp", "Demon", "Sin Demon", "Demon Lord"],
+          names: [
+            "Imp",
+            "Demon",
+            getDemonVariantSelection("Sin Demon") || "Sin Demon",
+            variantName,
+          ],
+        };
+      });
+    }
+
+    return displayPaths;
+  }
+
   function updateActiveLinks(slug) {
     var index;
 
@@ -151,9 +279,12 @@
     var nodes = [];
     var edges = [];
     var pathIndex;
+    var displayPaths = getDisplayPaths(line);
 
-    for (pathIndex = 0; pathIndex < line.paths.length; pathIndex += 1) {
-      var path = line.paths[pathIndex];
+    for (pathIndex = 0; pathIndex < displayPaths.length; pathIndex += 1) {
+      var path = displayPaths[pathIndex].names;
+      var logicalPath = displayPaths[pathIndex].logical;
+      var basePathIndex = displayPaths[pathIndex].pathIndex;
       var previousNode = null;
       var stepIndex;
 
@@ -166,12 +297,14 @@
           node = {
             key: key,
             name: name,
+            logicalName: logicalPath[stepIndex],
+            label: getNodeLabel(line.slug, logicalPath[stepIndex], name),
             depth: stepIndex,
             parents: [],
             children: [],
             pathRefs: [],
             pathIndices: [],
-            firstPathIndex: pathIndex,
+            firstPathIndex: basePathIndex,
             firstSeenOrder: nodes.length,
             layoutX: 0,
             layoutY: 0,
@@ -180,8 +313,8 @@
           nodes.push(node);
         }
 
-        node.pathRefs.push({ pathIndex: pathIndex, stepIndex: stepIndex });
-        node.pathIndices.push(pathIndex);
+        node.pathRefs.push({ pathIndex: basePathIndex, stepIndex: stepIndex });
+        node.pathIndices.push(basePathIndex);
 
         if (previousNode) {
           var edgeKey = previousNode.key + "->" + node.key;
@@ -207,7 +340,7 @@
             node.parents.push(previousNode.key);
           }
 
-          edge.pathIndices.push(pathIndex);
+          edge.pathIndices.push(basePathIndex);
         }
 
         previousNode = node;
@@ -323,30 +456,44 @@
   function isNodeActive(node, line) {
     var selected = parseSelectedNodeKey();
     var path;
+    var displayName;
 
     if (!selected || selected.slug !== line.slug) {
       return false;
     }
 
     path = line.paths[selected.pathIndex];
+    displayName = getDisplayNameForNode(line.slug, node.logicalName);
 
-    return Boolean(path && node.depth <= selected.stepIndex && path[node.depth] === node.name);
+    return Boolean(
+      path &&
+        node.depth <= selected.stepIndex &&
+        path[node.depth] === node.logicalName &&
+        node.name === displayName,
+    );
   }
 
   function isNodeSelected(node, line) {
     var selected = parseSelectedNodeKey();
     var path;
+    var displayName;
 
     if (!selected || selected.slug !== line.slug) {
       return false;
     }
 
     path = line.paths[selected.pathIndex];
+    displayName = getDisplayNameForNode(line.slug, node.logicalName);
 
-    return Boolean(path && node.depth === selected.stepIndex && path[node.depth] === node.name);
+    return Boolean(
+      path &&
+        node.depth === selected.stepIndex &&
+        path[node.depth] === node.logicalName &&
+        node.name === displayName,
+    );
   }
 
-  function getResolvedPathIndex(line, nodeName, stepIndex) {
+  function getResolvedPathIndex(line, nodeName, stepIndex, logicalName) {
     var candidatePathIndices = [];
     var pathIndex;
     var selected = parseSelectedNodeKey();
@@ -356,7 +503,7 @@
     var bestScore = -1;
 
     for (pathIndex = 0; pathIndex < line.paths.length; pathIndex += 1) {
-      if (line.paths[pathIndex][stepIndex] === nodeName) {
+      if (line.paths[pathIndex][stepIndex] === (logicalName || nodeName)) {
         candidatePathIndices.push(pathIndex);
       }
     }
@@ -419,8 +566,8 @@
         parentNode &&
         childNode &&
         childNode.depth <= selected.stepIndex &&
-        path[parentNode.depth] === parentNode.name &&
-        path[childNode.depth] === childNode.name,
+        path[parentNode.depth] === parentNode.logicalName &&
+        path[childNode.depth] === childNode.logicalName,
     );
   }
 
@@ -563,11 +710,17 @@
         escapeHtml(line.slug) +
         '" data-tree-node-name="' +
         escapeHtml(node.name) +
+        '" data-tree-node-logical="' +
+        escapeHtml(node.logicalName) +
+        '" data-tree-variant-base="' +
+        escapeHtml(isDemonVariantBase(node.logicalName) ? node.logicalName : "") +
+        '" data-tree-variant-option="' +
+        (line.slug === "demon-line" && demonVariantState.expandedBase === node.logicalName ? "true" : "false") +
         '" data-tree-node-step="' +
         node.depth +
         '">' +
         '<span class="tree-node__name">' +
-        escapeHtml(node.name) +
+        escapeHtml(node.label || node.name) +
         "</span>" +
         "</button>";
     }
@@ -595,7 +748,7 @@
   }
 
   function renderSelectionDetails(line, pathIndex, stepIndex) {
-    var path = line.paths[pathIndex].slice(0, stepIndex + 1);
+    var path = getDisplayPath(line, pathIndex, stepIndex);
     var title = path[path.length - 1];
 
     selectionTitle.textContent = title + " Path";
@@ -615,12 +768,13 @@
   }
 
   function renderSelectedPathCards(line, pathIndex, stepIndex) {
-    var path = line.paths[pathIndex].slice(0, stepIndex + 1);
+    var logicalPath = line.paths[pathIndex].slice(0, stepIndex + 1);
+    var path = getDisplayPath(line, pathIndex, stepIndex);
     var markup = '<div class="monster-card-grid">';
     var index;
 
     for (index = 0; index < path.length; index += 1) {
-      var monster = getMonster(line.slug, path[index]) || {
+      var monster = getMonster(line.slug, path[index]) || getMonster(line.slug, logicalPath[index]) || {
         name: path[index],
         rarity: "---",
         commonality: "---",
@@ -660,6 +814,22 @@
     return order;
   }
 
+  function getOrderLookupName(line, monsterName) {
+    if (line.slug !== "demon-line") {
+      return monsterName;
+    }
+
+    if (/^Sin Demon of /.test(monsterName)) {
+      return "Sin Demon";
+    }
+
+    if (/^Demon Lord of /.test(monsterName)) {
+      return "Demon Lord";
+    }
+
+    return monsterName;
+  }
+
   function buildLineMonsterIndexMarkup(line, includeHeader) {
     var detailLine = getLineDetails(line.slug);
     var orderMap = getLineMonsterOrder(line);
@@ -672,8 +842,8 @@
     }
 
     monsters = detailLine.monsters.slice().sort(function (left, right) {
-      var leftOrder = orderMap[left.name] || { depth: 99, order: 999 };
-      var rightOrder = orderMap[right.name] || { depth: 99, order: 999 };
+      var leftOrder = orderMap[getOrderLookupName(line, left.name)] || { depth: 99, order: 999 };
+      var rightOrder = orderMap[getOrderLookupName(line, right.name)] || { depth: 99, order: 999 };
 
       if (leftOrder.depth !== rightOrder.depth) {
         return leftOrder.depth - rightOrder.depth;
@@ -687,7 +857,7 @@
     });
 
     monsters.forEach(function (monster) {
-      var meta = orderMap[monster.name] || { depth: 0 };
+      var meta = orderMap[getOrderLookupName(line, monster.name)] || { depth: 0 };
 
       if (!stageGroups[meta.depth]) {
         stageGroups[meta.depth] = [];
@@ -848,6 +1018,7 @@
   function setLine(slug) {
     selectedNodeKey = "";
     currentLineSlug = slug;
+    demonVariantState.expandedBase = "";
     renderCurrentView();
 
     if (window.location.hash !== "#" + slug) {
@@ -860,6 +1031,7 @@
     var line = getLine(hash);
 
     selectedNodeKey = "";
+    demonVariantState.expandedBase = "";
 
     if (hash === allViewSlug || !hash) {
       currentLineSlug = allViewSlug;
@@ -914,6 +1086,10 @@
     var pathIndex;
     var nextSelectionKey;
     var targetGroup;
+    var logicalName;
+    var variantBase;
+    var variantOption;
+    var pairedVariant;
 
     if (jumpTrigger) {
       targetGroup = selectionCards.querySelector('[data-tree-group-id="' + jumpTrigger.dataset.treeGroupJump + '"]');
@@ -936,13 +1112,58 @@
     }
 
     stepIndex = Number(trigger.dataset.treeNodeStep);
-    pathIndex = getResolvedPathIndex(line, trigger.dataset.treeNodeName, stepIndex);
+    logicalName = trigger.dataset.treeNodeLogical || trigger.dataset.treeNodeName;
+    variantBase = trigger.dataset.treeVariantBase || "";
+    variantOption = trigger.dataset.treeVariantOption === "true";
+
+    if (line.slug === "demon-line" && variantBase) {
+      if (variantOption) {
+        demonVariantState.selectedByBase[variantBase] = trigger.dataset.treeNodeName;
+
+        if (variantBase === "Sin Demon") {
+          pairedVariant = getMatchingDemonVariant("Demon Lord", trigger.dataset.treeNodeName);
+
+          if (
+            demonVariantState.selectedByBase["Demon Lord"] &&
+            demonVariantState.selectedByBase["Demon Lord"] !== pairedVariant
+          ) {
+            demonVariantState.selectedByBase["Demon Lord"] = "";
+          }
+        }
+
+        if (variantBase === "Demon Lord") {
+          demonVariantState.selectedByBase["Sin Demon"] =
+            getMatchingDemonVariant("Sin Demon", trigger.dataset.treeNodeName);
+        }
+
+        demonVariantState.expandedBase = "";
+      } else if (trigger.dataset.treeNodeName === variantBase) {
+        demonVariantState.expandedBase =
+          demonVariantState.expandedBase === variantBase ? "" : variantBase;
+        renderCurrentView();
+        return;
+      }
+    }
+
+    pathIndex = getResolvedPathIndex(line, trigger.dataset.treeNodeName, stepIndex, logicalName);
 
     if (pathIndex === -1) {
       return;
     }
 
     nextSelectionKey = line.slug + ":" + pathIndex + ":" + stepIndex;
+
+    if (
+      line.slug === "demon-line" &&
+      variantBase &&
+      !variantOption &&
+      trigger.dataset.treeNodeName === getDemonVariantSelection(variantBase) &&
+      selectedNodeKey === nextSelectionKey
+    ) {
+      demonVariantState.expandedBase = variantBase;
+      renderCurrentView();
+      return;
+    }
 
     if (selectedNodeKey === nextSelectionKey) {
       selectedNodeKey = "";
