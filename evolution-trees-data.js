@@ -107,10 +107,13 @@ window.evolutionTreeData = [
     name: "Wolf Line",
     shortName: "Wolf",
     paths: [
+      ["Fang Wolf", "Dire Wolf", "Cu Sith", "Orthrus"],
+      ["Fang Wolf", "Dire Wolf", "Fenrir", "Orthrus"],
       ["Fang Wolf", "Dire Wolf", "Fenrir", "Skoll"],
-      ["Fang Wolf", "Dire Wolf", "Lycan", "Alpha Lycan"],
-      ["Fang Wolf", "Worg", "Fenrir", "Skoll"],
-      ["Fang Wolf", "Worg", "Lycan", "Alpha Lycan"],
+
+      ["Fang Wolf", "Warg", "Lycan", "Amarok"],
+      ["Fang Wolf", "Warg", "Barghest", "Amarok"],
+      ["Fang Wolf", "Warg", "Barghest", "Garm"],
     ],
   },
   {

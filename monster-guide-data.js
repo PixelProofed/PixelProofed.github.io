@@ -282,19 +282,30 @@ window.monsterGuideData = [
     slug: "wolf-line",
     name: "Wolf Line",
     monsters: [
-      ["Fang Wolf", "Born", "Common", ["Small"], "---", "- **Agile Dodger** - Increases evasion capabilities."],
+      ["Fang Wolf", "Born", "Very Common", ["Small"], "Wolf monsters known for their aggression and strong pack instincts. They resemble oversized wolves with enlarged fangs, and a more dangerous intensity than natural beasts. They are active hunters that rely on pursuit, coordination, and repeated attacks to wear prey down rather than ending a fight in a single rush. Even on their own they are dangerous, but they become far more threatening when several are working the same target.", "- **Hunt Rotation** - Gain 20% increased damage against any enemy an ally has already attacked this round."],
 
 
-      ["Dire Wolf", "Born or First Evolution", "Common", ["Medium"], "---", "- **Dreaded Howl** - Any howl can temporarily weaken the END of all enemies within hearing range by 20% for 1 turn. Roll a 1d2, 1 triggers effect."],
-      ["Worg", "Born or First Evolution", "Very Uncommon", ["Medium"], "---", "- **Keen Tracker** - Possesses an exceptional sense of smell and sight, allowing them to track hidden or invisible enemies more effectively than other creatures."],
+      ["Dire Wolf", "Born or First Evolution", "Common", ["Medium"], "Wolf monsters with heavier frames, thicker muscle, and a more forceful presence than lesser wolf species. They often serve as the dominant leaders of Fang Wolf packs, driving hunts, holding territory, and asserting control through sheer strength and presence. Built for direct confrontation as much as pursuit, they are capable of bringing down larger prey through coordination and raw physical pressure. When a Dire Wolf leads a pack, the whole group becomes more dangerous", "- **Lead the Hunt** - At the start of the encounter, mark one target. Allies gain 20% increased damage against that target for 5 turns."],
+
+      ["Warg", "Born or First Evolution", "Uncommon", ["Medium"], "Wolf monsters with bulky frames of dark fur, harsh features, and a mouth full of razor-like teeth. They are aggressive hunters that seem to take excessive satisfaction from the kill, always going for the bloodiest result. They are highly territorial and jump on any occasion to make a scene. Though they don't generally hunt in packs, Warg are no less efficient on their own.", "- **Slaughterhouse** - The first strike on an enemy immediately after landing the killing blow on another enemy will deal 50% more damage."],
 
 
-      ["Fenrir", "Born or Second Evolution", "Very Rare", ["Large"], "---", "- **Ragnarok's Herald** - Physical attacks generate shockwaves, with a 1d3 chance to cause additional area damage around the primary target."],
-      ["Skoll", "Third Evolution", "Extremely Rare", ["Massive"], "---", "- **Celestial Might** - Skoll gains highly increased strength and agility while in the sun, with a buff of 20% each.  Attacks may ignite the target while under this effect. Roll a 1d10, 1 triggers effect of Burn III for 2 turns, once per enemy with a cooldown of 3 turns."],
+      ["Cu Sith", "Born or Second Evolution", "Very Uncommon", ["Large"], "Hound monsters with thick, lightly colored and shaggy coats and heavy builds. They serve as protectors within the pack, remaining most alert while the others are at rest. They are highly territorial and quick to intercept anything that comes too close to their pack, forcing intruders to deal with them before reaching the rest of the group. Though less pursuit-focused than other wolf monsters, they are no less dangerous once they decide something has no business existing.", "- **Always Up** - Do not require sleep, and are immune to Control debuffs."],
+
+      ["Fenrir", "Born or Second Evolution", "Rare", ["Huge"], "Oversized wolf monsters with thick coats, oversized fangs and claws, and pale markings that run through the fur in vivid lines. Their eyes are often solid in color and bright enough to stand out at a distance, giving them a watchful and severe look. They do not come across as reckless beasts, but as creatures that choose their moment, commit fully, and expect the force of that choice to be enough. Their movements are steady for their size, and there is often a sense that they are reading the field before they close, rather than simply rushing what is in front of them.", "- **Dominant Frame** - Smaller enemies deal 10% less melee damage per size class lower."],
+
+      ["Barghest", "Born or Second Evolution", "Rare", ["Medium"], "Hound monsters with heavy coats like ink, gleaming eyes, and a shape that stands out even at a distance. They are often encountered alone near roads, ruins, grave sites, and the very edges of settled land. Their behavior is watchful and selective, with a tendency to appear in places where people are already unsettled. It is thought that Barghest are particularly picky about their prey, taking their time to choose before beginning a hunt. Because of this, it is known that seeing one watching means death is coming.", "- **Death Omen** - An enemy is chosen and marked. That enemy cannot use any Mobility skills beyond 5m and gets a -1 to any system rolls for the length of the encounter."],      
+
+      ["Lycan", "Born or Second Evolution", "Very Uncommon", ["Large"], "Bipedal wolf monsters with long limbs, dense muscle, and a humanoid frame built for tearing, grappling, and close range violence. They live in tightly bound packs with a more tribal structure, gathering around territory, hierarchy, and shared hunts. Their behavior is aggressive and possessive, quick to defend their own, punish intrusion, and close ranks against anything that threatens the group. A Lycan is dangerous on its own, but far more so as part of a pack.", "- **Savage Rend** - Claw attacks have a 1d3 chance to inflict Bleed for 3 turns, once per enemy."],
 
 
-      ["Lycan", "Born or Second Evolution", "Rare", ["Large"], "---", "- **Territorial** - Gains a 10% boost in Strength and Agility when fighting within the area of its den or claimed territory."],
-      ["Alpha Lycan", "Third Evolution", "Extremely Rare", ["Large"], "---", "- **Nocturnal Might** - Strength, Agility, and Endurance increase by 30% under the moonlight, vastly enhancing one's combat effectiveness during the night."],
+      ["Orthrus", "Third Evolution", "Extremely Rare", ["Huge"], "Hound monsters with massive frames, dense muscle, and thick shaggy coats that make them appear even larger than they are. Each head watches independently, making them especially effective at guarding territory, tracking movement, and reacting quickly to anything that approaches. Their fur ends at the base of their tail as it transitions into the scales of the sturdy serpent that watches their back. They are built to hold ground, meeting threats head-on and often using its many teeth to rip them apart.", "- **Serpent Tail** - The Orthrus' tail may strike at a target within 3m once per turn, dealing damage and a 1d3 chance to inflict Potent Poison. Does so automatically when approached from behind immune to poisons Severe and lower."],
+
+      ["Skoll", "Third Evolution", "Extremely Rare", ["Massive"], "Enormous wolf monsters with radiant fur, bright eyes, and pale markings that spread across the body in patterns like flares or branching light. Their build is heavy and powerful, but they do not look cumbersome, carrying their size with an obvious ease. They are the kind of monster that favors open land, where their full speed and reach can be used without obstruction. A Skoll is most dangerous once it has room to run, as very little can match the force of its approach or pursuit.", "- **His Radiance** - While in direct sunlight, STR and AGI are buffed by 25% each. Attacks may ignite the target while under this effect. Roll a 1d10, 1 triggers effect of Burn III for 3 turns, once per enemy."],
+
+      ["Amarok", "Third Evolution", "Extremely Rare", ["Huge"], "A truly towering Lycan variant marked by dense muscle and fur, broad shoulders, and an imposing shape built for direct violence. There is little wildness in how they carry themselves, only the weight of a predator fully at ease in its own strength and intelligence. Their presence feels stark and self-contained, giving them a more solitary cast even when they are not alone. Amarok are extremely proficient hunters, often seeking out the most dangerous prey they can find in attempts to challenge themself.", "- **Trophy Hunter** - After directly killing an enemy of Rare or higher, gains 20% increased damage for the remainder of the thread. Does not stack. Also gains 10% damage while fighting an equal sized or larger enemy 1 on 1."],
+
+      ["Garm", "Third Evolution", "Extremely Rare", ["Large"], "Hound monsters with black coats, skull-like faces, and bright hollow eyes set deep in exposed bone. Their bodies are thick with fur and muscle, often broken by visible ribs or bony ridges and spikes that give an impression of death worked into the shape of a living beast. Garm are the kind of monsters that plant themselves somewhere and make crossing it a matter of surviving them first. Once roused, they are difficult to divert or drive off, pressing forward with the certainty that has already decided the outcome.", "- **Claim the Dead** - Upon directly killing a marked enemy, gain Regen I across 2 turns and immediately mark a new target."],
     ],
   },
   {
@@ -611,27 +622,20 @@ window.monsterGuideData = [
     monsters: [
       ["Dire Rat", "Born", "Very Common", ["Small"]],
       ["Gargoyle", "Born or Mana Spawn", "Uncommon", ["Medium"]],
-      ["Serpent", "Born", "Very Common", ["Medium"]],
-      ["Mana Leech", "Born or Mana Spawn", "Very Common", ["Small"]],
-      ["Glimmerstag", "Born", "Common", ["Medium"]],
-      ["Serpent Weasel", "Born", "Common", ["Small"]],
       ["Goosefang", "Born", "Very Common", ["Small"]],
-      ["Giant Eagle", "Born", "Common", ["Large"]],
       ["Golem", "Mana Spawn", "Very Uncommon", ["Large"]],
       ["Giant Scorpion", "Born", "Uncommon", ["Medium"]],
       ["Cockatrice", "Born", "Very Uncommon", ["Small"]],
-      ["Boar", "Born", "Very Common", ["Medium"]],
+      ["Dire Boar", "Born", "Very Common", ["Medium"]],
       ["Gnoll", "Born", "Common", ["Medium"]],
       ["Minotaur", "Born or Mana Spawn", "Very Uncommon", ["Medium"]],
       ["Manticore", "Born or Mana Spawn", "Very Rare", ["Large"]],
       ["Frost Giant", "Born or Mana Spawn", "Rare", ["Large"]],
       ["Hill Giant", "Born or Mana Spawn", "Very Uncommon", ["Large"]],
       ["Ankheg", "Born or Mana Spawn", "Common", ["Small"]],
-      ["Sprite Swarm", "Born or Mana Spawn", "Uncommon", ["Tiny"]],
       ["Pixie", "Born or Mana Spawn", "Uncommon", ["Tiny"]],
       ["Gremlin", "Born or Mana Spawn", "Uncommon", ["Small"]],
       ["Darkling", "Born or Mana Spawn", "Common", ["Small"]],
-      ["Barghest", "Born or Mana Spawn", "Rare", ["Medium"]],
       ["Giant Bat", "Born", "Common", ["Medium"]],
       ["Night Hag", "Mana Spawn", "Very Uncommon", ["Medium"]],
       ["Kraken", "Born or Mana Spawn", "Extremely Rare", ["Massive"]],
