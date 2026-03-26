@@ -149,6 +149,7 @@ window.evolutionTreeData = [
     paths: [
       ["Veil Fox", "Yobi", "Kitsune", "Gumiho"],
       ["Veil Fox", "Yobi", "Chunho", "Hojosa"],
+      ["Veil Fox", "Kuda", "Chunho", "Hojosa"],      
       ["Veil Fox", "Kuda", "Tuemesi", "Tulikettu"],
     ],
   },
