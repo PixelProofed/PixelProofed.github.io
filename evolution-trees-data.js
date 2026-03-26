@@ -135,8 +135,10 @@ window.evolutionTreeData = [
     name: "Spider Line",
     shortName: "Spider",
     paths: [
-      ["Spiderling", "Webspinner", "Silkweaver", "Arachne"],
       ["Spiderling", "Giant Spider", "Widowmaker", "Drider"],
+      ["Spiderling", "Webspinner", "Silkweaver", "Arachne"],
+      ["Spiderling", "Webspinner", "Spinner o' Lies", "Anansi"],
+      ["Spiderling", "Trickster Spider", "Silkweaver", "Arachne"],
       ["Spiderling", "Trickster Spider", "Spinner o' Lies", "Anansi"],
     ],
   },
