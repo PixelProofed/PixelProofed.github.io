@@ -41,6 +41,33 @@
       "Demon Lord": "",
     },
   };
+  var angelVariantOptions = {
+    Virtue: [
+      "Virtue of Humility",
+      "Virtue of Chastity",
+      "Virtue of Temperance",
+      "Virtue of Kindness",
+      "Virtue of Charity",
+      "Virtue of Patience",
+      "Virtue of Diligence",
+    ],
+    Principality: [
+      "Principality of Humility",
+      "Principality of Chastity",
+      "Principality of Temperance",
+      "Principality of Kindness",
+      "Principality of Charity",
+      "Principality of Patience",
+      "Principality of Diligence",
+    ],
+  };
+  var angelVariantState = {
+    expandedBase: "",
+    selectedByBase: {
+      Virtue: "",
+      Principality: "",
+    },
+  };
   var currentLineSlug = "";
   var selectedNodeKey = "";
   var resizeFrame = 0;
@@ -158,7 +185,15 @@
     return demonVariantState.selectedByBase[baseName] || "";
   }
 
-  function getMatchingDemonVariant(baseName, sourceName) {
+  function isAngelVariantBase(name) {
+    return Boolean(angelVariantOptions[name]);
+  }
+
+  function getAngelVariantSelection(baseName) {
+    return angelVariantState.selectedByBase[baseName] || "";
+  }
+
+  function getMatchingVariant(baseName, sourceName) {
     var suffix;
 
     if (!sourceName || sourceName.indexOf(" of ") === -1) {
@@ -187,6 +222,10 @@
       return getDemonVariantSelection(logicalName) || logicalName;
     }
 
+    if (lineSlug === "angel-line" && isAngelVariantBase(logicalName)) {
+      return getAngelVariantSelection(logicalName) || logicalName;
+    }
+
     return logicalName;
   }
 
@@ -198,8 +237,8 @@
 
   function getNodeLabel(lineSlug, logicalName, displayName) {
     if (
-      lineSlug === "demon-line" &&
-      demonVariantState.expandedBase === logicalName &&
+      ((lineSlug === "demon-line" && demonVariantState.expandedBase === logicalName) ||
+        (lineSlug === "angel-line" && angelVariantState.expandedBase === logicalName)) &&
       displayName.indexOf(" of ") !== -1
     ) {
       return getVariantSuffix(displayName);
@@ -220,10 +259,12 @@
     });
 
     if (line.slug !== "demon-line" || !demonVariantState.expandedBase) {
-      return displayPaths;
+      if (line.slug !== "angel-line" || !angelVariantState.expandedBase) {
+        return displayPaths;
+      }
     }
 
-    if (demonVariantState.expandedBase === "Sin Demon") {
+    if (line.slug === "demon-line" && demonVariantState.expandedBase === "Sin Demon") {
       return demonVariantOptions["Sin Demon"].map(function (variantName) {
         return {
           pathIndex: 2,
@@ -233,7 +274,7 @@
       });
     }
 
-    if (demonVariantState.expandedBase === "Demon Lord") {
+    if (line.slug === "demon-line" && demonVariantState.expandedBase === "Demon Lord") {
       return demonVariantOptions["Demon Lord"].map(function (variantName) {
         return {
           pathIndex: 2,
@@ -242,6 +283,31 @@
             "Imp",
             "Demon",
             getDemonVariantSelection("Sin Demon") || "Sin Demon",
+            variantName,
+          ],
+        };
+      });
+    }
+
+    if (line.slug === "angel-line" && angelVariantState.expandedBase === "Virtue") {
+      return angelVariantOptions.Virtue.map(function (variantName) {
+        return {
+          pathIndex: 0,
+          logical: ["Cherub", "Angel", "Virtue"],
+          names: ["Cherub", "Angel", variantName],
+        };
+      });
+    }
+
+    if (line.slug === "angel-line" && angelVariantState.expandedBase === "Principality") {
+      return angelVariantOptions.Principality.map(function (variantName) {
+        return {
+          pathIndex: 0,
+          logical: ["Cherub", "Angel", "Virtue", "Principality"],
+          names: [
+            "Cherub",
+            "Angel",
+            getAngelVariantSelection("Virtue") || "Virtue",
             variantName,
           ],
         };
@@ -713,9 +779,17 @@
         '" data-tree-node-logical="' +
         escapeHtml(node.logicalName) +
         '" data-tree-variant-base="' +
-        escapeHtml(isDemonVariantBase(node.logicalName) ? node.logicalName : "") +
+        escapeHtml(
+          (line.slug === "demon-line" && isDemonVariantBase(node.logicalName)) ||
+            (line.slug === "angel-line" && isAngelVariantBase(node.logicalName))
+            ? node.logicalName
+            : "",
+        ) +
         '" data-tree-variant-option="' +
-        (line.slug === "demon-line" && demonVariantState.expandedBase === node.logicalName ? "true" : "false") +
+        ((line.slug === "demon-line" && demonVariantState.expandedBase === node.logicalName) ||
+        (line.slug === "angel-line" && angelVariantState.expandedBase === node.logicalName)
+          ? "true"
+          : "false") +
         '" data-tree-node-step="' +
         node.depth +
         '">' +
@@ -815,16 +889,24 @@
   }
 
   function getOrderLookupName(line, monsterName) {
-    if (line.slug !== "demon-line") {
-      return monsterName;
+    if (line.slug === "demon-line") {
+      if (/^Sin Demon of /.test(monsterName)) {
+        return "Sin Demon";
+      }
+
+      if (/^Demon Lord of /.test(monsterName)) {
+        return "Demon Lord";
+      }
     }
 
-    if (/^Sin Demon of /.test(monsterName)) {
-      return "Sin Demon";
-    }
+    if (line.slug === "angel-line") {
+      if (/^Virtue of /.test(monsterName)) {
+        return "Virtue";
+      }
 
-    if (/^Demon Lord of /.test(monsterName)) {
-      return "Demon Lord";
+      if (/^Principality of /.test(monsterName)) {
+        return "Principality";
+      }
     }
 
     return monsterName;
@@ -1019,6 +1101,7 @@
     selectedNodeKey = "";
     currentLineSlug = slug;
     demonVariantState.expandedBase = "";
+    angelVariantState.expandedBase = "";
     renderCurrentView();
 
     if (window.location.hash !== "#" + slug) {
@@ -1032,6 +1115,7 @@
 
     selectedNodeKey = "";
     demonVariantState.expandedBase = "";
+    angelVariantState.expandedBase = "";
 
     if (hash === allViewSlug || !hash) {
       currentLineSlug = allViewSlug;
@@ -1121,25 +1205,42 @@
         demonVariantState.selectedByBase[variantBase] = trigger.dataset.treeNodeName;
 
         if (variantBase === "Sin Demon") {
-          pairedVariant = getMatchingDemonVariant("Demon Lord", trigger.dataset.treeNodeName);
-
-          if (
-            demonVariantState.selectedByBase["Demon Lord"] &&
-            demonVariantState.selectedByBase["Demon Lord"] !== pairedVariant
-          ) {
-            demonVariantState.selectedByBase["Demon Lord"] = "";
-          }
+          pairedVariant = getMatchingVariant("Demon Lord", trigger.dataset.treeNodeName);
+          demonVariantState.selectedByBase["Demon Lord"] = pairedVariant;
         }
 
         if (variantBase === "Demon Lord") {
           demonVariantState.selectedByBase["Sin Demon"] =
-            getMatchingDemonVariant("Sin Demon", trigger.dataset.treeNodeName);
+            getMatchingVariant("Sin Demon", trigger.dataset.treeNodeName);
         }
 
         demonVariantState.expandedBase = "";
       } else if (trigger.dataset.treeNodeName === variantBase) {
         demonVariantState.expandedBase =
           demonVariantState.expandedBase === variantBase ? "" : variantBase;
+        renderCurrentView();
+        return;
+      }
+    }
+
+    if (line.slug === "angel-line" && variantBase) {
+      if (variantOption) {
+        angelVariantState.selectedByBase[variantBase] = trigger.dataset.treeNodeName;
+
+        if (variantBase === "Virtue") {
+          pairedVariant = getMatchingVariant("Principality", trigger.dataset.treeNodeName);
+          angelVariantState.selectedByBase.Principality = pairedVariant;
+        }
+
+        if (variantBase === "Principality") {
+          angelVariantState.selectedByBase.Virtue =
+            getMatchingVariant("Virtue", trigger.dataset.treeNodeName);
+        }
+
+        angelVariantState.expandedBase = "";
+      } else if (trigger.dataset.treeNodeName === variantBase) {
+        angelVariantState.expandedBase =
+          angelVariantState.expandedBase === variantBase ? "" : variantBase;
         renderCurrentView();
         return;
       }
@@ -1161,6 +1262,18 @@
       selectedNodeKey === nextSelectionKey
     ) {
       demonVariantState.expandedBase = variantBase;
+      renderCurrentView();
+      return;
+    }
+
+    if (
+      line.slug === "angel-line" &&
+      variantBase &&
+      !variantOption &&
+      trigger.dataset.treeNodeName === getAngelVariantSelection(variantBase) &&
+      selectedNodeKey === nextSelectionKey
+    ) {
+      angelVariantState.expandedBase = variantBase;
       renderCurrentView();
       return;
     }
