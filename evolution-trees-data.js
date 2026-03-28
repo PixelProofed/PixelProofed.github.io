@@ -16,8 +16,14 @@ window.evolutionTreeData = [
     name: "Goblin Line",
     shortName: "Goblin",
     paths: [
-      ["Goblin", "Hobgoblin", "Hobgoblin Lord", "Oni"],
+      ["Goblin", "Hobgoblin", "Bugbear", "Ettin"],
+      ["Goblin", "Hobgoblin", "Bugbear", "Ogre"],
       ["Goblin", "Hobgoblin", "Orc", "Ogre"],
+      ["Goblin", "Goblin Shaman", "Goblin Mage", "Oni"],
+      ["Goblin", "Goblin Shaman", "Goblin Scrapper", "Oni"],
+      ["Goblin", "Goblin Tinker", "Goblin Scrapper", "Oni"],
+      ["Goblin", "Gremlin", "Goblin Scrapper", "Oni"],
+      ["Goblin", "Gremlin", "Boggart", "Bogeyman"],
     ],
   },
   {

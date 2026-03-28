@@ -46,13 +46,28 @@ window.monsterGuideData = [
 
       ["Hobgoblin", "Born or First Evolution", "Common", ["Medium"], "A larger goblinoid that trades off speed and skittishness for raw strength and durability. Hobgoblins are more willing to fight directly than common goblins, often acting as bruisers, hunters, or the first to push into danger. They are not especially refined or disciplined, but they are meaner in a straight fight and harder to put down. Around lesser goblinoids, they often bully, intimidate, or take what they want through force.", "- **Pack Hunter** - Increases a chosen stat when fighting alongside other goblinoids, 10% per ally, up to 30%."],
 
-      ["Hobgoblin Lord", "Born or Second Evolution", "Rare", ["Medium"], "A rarer and more imposing goblinoid species born with greater size, presence, and physical ability than common hobgoblins. They are often more assertive, confrontational, and harder to cow than lesser goblinoids, which can make them stand out early even before they become truly powerful. A young Hobgoblin Lord may be little more than a rough, oversized goblinoid, while an older one would be a serious centerpiece in any goblinoid group.", "- **Iron Discipline** - Provides self and allies within 5m a 1d2 resistance to all Influence and Control debuffs."],
-
-      ["Oni", "Born or Third Evolution", "Very Rare", ["Medium"], "A tall goblinoid species with a humanoid build, known for its aggression, presence, and unusually developed culture compared to lesser goblinoids. Their horns vary between individuals in size, shape, and number, and are one of the clearest signs of the species. Oni are still violent by nature and quick to meet force with force, but they are not merely tribal brutes, often forming more stable social structures and systems of hierarchy.", "- **Elemental Resistance** - Reduces damage taken from elemental sources by 50%."],
-      
       ["Orc", "Born or Second Evolution", "Very Uncommon", ["Large"], "A tusked goblinoid known for their brutality, aggression, and overwhelming physical force. Orcs commonly place themselves above goblins and hobgoblins in the local hierarchy, ruling through fear and violence while treating weaker goblinoids as labor, fodder, or property. They are cruel, territorial, and quick to answer resistance with open force, making them a constant threat wherever they take hold. When orcs gather in number, they tend to form harsh groups built around strength, control, and the steady abuse of anything beneath them.", "- **Brutal Strength** - Increased damage by 30% with blunt melee weapons."],
 
       ["Ogre", "Born or Third Evolution", "Rare", ["Large"], "Defined by raw physical power and a crude but dangerous kind of persistence. Ogres are often less disciplined than orcs or hobgoblins, relying on reach, weight, and brute force to crush whatever is in front of them. They may seem slow-witted, but that should not be mistaken for harmlessness, especially when angered or cornered. Even a poorly armed ogre is a serious threat simply because it hits hard enough to break men, walls, and formations.", "- **Staggering Blow** - 1d3 chance to inflict Stun 1 on an enemy for 1 turn from any melee attack, once per enemy."],
+
+
+      ["Bugbear", "Born", "Very Common", ["Small"], "---", "- **Spoilsport** - Once per enemy, the bugbear may immediately end any ongoing skill being used by landing a hit on them."], 
+      ["Ettin", "Born", "Very Common", ["Small"], "---", "- **Redundant Will** - If hit with Stun, Dizzy, Blind, Silence, or any Influence debuff, one head will take it, while the body remains active under the other head’s control. Only one debuff can be soaked at a time."], 
+
+      ["Goblin Picker", "Born", "Very Common", ["Small"], "---", "- **Herbalist** - Pickers spend their time picking through the terrain, grabbing anything that looks like it might do things in a cauldron. Rank faster in Gathering."],      
+
+      ["Goblin Shaman", "Born", "Very Common", ["Small"], "---", "- **Potion Brewer** - Shamans have gotten deep into the craft of potion-making. Rank faster in Alchemy. "], 
+
+      ["Goblin Tinker", "Born", "Very Common", ["Small"], "---", "- **Craftsman** - Tinkers take particularly well to craftsman ship, each having something they excel in. Rank faster in Smithing."], 
+
+      ["Goblin Scrapper", "Born", "Very Common", ["Small"], "---", "- **Trapwright** - Scrappers have long been stealing the secrets of the Kobolds, leeching off their skills. Access to full Scavenger profession."], 
+
+      ["Gremlin", "Born", "Very Common", ["Small"], "---", "- **Skulk** - If the Gremlin ends their turn outside of direct attention, they are treated as hidden they act again or are directly revealed by someone."], 
+      ["Boggart", "Born", "Very Common", ["Small"], "---", "- **Blindside** - The first harmful action the Boggart takes per enemy that is not paying attention to it will deal 20% more damage."], 
+      ["Bogeyman", "Born", "Very Common", ["Small"], "---", "- **Eyes Off** - Once per Bogeyman's turn, a creature that has not directly observerd the Bogeyman since the beginning of their last turn cannot make reactions against it."], 
+
+      ["Oni", "Born or Third Evolution", "Very Rare", ["Medium"], "A tall goblinoid species with a humanoid build, known for its aggression, presence, and unusually developed culture compared to lesser goblinoids. Their horns vary between individuals in size, shape, and number, and are one of the clearest signs of the species. Oni are still violent by nature and quick to meet force with force, but they are not merely tribal brutes, often forming more stable social structures and systems of hierarchy.", "- **Elemental Resistance** - Reduces damage taken from elemental sources by 50%."],
+      
     ],
   },
   {
