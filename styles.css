@@ -816,8 +816,7 @@ color: var(--text-soft);
   width: 100%;
   margin-top: 0.75rem;
   position: relative;
-  overflow: hidden;
-  overflow-y: visible;
+  overflow: visible;
 }
 
 .tree-diagram-scale {
