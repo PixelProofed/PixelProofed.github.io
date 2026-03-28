@@ -87,6 +87,10 @@
       return false;
     }
 
+    if (element.classList && element.classList.contains("menu-button")) {
+      return false;
+    }
+
     children = element.children;
 
     for (index = 0; index < children.length; index += 1) {

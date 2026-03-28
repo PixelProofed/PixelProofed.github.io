@@ -964,6 +964,9 @@ color: var(--text-soft);
 }
 
 .menu-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid var(--line);
   background: var(--bg-strong);
   color: var(--text);
@@ -972,6 +975,8 @@ color: var(--text-soft);
   padding: 0.7rem 1rem;
   font: inherit;
   font-weight: 700;
+  line-height: 1;
+  text-align: center;
 }
 
 .backdrop {
@@ -1097,8 +1102,11 @@ color: var(--text-soft);
   }
 
   .menu-button {
-    min-height: 2.55rem;
-    padding: 0.58rem 0.9rem;
+    min-height: 2.15rem;
+    min-width: 4.25rem;
+    padding: 0.35rem 0.82rem;
+    border-radius: 0.95rem;
+    font-size: 0.95rem;
   }
 
   h1 {
