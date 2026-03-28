@@ -702,9 +702,11 @@
     var scaleLayer = target.querySelector("[data-tree-scale]");
     var lineSvg = target.querySelector("[data-tree-lines]");
     var nodesLayer = target.querySelector("[data-tree-nodes]");
+    var compactConnectorLayout = false;
 
     renderStageHeadings(stageHeadings);
     layoutTree(tree, availableWidth || diagramWrap);
+    compactConnectorLayout = (diagramWrap.clientWidth || availableWidth || tree.width) <= 640;
 
     diagram.style.width = tree.width + "px";
     diagram.style.height = tree.height + "px";
@@ -722,7 +724,11 @@
       var startY = fromNode.layoutY;
       var endX = toNode.layoutX;
       var endY = toNode.layoutY;
-      var branchX = startX + Math.min(22, Math.max(14, (endX - startX) / 2));
+      var connectorGap = endX - startX;
+      var branchOffset = compactConnectorLayout
+        ? connectorGap / 2
+        : Math.min(22, Math.max(14, connectorGap / 2));
+      var branchX = startX + Math.max(6, Math.min(connectorGap - 6, branchOffset));
       var isActive = isEdgeActive(edge, line, tree);
 
       addSegment(startX, startY, branchX, startY, isActive);
