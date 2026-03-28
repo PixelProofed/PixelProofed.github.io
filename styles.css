@@ -259,7 +259,7 @@ h2 {
 }
 
 .hero__text {
-  max-width: none;
+  max-width: 90%;
 }
 
 .page-intro__text {
@@ -664,6 +664,30 @@ color: var(--text-soft);
     var(--bg-strong);
   background-attachment: fixed;
   backdrop-filter: none;
+}
+
+.tree-selection p {
+  font-size:0.75em;
+}
+
+.tree-selection__traits {
+  margin-top: 1rem;
+}
+
+.tree-selection__trait-list {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.tree-selection__trait-copy {
+  color: var(--text-soft);
+  font-size: 0.75rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.tree-selection__trait-copy strong {
+  color: var(--accent);
 }
 
 .tree-selected-grid {

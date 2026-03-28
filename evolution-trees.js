@@ -10,6 +10,7 @@
   var chartContent = document.querySelector("[data-tree-chart-content]");
   var selectionTitle = document.querySelector("[data-tree-selection-title]");
   var selectionCopy = document.querySelector("[data-tree-selection-copy]");
+  var selectionTraits = document.querySelector("[data-tree-selection-traits]");
   var selectionCards = document.querySelector("[data-tree-selected-cards]");
   var stageLabels = ["Origin", "First Stage", "Second Stage", "Third Stage"];
   var monsterCardUtils = window.monsterCardUtils || {};
@@ -816,9 +817,66 @@
     selectionTitle.textContent = title;
     selectionCopy.textContent = copy;
 
+    if (selectionTraits) {
+      selectionTraits.innerHTML = "";
+    }
+
     if (textFormatter.apply) {
       textFormatter.apply(selectionTitle.parentNode);
     }
+  }
+
+  function formatSelectionTraitHtml(value) {
+    if (textFormatter.formatBlockHtml) {
+      return textFormatter.formatBlockHtml(value || "---");
+    }
+
+    return escapeHtml(value || "---");
+  }
+
+  function stripInheritedTraitSummary(value) {
+    var lines = String(value || "")
+      .replace(/\r\n/g, "\n")
+      .replace(/\r/g, "\n")
+      .split(/\\n|\/n|\n/g)
+      .filter(function (line) {
+        return !/^\s*-\s+\*\*Traits From /.test(line.trim());
+      });
+
+    return lines.join("\n").trim() || "---";
+  }
+
+  function renderSelectionTraitSummary(line, pathIndex, stepIndex) {
+    var logicalPath;
+    var path;
+    var markup = "";
+    var index;
+
+    if (!selectionTraits) {
+      return;
+    }
+
+    logicalPath = line.paths[pathIndex].slice(0, stepIndex + 1);
+    path = getDisplayPath(line, pathIndex, stepIndex);
+
+    markup += '<div class="tree-selection__trait-list">';
+
+    for (index = 0; index < path.length; index += 1) {
+      var monster =
+        getMonster(line.slug, path[index]) ||
+        getMonster(line.slug, logicalPath[index]) || {
+          name: path[index],
+          traits: "---",
+        };
+
+      markup +=
+        '<div class="tree-selection__trait-copy" data-format-skip="true">' +
+        formatSelectionTraitHtml(stripInheritedTraitSummary(monster.traits || "---")) +
+        "</div>";
+    }
+
+    markup += "</div>";
+    selectionTraits.innerHTML = markup;
   }
 
   function renderSelectionDetails(line, pathIndex, stepIndex) {
@@ -827,6 +885,7 @@
 
     selectionTitle.textContent = title + " Path";
     selectionCopy.textContent = path.join(" -> ");
+    renderSelectionTraitSummary(line, pathIndex, stepIndex);
 
     if (textFormatter.apply) {
       textFormatter.apply(selectionTitle.parentNode);
