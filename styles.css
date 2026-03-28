@@ -785,8 +785,8 @@ color: var(--text-soft);
 .tree-workspace.is-all-view .tree-selection {
   position: sticky;
   top: 1.5rem;
-  max-height: calc(100vh - 3rem);
-  overflow: auto;
+  max-height: none;
+  overflow: visible;
 }
 
 .tree-stage-headings {
