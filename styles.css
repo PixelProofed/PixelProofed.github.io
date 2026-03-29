@@ -1137,6 +1137,14 @@ color: var(--text-soft);
     font-size: 0.9rem;
   }
 
+  .quick-links {
+    margin-bottom: 0.5rem;
+  }
+
+  .monster-line-hero {
+    margin-bottom: 0.75rem;
+  }
+
   .sidebar {
     width: min(20rem, 90vw);
   }
