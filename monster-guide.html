@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=2026-03-28-2" />
   </head>
   <body data-page="monster-guide">
     <div class="site-shell">
@@ -35,6 +35,21 @@
 
         <section class="page-intro" data-monster-intro>
           <h1>MONSTER GUIDE</h1>
+        </section>
+
+        <section class="monster-search" data-monster-search>
+          <div class="monster-search__field">
+            <input
+              class="monster-search__input"
+              type="search"
+              id="monster-search-input"
+              data-monster-search-input
+              placeholder="Type any part of a monster name..."
+              aria-label="Search monsters"
+              autocomplete="off"
+              spellcheck="false"
+            />
+          </div>
         </section>
 
         <section class="quick-links">
@@ -117,12 +132,19 @@
         var introSection = document.querySelector("[data-monster-intro]");
         var overviewSection = document.querySelector("[data-monster-overview]");
         var detailSection = document.querySelector("[data-monster-detail]");
+        var searchSection = document.querySelector("[data-monster-search]");
+        var searchInput = document.querySelector("[data-monster-search-input]");
+        var lineHero = detailSection ? detailSection.querySelector(".monster-line-hero") : null;
         var currentLabel = document.querySelector("[data-monster-current-label]");
         var currentTitle = document.querySelector("[data-monster-current-title]");
         var currentSubtext = document.querySelector("[data-monster-current-subtext]");
         var currentCount = document.querySelector("[data-monster-current-count]");
         var monsterCards = document.querySelector("[data-monster-cards]");
         var hashTargets = document.querySelectorAll("[data-hash-target]");
+
+        function normalizeSearchValue(value) {
+          return String(value || "").trim().toLowerCase();
+        }
 
         function getLine(slug) {
           var index;
@@ -140,6 +162,26 @@
           return null;
         }
 
+        function getAllMonsters() {
+          var monsters = [];
+          var lineIndex;
+          var monsterIndex;
+
+          if (!data || !data.length) {
+            return monsters;
+          }
+
+          for (lineIndex = 0; lineIndex < data.length; lineIndex += 1) {
+            var line = data[lineIndex];
+
+            for (monsterIndex = 0; monsterIndex < line.monsters.length; monsterIndex += 1) {
+              monsters.push(line.monsters[monsterIndex]);
+            }
+          }
+
+          return monsters;
+        }
+
         function setActiveLink(slug) {
           var index;
 
@@ -149,18 +191,13 @@
           }
         }
 
-        function renderLine(line) {
+        function renderMonsterList(monsters) {
           var markup = "";
-          currentTitle.textContent = line.name;
-          currentSubtext.textContent = "---";
-          currentCount.textContent = line.monsters.length + " Entries";
-
           var index;
 
-          for (index = 0; index < line.monsters.length; index += 1) {
-            var monster = line.monsters[index];
+          for (index = 0; index < monsters.length; index += 1) {
             if (monsterCardUtils.buildMonsterCardMarkup) {
-              markup += monsterCardUtils.buildMonsterCardMarkup(monster);
+              markup += monsterCardUtils.buildMonsterCardMarkup(monsters[index]);
             }
           }
 
@@ -170,11 +207,49 @@
           }
         }
 
+        function renderLine(line) {
+          if (lineHero) {
+            lineHero.hidden = false;
+            lineHero.style.display = "";
+          }
+          currentTitle.textContent = line.name;
+          currentSubtext.textContent = "---";
+          currentCount.textContent = line.monsters.length + " Entries";
+          renderMonsterList(line.monsters);
+        }
+
+        function renderSearchResults(query) {
+          var normalizedQuery = normalizeSearchValue(query);
+          var matches = getAllMonsters().filter(function (monster) {
+            return normalizeSearchValue(monster.name).indexOf(normalizedQuery) !== -1;
+          });
+
+          setActiveLink("");
+          overviewSection.hidden = true;
+          overviewSection.style.display = "none";
+          detailSection.hidden = false;
+          detailSection.style.display = "block";
+          if (lineHero) {
+            lineHero.hidden = true;
+            lineHero.style.display = "none";
+          }
+          currentTitle.textContent = "Search Results";
+          currentSubtext.textContent = normalizedQuery
+            ? 'Showing monsters matching "' + query.trim() + '".'
+            : "---";
+          currentCount.textContent = matches.length + (matches.length === 1 ? " Match" : " Matches");
+          renderMonsterList(matches);
+        }
+
         function showOverview() {
           if (!overviewSection || !detailSection || !introSection) {
             return;
           }
 
+          if (lineHero) {
+            lineHero.hidden = false;
+            lineHero.style.display = "";
+          }
           setActiveLink("overview");
           overviewSection.hidden = false;
           overviewSection.style.display = "grid";
@@ -200,6 +275,12 @@
 
         function syncFromHash() {
           var slug = window.location.hash.replace(/^#/, "");
+          var searchValue = searchInput ? normalizeSearchValue(searchInput.value) : "";
+
+          if (searchValue) {
+            renderSearchResults(searchInput.value);
+            return;
+          }
 
           if (!slug || slug === "monster-overview") {
             showOverview();
@@ -207,6 +288,17 @@
           }
 
           showLine(slug);
+        }
+
+        function syncFromSearch() {
+          var query = searchInput ? searchInput.value : "";
+
+          if (normalizeSearchValue(query)) {
+            renderSearchResults(query);
+            return;
+          }
+
+          syncFromHash();
         }
 
         if (!data || !data.length) {
@@ -239,8 +331,13 @@
             }
 
             window.location.hash = slug;
-            showLine(slug);
+            syncFromHash();
           });
+        }
+
+        if (searchInput) {
+          searchInput.addEventListener("input", syncFromSearch);
+          searchInput.addEventListener("search", syncFromSearch);
         }
 
         syncFromHash();
