@@ -13,6 +13,13 @@
     DD: true,
     SPAN: true,
   };
+  var inlinePreservedTags = {
+    A: true,
+    BR: true,
+    EM: true,
+    SPAN: true,
+    STRONG: true,
+  };
 
   function escapeHtml(value) {
     return String(value)
@@ -32,11 +39,40 @@
     return html;
   }
 
-  function formatBlockHtml(value) {
+  function trimEmptyOuterLines(lines) {
+    var startIndex = 0;
+    var endIndex = lines.length - 1;
+
+    while (startIndex <= endIndex && !lines[startIndex].trim()) {
+      startIndex += 1;
+    }
+
+    while (endIndex >= startIndex && !lines[endIndex].trim()) {
+      endIndex -= 1;
+    }
+
+    return lines.slice(startIndex, endIndex + 1);
+  }
+
+  function formatBlockHtmlWithReplacements(value, replacements) {
     var lines = String(value || "")
       .replace(/\r\n/g, "\n")
       .replace(/\r/g, "\n")
       .split(/\\n|\/n|\n/g);
+    var map = replacements || {};
+
+    function applyReplacements(html) {
+      var keys = Object.keys(map);
+      var keyIndex;
+
+      for (keyIndex = 0; keyIndex < keys.length; keyIndex += 1) {
+        html = html.split(keys[keyIndex]).join(map[keys[keyIndex]]);
+      }
+
+      return html;
+    }
+
+    lines = trimEmptyOuterLines(lines);
 
     return lines
       .map(function (line) {
@@ -47,12 +83,16 @@
         }
 
         if (/^- /.test(trimmed)) {
-          return "&#8226; " + formatInlineHtml(trimmed.replace(/^- /, ""));
+          return applyReplacements("&#8226; " + formatInlineHtml(trimmed.replace(/^- /, "")));
         }
 
-        return formatInlineHtml(trimmed);
+        return applyReplacements(formatInlineHtml(trimmed));
       })
       .join("<br>");
+  }
+
+  function formatBlockHtml(value) {
+    return formatBlockHtmlWithReplacements(value);
   }
 
   function extractRawText(element) {
@@ -75,6 +115,36 @@
     return raw;
   }
 
+  function formatRichTextHtml(element) {
+    var raw = "";
+    var replacements = {};
+    var nodeIndex;
+
+    for (nodeIndex = 0; nodeIndex < element.childNodes.length; nodeIndex += 1) {
+      var node = element.childNodes[nodeIndex];
+
+      if (node.nodeType === Node.TEXT_NODE) {
+        raw += node.nodeValue;
+        continue;
+      }
+
+      if (node.nodeType !== Node.ELEMENT_NODE) {
+        continue;
+      }
+
+      if (node.tagName === "BR") {
+        raw += "\n";
+        continue;
+      }
+
+      var token = "__HTML_TOKEN_" + nodeIndex + "__";
+      replacements[token] = node.outerHTML;
+      raw += token;
+    }
+
+    return formatBlockHtmlWithReplacements(raw, replacements);
+  }
+
   function isLeafFormatTarget(element) {
     var children;
     var index;
@@ -94,6 +164,13 @@
     children = element.children;
 
     for (index = 0; index < children.length; index += 1) {
+      if (
+        (element.tagName === "P" || element.tagName === "LI" || element.tagName === "DD") &&
+        inlinePreservedTags[children[index].tagName]
+      ) {
+        continue;
+      }
+
       if (children[index].tagName !== "BR") {
         return false;
       }
@@ -124,6 +201,14 @@
       raw = extractRawText(node);
 
       if (!raw || !raw.trim()) {
+        continue;
+      }
+
+      if (
+        (node.tagName === "P" || node.tagName === "LI" || node.tagName === "DD") &&
+        node.children.length
+      ) {
+        node.innerHTML = formatRichTextHtml(node);
         continue;
       }
 

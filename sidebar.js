@@ -9,6 +9,7 @@
   var sharedNav = [
     { slug: "home", href: "index.html", label: "Home" },
     { slug: "setting", href: "setting.html", label: "Setting" },
+    { slug: "starter-guide", href: "starter-guide.html", label: "Starter Guide" },
     { slug: "monster-guide", href: "monster-guide.html", label: "Monster Guide" },
     { slug: "bot-info", href: "bot-info.html", label: "Bot Info" },
   ];
@@ -52,6 +53,7 @@
   var monsterIndex = {
     label: "Monster Index",
     links: [
+      { href: "evolution-trees.html", label: "Evolution Trees" },
       { href: "#monster-overview", label: "Overview", attrs: ' data-hash-target="overview"' },
       { href: "#undead-line", label: "Undead Line", attrs: ' data-hash-target="undead-line"' },
       { href: "#goblin-line", label: "Goblin Line", attrs: ' data-hash-target="goblin-line"' },
@@ -75,6 +77,18 @@
       { href: "#equine-line", label: "Equine Line", attrs: ' data-hash-target="equine-line"' },
       { href: "#primate-line", label: "Primate Line", attrs: ' data-hash-target="primate-line"' },
       { href: "#non-evo-monsters", label: "Non-Evo Monsters", attrs: ' data-hash-target="non-evo-monsters"' },
+    ],
+  };
+
+  var starterGuideIndex = {
+    label: "Starter Guide",
+    links: [
+      { href: "starter-guide.html", label: "Overview" },
+      { href: "starter-stats.html", label: "Stats" },
+      { href: "starter-traits.html", label: "Traits" },
+      { href: "starter-skills.html", label: "Skills" },
+      { href: "starter-races.html", label: "Races" },
+      { href: "monster-guide.html", label: "Monsters" },
     ],
   };
 
@@ -121,6 +135,11 @@
       eyebrow: "Welcome to",
       title: "New Game Plus",
       section: settingIndex,
+    },
+    "starter-guide": {
+      eyebrow: "Welcome to",
+      title: "New Game Plus",
+      section: starterGuideIndex,
     },
     "monster-guide": {
       eyebrow: "Testing",
