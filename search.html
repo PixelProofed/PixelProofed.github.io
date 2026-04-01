@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>New Game Plus | Search</title>
+    <meta
+      name="description"
+      content="Search across New Game Plus guide pages by page name and page contents."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=2026-04-01-1" />
+  </head>
+  <body data-page="search" data-sidebar="home">
+    <div class="site-shell">
+      <div data-sidebar-root></div>
+
+      <main class="content">
+        <header class="topbar">
+          <button
+            class="menu-button"
+            type="button"
+            id="menu-button"
+            aria-expanded="false"
+            aria-controls="sidebar"
+          >
+            Menu
+          </button>
+        </header>
+
+        <section class="search-workspace">
+          <article class="card search-panel">
+            <p class="card__label">Search</p>
+            <h2 data-search-query-label>Search Results</h2>
+
+            <form class="search-query-form" data-search-results-form>
+              <div class="site-search site-search--page">
+                <div class="site-search__field">
+                  <input
+                    class="site-search__input"
+                    type="search"
+                    name="q"
+                    data-search-results-query
+                    placeholder="Search page names, contents, or both..."
+                    autocomplete="off"
+                    spellcheck="false"
+                  />
+                </div>
+              </div>
+
+              <div class="search-filters">
+                <label class="search-filter">
+                  <input type="checkbox" data-search-filter-title />
+                  <span>Page Name</span>
+                </label>
+                <label class="search-filter">
+                  <input type="checkbox" data-search-filter-content />
+                  <span>Page Contents</span>
+                </label>
+              </div>
+            </form>
+          </article>
+
+
+        </section>
+
+        <section class="search-results">
+          <div class="search-results__header">
+            <p class="card__label">Results</p>
+            <span class="monster-count-pill" data-search-results-count>0 Results</span>
+          </div>
+
+          <div class="search-results__empty card" data-search-results-empty>
+Enter a query above to search across the guide pages.
+          </div>
+
+          <div class="search-results__list" data-search-results-list></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="formatter.js?v=2026-03-30-1"></script>
+    <script src="sidebar.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

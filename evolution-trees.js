@@ -149,6 +149,57 @@
     return null;
   }
 
+  function getRequestedMonsterName() {
+    var params = new URLSearchParams(window.location.search);
+    return params.get("monster") || "";
+  }
+
+  function findSelectionForMonster(line, monsterName) {
+    var normalizedTarget = String(monsterName || "").trim().toLowerCase();
+    var pathIndex;
+    var stepIndex;
+
+    if (!line || !normalizedTarget) {
+      return "";
+    }
+
+    for (pathIndex = 0; pathIndex < line.paths.length; pathIndex += 1) {
+      for (stepIndex = 0; stepIndex < line.paths[pathIndex].length; stepIndex += 1) {
+        if (String(line.paths[pathIndex][stepIndex] || "").trim().toLowerCase() === normalizedTarget) {
+          return line.slug + ":" + pathIndex + ":" + stepIndex;
+        }
+      }
+    }
+
+    return "";
+  }
+
+  function findLineForMonster(monsterName) {
+    var normalizedTarget = String(monsterName || "").trim().toLowerCase();
+    var lineIndex;
+    var pathIndex;
+    var stepIndex;
+
+    if (!normalizedTarget) {
+      return null;
+    }
+
+    for (lineIndex = 0; lineIndex < treeData.length; lineIndex += 1) {
+      for (pathIndex = 0; pathIndex < treeData[lineIndex].paths.length; pathIndex += 1) {
+        for (stepIndex = 0; stepIndex < treeData[lineIndex].paths[pathIndex].length; stepIndex += 1) {
+          if (
+            String(treeData[lineIndex].paths[pathIndex][stepIndex] || "").trim().toLowerCase() ===
+            normalizedTarget
+          ) {
+            return treeData[lineIndex];
+          }
+        }
+      }
+    }
+
+    return null;
+  }
+
   function getLineDetails(slug) {
     var index;
 
@@ -1177,12 +1228,24 @@
   function syncFromHash() {
     var hash = window.location.hash.replace("#", "");
     var line = getLine(hash);
+    var requestedMonster = getRequestedMonsterName();
 
     selectedNodeKey = "";
     demonVariantState.expandedBase = "";
     angelVariantState.expandedBase = "";
 
     if (hash === allViewSlug || !hash) {
+      if (requestedMonster) {
+        line = findLineForMonster(requestedMonster);
+
+        if (line) {
+          currentLineSlug = line.slug;
+          selectedNodeKey = findSelectionForMonster(line, requestedMonster);
+          renderSingleLineView(line);
+          return;
+        }
+      }
+
       currentLineSlug = allViewSlug;
       renderAllView();
       return;
@@ -1190,6 +1253,9 @@
 
     if (line) {
       currentLineSlug = line.slug;
+      if (requestedMonster) {
+        selectedNodeKey = findSelectionForMonster(line, requestedMonster);
+      }
       renderSingleLineView(line);
       return;
     }

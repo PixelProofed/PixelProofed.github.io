@@ -4,21 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>New Game Plus | Skills</title>
-    <meta name="description" content="Starter Guide reference page for skills." />
+    <meta
+      name="description"
+      content="Starter Guide overview page for skills and the related rules pages."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=2026-03-30-2" />
+    <link rel="stylesheet" href="styles.css?v=2026-04-01-1" />
   </head>
-  <body data-page="starter-guide">
+  <body data-page="starter-guide" data-sidebar="starter-skills">
     <div class="site-shell">
       <div data-sidebar-root></div>
+
       <main class="content">
         <header class="topbar">
-          <button class="menu-button" type="button" id="menu-button" aria-expanded="false" aria-controls="sidebar">Menu</button>
+          <button
+            class="menu-button"
+            type="button"
+            id="menu-button"
+            aria-expanded="false"
+            aria-controls="sidebar"
+          >
+            Menu
+          </button>
         </header>
 
         <section class="page-intro">
@@ -31,28 +43,210 @@
 
         <section class="starter-links">
           <div class="starter-links__row">
-            <a href="starter-guide.html">Overview</a>
-            <a href="starter-stats.html">Stats</a>
-            <a href="starter-traits.html">Traits</a>
-            <a href="starter-skills.html">Skills</a>
-            <a href="starter-races.html">Races</a>
-            <a href="monster-guide.html">Monsters</a>
+            <a href="skill-examples.html">Skill Examples</a>
+            <a href="buffs.html">Buffs</a>
+            <a href="debuffs.html">Debuffs</a>
+            <a href="magic.html">Magic</a>
+            <a href="charisma-actions.html">Charisma Actions</a>
           </div>
         </section>
 
-        <section class="topic-grid">
-          <article class="topic-card">
-            <p class="card__label">Skills</p>
-            <h2>---</h2>
-            <p>
+        <section class="monster-overview-grid">
+          <article class="card monster-overview-card monster-overview-card--lead">
+            <div class="monster-guide-notes">
+              <section class="monster-guide-note">
+                <button
+                  class="monster-guide-note__toggle"
+                  type="button"
+                  data-starter-skills-note-toggle
+                  aria-expanded="true"
+                >
+                  <span>Skill Overview</span>
+                </button>
+                <div class="monster-guide-note__content" data-starter-skills-note-content>
+                  <p>
+Skills are active abilities enforced by the system. They are not general actions, broad talents, or passive qualities. A skill is something a character deliberately uses, more like a named technique or special move than a flexible form of control. In simple terms, think Fireball, not fire control.
+
+Because of that, skills are meant to be narrow and specific. A skill should usually be one clear action, or at most a small sequence of actions tied together into a single use. They are not meant to cover an entire fighting style, an entire school of magic, or a constant state of enhancement. If something is written as passive, ongoing, or innate, it is not a skill.
+
+Every skill should make sense for the character who has it. For most characters, starting skills should be relatively basic and fit the life they have actually lived up to that point. A young fighter might begin with a lunging strike, a hunter with a precise shot, and a novice mage with a simple elemental attack. Starting skills should feel like techniques a character could reasonably know at the beginning of play, not fully developed signature arts.
+
+Transmigrators are the one exception. Their first skill is granted by Siras on arrival, which allows it to be a little stranger, more game-like, or more system-oriented than normal. These starting skills do not have to be stronger, but they can include ideas often associated with isekai protagonists, such as Appraisal, Mini-Map, or Inventory. That extra freedom only applies to the Transmigrator's starting skill, not to any skill they learn afterward.
+
+Monsters have one special exception of their own. Monsters can be born with skills, and may be born with a magic-based skill that makes sense for its species, even if it does not have the matching Affinity trait. This and Evolution Skills are the only ways for a monster without an affinity to gain a magic skill, outside of obtaining a dungeon scroll. Even then, it should remain basic, species-appropriate, and is limited to a single magic skill if the monster has no affinity.
+                  </p>
+                </div>
+              </section>
+
+              <section class="monster-guide-note">
+                <button
+                  class="monster-guide-note__toggle"
+                  type="button"
+                  data-starter-skills-note-toggle
+                  aria-expanded="false"
+                >
+                  <span>Skill Rules</span>
+                </button>
+                <div class="monster-guide-note__content" data-starter-skills-note-content hidden>
+                  <p>
+Every skill must have a defined effect and a defined cooldown. The minimum cooldown for any skill is 2 turns. A simple attack or utility skill will often sit at that minimum, while stronger or more disruptive effects should have longer cooldowns. As a general rule, the more powerful or useful a skill is, the longer its cooldown should be.
+
+Skills should not bypass the core systems in place. They should always leave room for counterplay, resistance, or normal defenses to matter. Armor is still armor, and a skill should never be written as an automatic success.
+
+If a skill applies something from the debuff system, its description should include both the rank of the debuff and how many turns it lasts.
+
+If a skill is entirely non-combative, it can potentially use time-based cooldowns instead of turn-based.
+
+//Basic Skill Format//
+**Skill Name**
+Skill Description. Cooldown of X turns.
+
+Skills may fall into broad categories such as Offensive, Defensive, Mobility, Utility, or Support, but category labels are only there to help organize ideas and do not have to be written into the skill itself.
+
+//What Skills Cannot Be//
+- Passive effects
+- All-encompassing powers
+- Instant kills
+- Uncounterable attacks
+- Permanent toggles with no defined end
+- Skills that steal or swap stats, traits, or skills
+- Skills that speed up learning
+- Skills that act as full crafting or enchanting systems
+- Skills that generate money or extra resources
+- Summoning skills or anything that creates life or some semblance of it.
+- Magic that falls outside the existing affinity types
+
+The existing affinities are Non-affinity, Fire, Water, Earth, Wind, Ice, Lightning, Nature, Illusion, Holy, and Shadow.
+
+                  </p>
+                </div>
+              </section>
+
+              <section class="monster-guide-note">
+                <button
+                  class="monster-guide-note__toggle"
+                  type="button"
+                  data-starter-skills-note-toggle
+                  aria-expanded="false"
+                >
+                  <span>Skill Structure</span>
+                </button>
+                <div class="monster-guide-note__content" data-starter-skills-note-content hidden>
+                  <p>
 ---
-            </p>
+                  </p>
+                </div>
+              </section>
+
+              <section class="monster-guide-note">
+                <button
+                  class="monster-guide-note__toggle"
+                  type="button"
+                  data-starter-skills-note-toggle
+                  aria-expanded="false"
+                >
+                  <span>Skill Milestones</span>
+                </button>
+                <div class="monster-guide-note__content" data-starter-skills-note-content hidden>
+                  <p>
+---
+                  </p>
+                </div>
+              </section>
+
+            
+            </div>
           </article>
+
+          <div class="monster-overview-side">
+            <article class="card monster-stat-card">
+              <p class="card__label">Skill Examples</p>
+              <p>
+---
+              </p>
+              <a class="text-link" href="skill-examples.html">Open skill examples</a>
+            </article>
+
+          </div>
         </section>
       </main>
     </div>
+
     <script src="formatter.js?v=2026-03-30-1"></script>
     <script src="sidebar.js"></script>
+    <script>
+      (function () {
+        function getStarterSkillsNoteStorageKey(toggle, index) {
+          var label = toggle ? toggle.textContent.trim().toLowerCase().replace(/\s+/g, "-") : "";
+          return "starter-skills-note:" + (label || String(index));
+        }
+
+        function readStarterSkillsNoteState(toggle, index) {
+          try {
+            return window.localStorage.getItem(getStarterSkillsNoteStorageKey(toggle, index));
+          } catch (error) {
+            return null;
+          }
+        }
+
+        function writeStarterSkillsNoteState(toggle, index, expanded) {
+          try {
+            window.localStorage.setItem(
+              getStarterSkillsNoteStorageKey(toggle, index),
+              expanded ? "open" : "closed",
+            );
+          } catch (error) {
+            return;
+          }
+        }
+
+        function setupStarterSkillsNotes() {
+          var toggles = document.querySelectorAll("[data-starter-skills-note-toggle]");
+          var toggleIndex;
+
+          for (toggleIndex = 0; toggleIndex < toggles.length; toggleIndex += 1) {
+            (function (toggle, index) {
+              var savedState = readStarterSkillsNoteState(toggle, index);
+              var content = toggle.parentNode.querySelector("[data-starter-skills-note-content]");
+              var expanded =
+                savedState === "open"
+                  ? true
+                  : savedState === "closed"
+                    ? false
+                    : index === 0
+                      ? true
+                      : toggle.getAttribute("aria-expanded") === "true";
+
+              toggle.setAttribute("aria-expanded", expanded ? "true" : "false");
+
+              if (content) {
+                content.hidden = !expanded;
+              }
+
+              toggle.addEventListener("click", function () {
+                var expanded = this.getAttribute("aria-expanded") === "true";
+                var content = this.parentNode.querySelector("[data-starter-skills-note-content]");
+                var nextExpanded = !expanded;
+
+                this.setAttribute("aria-expanded", nextExpanded ? "true" : "false");
+
+                if (content) {
+                  content.hidden = !nextExpanded;
+                }
+
+                writeStarterSkillsNoteState(this, index, nextExpanded);
+              });
+            })(toggles[toggleIndex], toggleIndex);
+          }
+        }
+
+        setupStarterSkillsNotes();
+
+        if (window.siteTextFormatter && window.siteTextFormatter.apply) {
+          window.siteTextFormatter.apply(document.body);
+        }
+      })();
+    </script>
     <script src="script.js"></script>
   </body>
 </html>

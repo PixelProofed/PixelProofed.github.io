@@ -92,6 +92,27 @@
     ],
   };
 
+  var starterSkillsIndex = {
+    label: "Skills Guide",
+    links: [
+      { href: "skill-examples.html", label: "Skill Examples" },
+      { href: "buffs.html", label: "Buffs" },
+      { href: "debuffs.html", label: "Debuffs" },
+      { href: "magic.html", label: "Magic" },
+      { href: "charisma-actions.html", label: "Charisma Actions" },
+    ],
+  };
+
+  var manaStonesIndex = {
+    label: "Related Pages",
+    links: [
+      { href: "monster-guide.html", label: "Monsters" },
+      { href: "adventurers-guild.html", label: "Adventurer's Guild" },
+      { href: "magic.html", label: "Magic" },
+      { href: "alchemy.html", label: "Alchemy" },
+    ],
+  };
+
   var treeIndex = {
     label: "Tree Index",
     links: [
@@ -140,6 +161,16 @@
       eyebrow: "Welcome to",
       title: "New Game Plus",
       section: starterGuideIndex,
+    },
+    "starter-skills": {
+      eyebrow: "Welcome to",
+      title: "New Game Plus",
+      section: starterSkillsIndex,
+    },
+    "mana-stones": {
+      eyebrow: "Welcome to",
+      title: "New Game Plus",
+      section: manaStonesIndex,
     },
     "monster-guide": {
       eyebrow: "Testing",

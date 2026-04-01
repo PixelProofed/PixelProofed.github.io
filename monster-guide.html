@@ -6,7 +6,7 @@
     <title>Pixel Proofed | Monster Guide</title>
     <meta
       name="description"
-      content="Reference page for monster evolution lines and non-evolution monsters."
+      content="New Game Plus"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=2026-03-28-2" />
+    <link rel="stylesheet" href="styles.css?v=2026-04-01-1" />
   </head>
   <body data-page="monster-guide">
     <div class="site-shell">
@@ -35,7 +35,7 @@
 
         <section class="page-intro" data-monster-intro>
           <p class="eyebrow">New Game Plus</p>
-          <h1>MONSTER GUIDE</h1>
+          <h1>Monster Guide</h1>
         </section>
 
         <section class="monster-search" data-monster-search>
@@ -381,6 +381,25 @@ When your monster character is evolving, you will submit an updated sheet with t
           showLine(slug);
         }
 
+        function syncSearchFromQueryParam() {
+          var params;
+          var monsterQuery;
+
+          if (!searchInput) {
+            return;
+          }
+
+          params = new URLSearchParams(window.location.search);
+          monsterQuery = params.get("monster") || "";
+
+          if (!monsterQuery) {
+            return;
+          }
+
+          searchInput.value = monsterQuery;
+          renderSearchResults(monsterQuery);
+        }
+
         function syncFromSearch() {
           var query = searchInput ? searchInput.value : "";
 
@@ -496,6 +515,7 @@ When your monster character is evolving, you will submit an updated sheet with t
         }
 
         setupMonsterNotes();
+        syncSearchFromQueryParam();
         syncFromHash();
         if (textFormatter.apply) {
           textFormatter.apply(document.body);
