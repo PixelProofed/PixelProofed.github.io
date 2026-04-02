@@ -4,18 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>New Game Plus | Races</title>
-    <meta name="description" content="Starter Guide reference page for races." />
+    <meta
+      name="description"
+      content="Starter Guide reference page for playable races, their traits, stat ceilings, and world roles."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=2026-04-01-1" />
+    <link rel="stylesheet" href="styles.css?v=2026-04-01-2" />
   </head>
   <body data-page="starter-guide">
     <div class="site-shell">
       <div data-sidebar-root></div>
+
       <main class="content">
         <header class="topbar">
           <button class="menu-button" type="button" id="menu-button" aria-expanded="false" aria-controls="sidebar">Menu</button>
@@ -24,33 +28,725 @@
         <section class="page-intro">
           <p class="eyebrow">Starter Guide</p>
           <h1>Races</h1>
----
-          </p>
+
         </section>
 
-        <section class="starter-links">
-          <div class="starter-links__row">
-            <a href="starter-guide.html">Overview</a>
-            <a href="starter-stats.html">Stats</a>
-            <a href="starter-traits.html">Traits</a>
-            <a href="starter-skills.html">Skills</a>
-            <a href="starter-races.html">Races</a>
-            <a href="monster-guide.html">Monsters</a>
-          </div>
-        </section>
+        <section class="monster-detail">
 
-        <section class="topic-grid">
-          <article class="topic-card">
-            <p class="card__label">Races</p>
-            <h2>---</h2>
-            <p>
----
-            </p>
-          </article>
+
+          <section class="race-card-grid">
+            <article class="card race-entry">
+              <header class="race-entry__header">
+                <h2>Human</h2>
+              </header>
+              <dl class="monster-entry__meta race-entry__meta">
+                <div class="monster-entry__meta-row">
+                  <dt>Region</dt>
+                  <dd>Balethorn</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Population</dt>
+                  <dd>High</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Starting Level</dt>
+                  <dd>10 Native / Reincarnated, 4 Transmigrated</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Max Stat Total</dt>
+                  <dd>600 Native / Reincarnated, 800 Transmigrated</dd>
+                </div>
+                <div class="monster-entry__meta-row monster-entry__meta-row--full">
+                  <dt>Racial Buff / Debuff</dt>
+                  <dd>N/A</dd>
+                </div>
+              </dl>
+              <div class="race-entry__grid">
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Description</p>
+                  <p>
+Humans are the most numerous and industrious race in the region, defined less by any singular natural gift than by their ability to build, organize, and expand faster than anyone around them. They are the only race not descended from monsters, and many take quiet pride in that fact, seeing themselves as the people who rose above the old age of monster dominance and claimed the world through labor, ambition, and persistence. Many also see themselves as the true race of the gods. 
+
+Even far from the great centers of power, their presence is felt in the steady spread of villages, roads, trade, and cultivated land, transforming places that once belonged more fully to Demihuman races into distinctly human territory. Humans have an innate knack for practical craft, trade, and knowledge, and that constant productivity is likely what makes their race so difficult to displace once they have settled in.
+                  </p>
+                </section>
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Innate Traits</p>
+                  <p>
+                    **Quick Study** - Humans learn physical skills fast. Require 1 less training thread to learn a physical skill.<br />
+                    **Craftsmanship** - Each Human tends to have a particular craft or practical field they
+                    take to especially well.
+                  </p>
+                </section>
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Weaknesses</p>
+                  <p>
+                    **Resource Dependence** - Without access to tools, technology, or resources, humans will always be at a disadvantage. <br />
+                    **Magic Ineptitude** - Humans have a deep ineptitude towards magic. Even with dungeon scrolls, it will take them longer to learn a magic skill than other races, requiring 5 training threads.
+                  </p>
+                </section>
+              </div>
+            </article>
+
+            <article class="card race-entry">
+              <header class="race-entry__header">
+                <h2>Beastkin</h2>
+              </header>
+              <dl class="monster-entry__meta race-entry__meta">
+                <div class="monster-entry__meta-row">
+                  <dt>Region</dt>
+                  <dd>Balethorn</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Population</dt>
+                  <dd>Medium</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Starting Level</dt>
+                  <dd>10</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Max Stat Total</dt>
+                  <dd>600</dd>
+                </div>
+                <div class="monster-entry__meta-row monster-entry__meta-row--full">
+                  <dt>Racial Buff / Debuff</dt>
+                  <dd>Choose +5% to one stat and -5% to another</dd>
+                </div>
+              </dl>
+              <div class="race-entry__grid">
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Description</p>
+                  <p>
+Beastkin are clan-bound demihumans whose bodies carry the traits of animals, giving them sharp instincts, heightened physical ability, and a way of life rooted more in survival and kinship than in formal civilization. Their communities tend to be close, practical, and self-sufficient, shaped by hunting, gathering, and the needs of the land around them. Different clans can look and act very differently depending on their lineage, but most share a strong loyalty to their own and a guarded attitude toward outsiders. 
+
+In the region, Beastkin are a familiar presence but rarely a comfortable one within human spaces, as long histories of exploitation and prejudice have made many of them wary, independent, and slow to trust anything that looks too much like control. Despite this history, Beastkin in the region have made strides towards carving a place for themself among the human presence, steadily pushing back against the predjudice and risk of kidnappings.
+                  </p>
+                </section>
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Innate Traits</p>
+                  <p>
+                    **Animal Instinct** - Heightened senses and reflexes make Beastkin naturally good at
+                    tracking, hunting, and reacting under pressure. <br />
+                    **Enhanced Physiology** - Depending on their specific lineage, Beastkin may have superior physical aspects. Choose a stat to add an extra 10% to.
+                  </p>
+                </section>
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Weaknesses</p>
+                  <p>
+                    **Social Stigma** - Beastkin often deal with prejudice or distrust in more human-dominant
+                    spaces, making it difficult to integrate or get by. <br />
+                    **Instinct Impulse** - Strong animal instincts may sometimes override rational thought and can push them towards very poor choices in the wrong moment.
+                  </p>
+                </section>
+              </div>
+            </article>
+
+            <article class="card race-entry">
+              <header class="race-entry__header">
+                <h2>Genasi</h2>
+              </header>
+              <dl class="monster-entry__meta race-entry__meta">
+                <div class="monster-entry__meta-row">
+                  <dt>Region</dt>
+                  <dd>Balethorn</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Population</dt>
+                  <dd>Very Low</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Starting Level</dt>
+                  <dd>9</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Max Stat Total</dt>
+                  <dd>700</dd>
+                </div>
+                <div class="monster-entry__meta-row monster-entry__meta-row--full">
+                  <dt>Racial Buff / Debuff</dt>
+                  <dd>+10% Intellect, -10% Strength</dd>
+                </div>
+              </dl>
+              <div class="race-entry__grid">
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Description</p>
+                  <p>
+Genasi are rare demihumans marked by elemental lineage, with bodies and temperaments shaped by fire, water, earth, or air. They stand apart easily, both for their unusual appearance and for the way elemental power sits so naturally in them, making them feel a little out of step with ordinary society no matter where they live. 
+
+Unlike races with a homeland or long-established place of their own, Genasi are usually scattered among other peoples, especially in human lands, where they are valued for what they can do but rarely treated as fully belonging. In the region, they are uncommon but recognizable figures, often seen as capable, strange, and slightly untethered, caught between the practical world around them and the elemental nature that never fully lets them blend in.
+                  </p>
+                </section>
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Innate Traits</p>
+                  <p>
+                    **Elemental Affinity** - Each Genasi inherits abilities tied to their elemental lineage of Fire, Water, Earth, or Air, allowing them to manipulate aspects of their respective element. <br />
+                    **Elemental Summon** - They can contract and call a minor elemental suited to their
+                    lineage for brief assistance.
+                  </p>
+                </section>
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Weaknesses</p>
+                  <p>
+                    **Elemental Dependency** - Their abilities are tied to their element, and certain environments can weaken them. <br />
+                    **Social Stigma** - Their distinct elemental traits make them stand out, sometimes leading to fear or discrimination from more traditional societies.
+                  </p>
+                </section>
+              </div>
+            </article>
+
+            <article class="card race-entry">
+              <header class="race-entry__header">
+                <h2>Elf</h2>
+              </header>
+              <dl class="monster-entry__meta race-entry__meta">
+                <div class="monster-entry__meta-row">
+                  <dt>Region</dt>
+                  <dd>The Glades</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Population</dt>
+                  <dd>Low</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Starting Level</dt>
+                  <dd>10</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Max Stat Total</dt>
+                  <dd>600</dd>
+                </div>
+                <div class="monster-entry__meta-row monster-entry__meta-row--full">
+                  <dt>Racial Buff / Debuff</dt>
+                  <dd>+5% Agility, -10% Endurance</dd>
+                </div>
+              </dl>
+              <div class="race-entry__grid">
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Description</p>
+                  <p>
+Elves are a long-lived demihuman race with natural talent for magic and a strong cultural focus on nature, balance, and preservation. Like the other demihuman races, they are descended from monsters, though their exact lineage is unclear and has never been fully agreed upon. 
+
+They can live up to around two hundred years, which gives them a slower, more deliberate view of change than most, leading to their somewhat rigid personalities. Elves are widely regarded as a beautiful race, and their magical ability, knowledge, and connection to the natural world keeps them respected even outside their own lands. In human regions, they are uncommon but valued enough that Humans generally prefer to stay on good terms with them.
+                  </p>
+                </section>
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Innate Traits</p>
+                  <p>
+                    **Nimble** - Elves possess natural agility, allowing them to move easily through forests and tough terrain. +10% AGI. <br />
+                    **Magic Affinity** - Elves are able to tap into magic of any of the base elements, Earth, Wind, Fire, and Water, but their spells will be weaker if they do not choose a single one to focus on.
+                  </p>
+                </section>
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Weaknesses</p>
+                  <p>
+                    **Poor Improvisers** - Heavy reliance on training and tradition can leave Elves slower
+                    to adjust in sudden, messy situations. <br />
+                    **Isolationists** - They often struggle in dense cities and mixed-race communities far
+                    from the forests they know best.
+                  </p>
+                </section>
+              </div>
+            </article>
+
+            <article class="card race-entry">
+              <header class="race-entry__header">
+                <h2>Fairy</h2>
+              </header>
+              <dl class="monster-entry__meta race-entry__meta">
+                <div class="monster-entry__meta-row">
+                  <dt>Region</dt>
+                  <dd>The Glades</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Population</dt>
+                  <dd>Low</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Starting Level</dt>
+                  <dd>12</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Max Stat Total</dt>
+                  <dd>500</dd>
+                </div>
+                <div class="monster-entry__meta-row monster-entry__meta-row--full">
+                  <dt>Racial Buff / Debuff</dt>
+                  <dd>+5% Intellect, +10% Agility, -15% Endurance</dd>
+                </div>
+              </dl>
+              <div class="race-entry__grid">
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Description</p>
+                  <p>
+
+Fairies are a tiny demihuman race, usually no more than several inches tall, with insect-like wings, a natural gift for illusions, and a strong place in the the wilds. They live in hidden enclaves deep in forest growth, flower groves, hollow trees, giant mushroom patches, and other secluded places, and their communities are lively, secretive, and often governed in ways that seem chaotic to outsiders. 
+
+Fairies are closely tied to nature, but unlike the steadier Elves or Nymphs, they are whimsical, mischievous, and often guided as much by mood or amusement as by duty. In the world around them, they are known as tricksters, protectors of wild places, and keepers of small but valuable secrets, using illusion and misdirection to confuse intruders, punish disrespect, or help those they happen to favor.
+                  </p>
+                </section>
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Innate Traits</p>
+                  <p>
+                    **Mischief Sense** - Can sense when someone nearby is lying or plotting against them or their group, but do not know specifics. <br />
+                    **Illusion Affinity** - Fairies are naturally gifted in illusions, able to deceive, mislead, or hide with ease, making them difficult to pin down.
+                  </p>
+                </section>
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Weaknesses</p>
+                  <p>
+                    **Fragile** - Fairies are physically small and delicate, making them highly vulnerable to physical attacks if caught. <br />
+                    **Capricious Nature** - Their attention, moods, and sense of priority can shift quickly
+                    and unpredictably.
+                  </p>
+                </section>
+              </div>
+            </article>
+
+            <article class="card race-entry">
+              <header class="race-entry__header">
+                <h2>Nymph</h2>
+              </header>
+              <dl class="monster-entry__meta race-entry__meta">
+                <div class="monster-entry__meta-row">
+                  <dt>Region</dt>
+                  <dd>The Glades</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Population</dt>
+                  <dd>Low</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Starting Level</dt>
+                  <dd>10</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Max Stat Total</dt>
+                  <dd>600</dd>
+                </div>
+                <div class="monster-entry__meta-row monster-entry__meta-row--full">
+                  <dt>Racial Buff / Debuff</dt>
+                  <dd>+10% Charisma, -10% Agility</dd>
+                </div>
+              </dl>
+              <div class="race-entry__grid">
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Description</p>
+                  <p>
+Nymphs are a demihuman race deeply tied to the natural world, each one bound to a particular kind of landscape or elemental aspect such as water, wind, earth, or nature itself. They are not a highly structured people and do not usually build rigid societies, instead living alone or in loose circles shaped by the land and by seasonal gatherings. 
+
+Nymphs are known for their beauty, calm presence, and natural magical ability, but they are not weak or passive creatures; when something under their care is threatened, they can become harsh and dangerous very quickly. In the world around them, they are most often seen as caretakers, guides, and living extensions of the places they belong to, though their dependence on those environments means they are at their strongest when close to home.
+                  </p>
+                </section>
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Innate Traits</p>
+                  <p>
+                    **Elemental Affinity** - Each Nymph wields magic tied to their respective lineage, be it Water, Wind, Earth, or Nature. <br />
+                    **Veil of Serenity** - Their presence can calm nearby creatures that are not already
+                    fully committed to violence.
+                  </p>
+                </section>
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Weaknesses</p>
+                  <p>
+                    **Environmental Dependency** - A Nymph weakens when separated from their natural habitat for too long. Extended time away causes fatigue and diminishes their powers.<br />
+                    **Naivety** - Their sheltered lives can leave them too trusting or too slow to read the
+                    motives of others.
+                  </p>
+                </section>
+              </div>
+            </article>
+
+            <article class="card race-entry">
+              <header class="race-entry__header">
+                <h2>Merfolk</h2>
+              </header>
+              <dl class="monster-entry__meta race-entry__meta">
+                <div class="monster-entry__meta-row">
+                  <dt>Region</dt>
+                  <dd>The Shore</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Population</dt>
+                  <dd>Medium</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Starting Level</dt>
+                  <dd>10</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Max Stat Total</dt>
+                  <dd>600</dd>
+                </div>
+                <div class="monster-entry__meta-row monster-entry__meta-row--full">
+                  <dt>Racial Buff / Debuff</dt>
+                  <dd>+10% Charisma, -10% Strength</dd>
+                </div>
+              </dl>
+              <div class="race-entry__grid">
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Description</p>
+                  <p>
+Merfolk are an aquatic demihuman race with enormous physical variety, their forms drawing from all kinds of sea life rather than a single shared shape. Some fit the familiar image of fish-tailed sea folk, while others resemble sharks, octopi, jellyfish, crustaceans, or stranger deep-water creatures, and that variety often comes with noticable differences in ability or temperament, though all are capable of using Water Magic. 
+
+Most Merfolk belong to the ocean kingdom beyond the Shores, where they maintain large underwater societies shaped by trade, tradition, and the politics of life beneath the sea. Though they are fully at home in the water, they are also amphibious and able to take a walking form to move on land for limited periods, usually about a day before they need to return to the water and soak in their true form again. In the region, they are one of the more visibly distinct demihuman races, known as ocean-born people with strong ties to the coast, the tides, and the world just beyond the shoreline.
+                  </p>
+                </section>
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Innate Traits</p>
+                  <p>
+                    **Water Affinity** - Merfolk can work with water magic naturally for movement, defense, and
+                    shaping currents. <br />
+                    **Aquatic Adaptation** - Their exact physiology grants an additional aquatic edge based
+                    on the type of sea life they resemble.
+                  </p>
+                </section>
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Weaknesses</p>
+                  <p>
+                    **Water Dependency** - Merfolk must return to the water regularly to stay healthy and
+                    maintain strength. <br />
+                    **Limited Land Endurance** - While they are exceptional swimmers, they tire faster when running or exerting themselves on land.
+                  </p>
+                </section>
+              </div>
+            </article>
+
+            <article class="card race-entry">
+              <header class="race-entry__header">
+                <h2>Lamia</h2>
+              </header>
+              <dl class="monster-entry__meta race-entry__meta">
+                <div class="monster-entry__meta-row">
+                  <dt>Region</dt>
+                  <dd>The Shore</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Population</dt>
+                  <dd>Low</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Starting Level</dt>
+                  <dd>10</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Max Stat Total</dt>
+                  <dd>600</dd>
+                </div>
+                <div class="monster-entry__meta-row monster-entry__meta-row--full">
+                  <dt>Racial Buff / Debuff</dt>
+                  <dd>+10% Strength, -10% Agility</dd>
+                </div>
+              </dl>
+              <div class="race-entry__grid">
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Description</p>
+                  <p>
+Lamia are a serpentine demihuman race of the Shores, recognized by their large snake-like lower bodies, strong physiques, and tribal way of life. Their communities are usually matriarchal, with leadership tied to strength, endurance, and the ability to protect and provide for the tribe, while shamans hold an important place as spiritual guides, natural healers, and keepers of tradition. 
+
+Lamia life is built around hunting, fishing, gathering, and trade, and many tribes are known for their knowledge of herbs, poisons, and alchemical ingredients. They are practical, communal, and proud, with a strong sense of internal unity even when different tribes have their own customs or rivalries. In the wider region, Lamia are seen as capable and self-sufficient coastal beings who are willing to work with outsiders when treated with respect, but who are more than able to defend themselves when they are pushed or underestimated.
+                  </p>
+                </section>
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Innate Traits</p>
+                  <p>
+                    **Poison Immunity** - Lamia are naturally resistant to toxins and venoms. <br />
+                    **Fate-Touched** - Their instinct for omens can give them brief flashes of awareness
+                    around immediate danger.
+                  </p>
+                </section>
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Weaknesses</p>
+                  <p>
+                    **Temperature Sensitivity** - Cold environments can leave Lamia sluggish or nearly
+                    immobile. <br />
+                    **Oversized** - Their lower bodies make them powerful, but awkward in cramped or
+                    unsuitable terrain.
+                  </p>
+                </section>
+              </div>
+            </article>
+
+            <article class="card race-entry">
+              <header class="race-entry__header">
+                <h2>Vampire</h2>
+              </header>
+              <dl class="monster-entry__meta race-entry__meta">
+                <div class="monster-entry__meta-row">
+                  <dt>Region</dt>
+                  <dd>The Vale</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Population</dt>
+                  <dd>Very Low</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Starting Level</dt>
+                  <dd>9</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Max Stat Total</dt>
+                  <dd>700</dd>
+                </div>
+                <div class="monster-entry__meta-row monster-entry__meta-row--full">
+                  <dt>Racial Buff / Debuff</dt>
+                  <dd>+5% Charisma, +5% Strength, -10% Endurance</dd>
+                </div>
+              </dl>
+              <div class="race-entry__grid">
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Description</p>
+                  <p>
+Vampires are a demihuman race descended from the monsters of the same name, but unlike the monsters they are a fully living race, capable of natural birth and long-term society rather than existing as cursed undead. They still carry the defining needs and weaknesses of their lineage, requiring blood to stay in good condition and suffering under direct sunlight, but they are not naturally feral or openly predatory. 
+
+Instead, Vampire communities have learned to survive through structure, restraint, and negotiated arrangements, especially in the Vale, where they often maintain practical agreements with nearby Humans. Their society is highly formal and built around old bloodlines, etiquette, and an internal noble hierarchy that matters greatly among their own kind, even if it carries little real authority outside Vampire circles. In the region, they are seen as controlled, dignified, and somewhat unsettling, a race that lives close to danger by nature.
+                  </p>
+                </section>
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Innate Traits</p>
+                  <p>
+                    **Vampiric Regeneration** - Vampires may recover by feeding on fresh blood, gaining Restore II from a feeding, once per thread.
+                    <br />
+                    **Shadow Affinity** - Vampires are naturally capable of controlling the shadows around them in various ways with Shadow Magic.
+                  </p>
+                </section>
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Weaknesses</p>
+                  <p>
+                    **Sunlight Sensitivity** - Direct sunlight drains their strength and, with prolonged exposure, can cause severe physical harm. Being in sunlight inflicts Drain, which changes into Burn after 3 turns.
+                    <br />
+                    **Blood Dependency** - Vampires must consume blood regularly to maintain their physical condition. Without it, their regeneration ceases and they grow weaker.
+                  </p>
+                </section>
+              </div>
+            </article>
+
+            <article class="card race-entry">
+              <header class="race-entry__header">
+                <h2>Tengu</h2>
+              </header>
+              <dl class="monster-entry__meta race-entry__meta">
+                <div class="monster-entry__meta-row">
+                  <dt>Region</dt>
+                  <dd>The Vale and the Mountains</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Population</dt>
+                  <dd>Low</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Starting Level</dt>
+                  <dd>10</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Max Stat Total</dt>
+                  <dd>600</dd>
+                </div>
+                <div class="monster-entry__meta-row monster-entry__meta-row--full">
+                  <dt>Racial Buff / Debuff</dt>
+                  <dd>+10% Agility, -10% Endurance</dd>
+                </div>
+              </dl>
+              <div class="race-entry__grid">
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Description</p>
+                  <p>
+Tengu are a winged demihuman race with birdlike traits, usually including feathers, wings, taloned feet, and avian features worked into an otherwise humanoid body. Some have full beaks, while others are more human-faced with sharp birdlike eyes and feathered features, but all of them are clearly tied to birds of prey and hold a natural talent in Wind Magic. They are native to the Vale and the surrounding mountains, where much of their culture is shaped by training, self-mastery, and pride in earned skill. Many Tengu live in small enclaves or warrior-monastic orders rather than large mixed settlements. 
+
+They are not an especially social race, tending toward distance and self-sufficiency, and they can come across as arrogant or difficult to approach, especially when dealing with people they do not consider competent. In the wider region, Tengu are most often known as fighters, scouts, messengers, and wandering martial specialists, respected for what they can do more than for any political presence they hold.
+                  </p>
+                </section>
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Innate Traits</p>
+                  <p>
+                    **Wind Affinity** - Tengu are naturally attuned to wind magic and the movement it grants.
+                    <br />
+                    **Keen Perception** - They can see with unusual clarity across long distances and through
+                    poor conditions.
+                  </p>
+                </section>
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Weaknesses</p>
+                  <p>
+                    **Arrogance** - Tengu pride can make them harsh, dismissive, or difficult to work with.
+                    <br />
+                    **Solitary Nature** - Many prefer distance over attachment, which can make deeper bonds
+                    harder for them.
+                  </p>
+                </section>
+              </div>
+            </article>
+
+            <article class="card race-entry">
+              <header class="race-entry__header">
+                <h2>Changeling</h2>
+              </header>
+              <dl class="monster-entry__meta race-entry__meta">
+                <div class="monster-entry__meta-row">
+                  <dt>Region</dt>
+                  <dd>The Vale Underground</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Population</dt>
+                  <dd>Unknown</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Starting Level</dt>
+                  <dd>10</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Max Stat Total</dt>
+                  <dd>600</dd>
+                </div>
+                <div class="monster-entry__meta-row monster-entry__meta-row--full">
+                  <dt>Racial Buff / Debuff</dt>
+                  <dd>+10% Charisma, -10% Strength</dd>
+                </div>
+              </dl>
+              <div class="race-entry__grid">
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Description</p>
+                  <p>
+Changelings are a demihuman race of shapeshifters that once lived in the Glades before being banished long ago for reasons that have since been lost or obscured. Now they mostly inhabit the Vale, occupying old subterranean ruins and tunnel networks beneath the surface, where they have built up much of their hidden culture. Only partial shapeshifters, Changelings are capable of stealing the appearances of any other humanoid within the same size class, but not creating new appearances.
+
+Many spend their lives avoiding recognition as Changelings at all, preferring to move through the world behind borrowed faces. That secrecy shapes much of their culture, making them a cautious, guarded people who value adaptability, concealment, and trust within their own kind. In the region, they are a race more often spoken about than openly seen, with most people encountering them without ever realizing it.
+                  </p>
+                </section>
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Innate Traits</p>
+                  <p>
+                    **Mimicry** - Changelings can copy the appearance of a humanoid they have properly
+                    observed, though it remains cosmetic only. <br />
+                    **Veil of the Forgotten** - People tend to overlook them and struggle to remember them
+                    clearly unless the Changeling leaves a strong impression.
+                  </p>
+                </section>
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Weaknesses</p>
+                  <p>
+                    **Fragile Identity** - Constant adaptation can leave Changelings feeling detached from
+                    their own true selves. <br />
+                    **Difficult Healing** - Their bodies recover slower than most races from
+                    serious injury. All healing resolves a rank lower.
+                  </p>
+                </section>
+              </div>
+            </article>
+
+            <article class="card race-entry">
+              <header class="race-entry__header">
+                <h2>Centaur</h2>
+              </header>
+              <dl class="monster-entry__meta race-entry__meta">
+                <div class="monster-entry__meta-row">
+                  <dt>Region</dt>
+                  <dd>The Plains and Mountains</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Population</dt>
+                  <dd>Medium</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Starting Level</dt>
+                  <dd>10</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Max Stat Total</dt>
+                  <dd>600</dd>
+                </div>
+                <div class="monster-entry__meta-row monster-entry__meta-row--full">
+                  <dt>Racial Buff / Debuff</dt>
+                  <dd>+10% Endurance, -10% Intellect</dd>
+                </div>
+              </dl>
+              <div class="race-entry__grid">
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Description</p>
+                  <p>
+Centaurs are a demihuman race with the body plan of both horse and humanoid, giving them the size, speed, and endurance to live a nomadic life comfortably in open country. They are most at home in the plains and mountain valleys, where they travel in clans rather than settling into dense permanent towns. Their way of life is shaped by movement, with clans following game, seasons, and old routes across the land, returning to shared gathering grounds for trade, celebration, and diplomacy.
+
+Their society is direct and physical, with status often tied to proven strength, reliability, or wisdom rather than wealth or ornament. Disputes are just as likely to be settled through contests, races, or trials of endurance as through long argument, and leadership is something expected to be upheld through action. Centaurs are not mindless brutes, but they are a people who trust what can be demonstrated plainly, and they tend to respect honesty, courage, and self-control more than clever words.
+                  </p>
+                </section>
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Innate Traits</p>
+                  <p>
+                    **Warrior's Charge** - Any basic attack a Centaur makes after running at least 5 meters gains increased impact force, dealing 20% more damage.
+                    <br />
+                    **Roaming Instincts** - They carry an unusually strong sense of direction and can
+                    retrace their path reliably.
+                  </p>
+                </section>
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Weaknesses</p>
+                  <p>
+                    **Large Size** - Tight interiors and enclosed terrain work badly against them. <br />
+                    **Temperamental** - Strong emotion and impulse can push them into rash choices under
+                    pressure.
+                  </p>
+                </section>
+              </div>
+            </article>
+
+            <article class="card race-entry">
+              <header class="race-entry__header">
+                <h2>Kobold</h2>
+              </header>
+              <dl class="monster-entry__meta race-entry__meta">
+                <div class="monster-entry__meta-row">
+                  <dt>Region</dt>
+                  <dd>The Mountains</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Population</dt>
+                  <dd>Medium</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Starting Level</dt>
+                  <dd>12</dd>
+                </div>
+                <div class="monster-entry__meta-row">
+                  <dt>Max Stat Total</dt>
+                  <dd>500</dd>
+                </div>
+                <div class="monster-entry__meta-row monster-entry__meta-row--full">
+                  <dt>Racial Buff / Debuff</dt>
+                  <dd>+5% Intellect, +5% Agility, -10% Strength</dd>
+                </div>
+              </dl>
+              <div class="race-entry__grid">
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Description</p>
+                  <p>
+
+Kobolds are a small demihuman race with compact bodies, reptilian features, and a natural talent for life underground. They live in caves, mines, and tunnel settlements, where their clans carve out dense warrens filled with traps, tools, scavenged parts, and unstable contraptions. 
+
+Their communities are built around making things, defending what is theirs, and turning even poor ground into something useful. Kobolds are physically weak compared to most other races, so they rely on planning, trapwork, and dirty fighting rather than direct force. They tend to be excitable, fast-talking, and difficult to keep focused, but that same restless energy makes them inventive in ways that are easy to underestimate.
+                  </p>
+                </section>
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Innate Traits</p>
+                  <p>
+                    **Trapmaker's Instinct** - Kobolds are naturally gifted with traps, explosives, and
+                    simple mechanical contraptions. Full access to Scavenger profession. <br />
+                    **Trap Sense** - They recognize nearby mechanical traps easily and can disarm them if
+                    they can reach them. +3 to physical Trap finding.
+                  </p>
+                </section>
+                <section class="race-entry__section">
+                  <p class="monster-entry__description-label">Weaknesses</p>
+                  <p>
+                    **Small Stature** - Kobolds are physically weak compared to most other races, relying on numbers, strategy, and cunning over direct combat. <br />
+                    **Scatterbrained** - Kobolds are easily distracted, struggling to focus on complex plans or tasks for extended periods. They tend to jump between ideas chaotically, often abandoning one thing to tinker with another.
+                  </p>
+                </section>
+              </div>
+            </article>
+          </section>
         </section>
       </main>
     </div>
-    <script src="formatter.js?v=2026-03-30-1"></script>
+    <script src="formatter.js?v=2026-04-01-2"></script>
     <script src="sidebar.js"></script>
     <script src="script.js"></script>
   </body>

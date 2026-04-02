@@ -751,6 +751,7 @@ text-align:justify;
   justify-content: space-between;
   gap: 1rem;
   padding: 0.9rem 0;
+  padding-bottom:0.3rem;
   border: 0;
   background: transparent;
   color: var(--text);
@@ -837,6 +838,12 @@ text-align:justify;
 }
 
 .monster-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.race-card-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
@@ -967,6 +974,13 @@ text-align:justify;
   min-height: 100%;
 }
 
+.race-entry {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem 1.05rem;
+  min-height: 100%;
+}
+
 .monster-entry__header {
   display: grid;
   gap: 0.3rem;
@@ -980,12 +994,25 @@ text-align:justify;
   letter-spacing:0.05rem;
 }
 
+.race-entry h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.1vw, 1.7rem);
+  line-height: 1.1;
+  letter-spacing: 0.04rem;
+  color: var(--text);
+}
+
 .monster-entry__meta {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.55rem;
   margin-top: 0;
   margin-bottom:0;
+}
+
+.race-entry__meta {
+  margin-top: 0.1rem;
 }
 
 .monster-entry__meta-row {
@@ -1032,6 +1059,36 @@ color: var(--text-soft);
     font-size: 0.7rem;
     text-align: justify;
     letter-spacing: 0.03rem;
+}
+
+.race-entry__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid var(--line);
+}
+
+.race-entry__column {
+  display: contents;
+}
+
+.race-entry__section {
+  display: grid;
+  gap: 0.32rem;
+}
+
+.race-entry__section p:last-child {
+  margin: 0;
+  color: var(--text-soft);
+  line-height: 1.5;
+  font-size: 0.75rem;
+  text-align: justify;
+  letter-spacing: 0.02rem;
+}
+
+.race-entry__section p + p {
+  margin-top: 0.35rem;
 }
 
 .formatted-line {
@@ -1468,11 +1525,16 @@ color: var(--text-soft);
   .topic-grid,
   .monster-overview-grid,
   .monster-card-grid,
+  .race-card-grid,
   .search-workspace {
     grid-template-columns: 1fr;
   }
 
   .monster-entry__meta {
+    grid-template-columns: 1fr;
+  }
+
+  .race-entry__grid {
     grid-template-columns: 1fr;
   }
 
