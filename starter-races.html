@@ -16,7 +16,7 @@
     />
     <link rel="stylesheet" href="styles.css?v=2026-04-01-2" />
   </head>
-  <body data-page="starter-guide">
+  <body data-page="starter-guide" data-sidebar="starter-races">
     <div class="site-shell">
       <div data-sidebar-root></div>
 
@@ -31,11 +31,30 @@
 
         </section>
 
+        <section class="quick-links">
+          <div class="pill-links pill-links--monster" data-race-pills>
+            <a href="#" class="is-active" data-race-filter="all">All</a>
+            <a href="#" data-race-filter="human">Human</a>
+            <a href="#" data-race-filter="beastkin">Beastkin</a>
+            <a href="#" data-race-filter="genasi">Genasi</a>
+            <a href="#" data-race-filter="elf">Elf</a>
+            <a href="#" data-race-filter="fairy">Fairy</a>
+            <a href="#" data-race-filter="nymph">Nymph</a>
+            <a href="#" data-race-filter="merfolk">Merfolk</a>
+            <a href="#" data-race-filter="lamia">Lamia</a>
+            <a href="#" data-race-filter="vampire">Vampire</a>
+            <a href="#" data-race-filter="tengu">Tengu</a>
+            <a href="#" data-race-filter="changeling">Changeling</a>
+            <a href="#" data-race-filter="centaur">Centaur</a>
+            <a href="#" data-race-filter="kobold">Kobold</a>
+          </div>
+        </section>
+
         <section class="monster-detail">
 
 
           <section class="race-card-grid">
-            <article class="card race-entry">
+            <article class="card race-entry" data-race-card="human">
               <header class="race-entry__header">
                 <h2>Human</h2>
               </header>
@@ -88,7 +107,7 @@ Even far from the great centers of power, their presence is felt in the steady s
               </div>
             </article>
 
-            <article class="card race-entry">
+            <article class="card race-entry" data-race-card="beastkin">
               <header class="race-entry__header">
                 <h2>Beastkin</h2>
               </header>
@@ -142,7 +161,7 @@ In the region, Beastkin are a familiar presence but rarely a comfortable one wit
               </div>
             </article>
 
-            <article class="card race-entry">
+            <article class="card race-entry" data-race-card="genasi">
               <header class="race-entry__header">
                 <h2>Genasi</h2>
               </header>
@@ -195,7 +214,7 @@ Unlike races with a homeland or long-established place of their own, Genasi are 
               </div>
             </article>
 
-            <article class="card race-entry">
+            <article class="card race-entry" data-race-card="elf">
               <header class="race-entry__header">
                 <h2>Elf</h2>
               </header>
@@ -249,7 +268,7 @@ They can live up to around two hundred years, which gives them a slower, more de
               </div>
             </article>
 
-            <article class="card race-entry">
+            <article class="card race-entry" data-race-card="fairy">
               <header class="race-entry__header">
                 <h2>Fairy</h2>
               </header>
@@ -303,7 +322,7 @@ Fairies are closely tied to nature, but unlike the steadier Elves or Nymphs, the
               </div>
             </article>
 
-            <article class="card race-entry">
+            <article class="card race-entry" data-race-card="nymph">
               <header class="race-entry__header">
                 <h2>Nymph</h2>
               </header>
@@ -357,7 +376,7 @@ Nymphs are known for their beauty, calm presence, and natural magical ability, b
               </div>
             </article>
 
-            <article class="card race-entry">
+            <article class="card race-entry" data-race-card="merfolk">
               <header class="race-entry__header">
                 <h2>Merfolk</h2>
               </header>
@@ -412,7 +431,7 @@ Most Merfolk belong to the ocean kingdom beyond the Shores, where they maintain 
               </div>
             </article>
 
-            <article class="card race-entry">
+            <article class="card race-entry" data-race-card="lamia">
               <header class="race-entry__header">
                 <h2>Lamia</h2>
               </header>
@@ -467,7 +486,7 @@ Lamia life is built around hunting, fishing, gathering, and trade, and many trib
               </div>
             </article>
 
-            <article class="card race-entry">
+            <article class="card race-entry" data-race-card="vampire">
               <header class="race-entry__header">
                 <h2>Vampire</h2>
               </header>
@@ -521,7 +540,7 @@ Instead, Vampire communities have learned to survive through structure, restrain
               </div>
             </article>
 
-            <article class="card race-entry">
+            <article class="card race-entry" data-race-card="tengu">
               <header class="race-entry__header">
                 <h2>Tengu</h2>
               </header>
@@ -577,7 +596,7 @@ They are not an especially social race, tending toward distance and self-suffici
               </div>
             </article>
 
-            <article class="card race-entry">
+            <article class="card race-entry" data-race-card="changeling">
               <header class="race-entry__header">
                 <h2>Changeling</h2>
               </header>
@@ -633,7 +652,7 @@ Many spend their lives avoiding recognition as Changelings at all, preferring to
               </div>
             </article>
 
-            <article class="card race-entry">
+            <article class="card race-entry" data-race-card="centaur">
               <header class="race-entry__header">
                 <h2>Centaur</h2>
               </header>
@@ -688,7 +707,7 @@ Their society is direct and physical, with status often tied to proven strength,
               </div>
             </article>
 
-            <article class="card race-entry">
+            <article class="card race-entry" data-race-card="kobold">
               <header class="race-entry__header">
                 <h2>Kobold</h2>
               </header>
@@ -749,5 +768,57 @@ Their communities are built around making things, defending what is theirs, and 
     <script src="formatter.js?v=2026-04-01-2"></script>
     <script src="sidebar.js"></script>
     <script src="script.js"></script>
+    <script>
+      (function () {
+        var pillRoot = document.querySelector("[data-race-pills]");
+        var pills = pillRoot ? Array.prototype.slice.call(pillRoot.querySelectorAll("[data-race-filter]")) : [];
+        var cards = Array.prototype.slice.call(document.querySelectorAll("[data-race-card]"));
+        var activeFilters = [];
+
+        function render() {
+          var showAll = activeFilters.length === 0;
+
+          pills.forEach(function (pill) {
+            var filter = pill.getAttribute("data-race-filter");
+            var isActive = filter === "all" ? showAll : activeFilters.indexOf(filter) !== -1;
+            pill.classList.toggle("is-active", isActive);
+          });
+
+          cards.forEach(function (card) {
+            var filter = card.getAttribute("data-race-card");
+            card.hidden = !showAll && activeFilters.indexOf(filter) === -1;
+          });
+        }
+
+        function toggleFilter(filter) {
+          var index;
+
+          if (filter === "all") {
+            activeFilters = [];
+            render();
+            return;
+          }
+
+          index = activeFilters.indexOf(filter);
+
+          if (index === -1) {
+            activeFilters.push(filter);
+          } else {
+            activeFilters.splice(index, 1);
+          }
+
+          render();
+        }
+
+        pills.forEach(function (pill) {
+          pill.addEventListener("click", function (event) {
+            event.preventDefault();
+            toggleFilter(pill.getAttribute("data-race-filter"));
+          });
+        });
+
+        render();
+      })();
+    </script>
   </body>
 </html>

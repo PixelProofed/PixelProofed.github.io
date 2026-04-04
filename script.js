@@ -93,6 +93,12 @@ const SEARCH_PAGE_MANIFEST = [
     resultLabel: "New Game Plus",
   },
   {
+    href: "map.html",
+    title: "Map",
+    description: "Map",
+    resultLabel: "New Game Plus",
+  },
+  {
     href: "adventurers-guild.html",
     title: "Adventurer's Guild",
     description: "Adventurer's Guild",

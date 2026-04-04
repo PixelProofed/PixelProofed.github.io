@@ -113,6 +113,18 @@
     ],
   };
 
+  var starterRacesIndex = {
+    label: "Related Pages",
+    links: [
+      { href: "locations.html", label: "Locations" },
+      { href: "adventurers-guild.html", label: "Adventurer's Guild" },
+      { href: "alchemy.html", label: "Alchemy" },
+      { href: "blacksmithing.html", label: "Blacksmithing" },
+      { href: "herbalism.html", label: "Herbalism" },
+      { href: "mining.html", label: "Mining" },
+    ],
+  };
+
   var treeIndex = {
     label: "Tree Index",
     links: [
@@ -166,6 +178,11 @@
       eyebrow: "Welcome to",
       title: "New Game Plus",
       section: starterSkillsIndex,
+    },
+    "starter-races": {
+      eyebrow: "Welcome to",
+      title: "New Game Plus",
+      section: starterRacesIndex,
     },
     "mana-stones": {
       eyebrow: "Welcome to",

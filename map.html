@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>New Game Plus | Map</title>
+    <meta
+      name="description"
+      content="Interactive test map page for hex terrain tiles and location selection."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=2026-04-03-5" />
+  </head>
+  <body data-page="setting">
+    <div class="site-shell">
+      <div data-sidebar-root></div>
+
+      <main class="content">
+        <header class="topbar">
+          <button
+            class="menu-button"
+            type="button"
+            id="menu-button"
+            aria-expanded="false"
+            aria-controls="sidebar"
+          >
+            Menu
+          </button>
+        </header>
+
+        <section class="page-intro">
+          <p class="eyebrow">Setting Guide</p>
+          <h1>Map</h1>
+        </section>
+
+        <section class="map-editor">
+
+          <section class="map-card">
+            <div class="map-card__header">
+              <div class="map-card__controls">
+                <div class="map-card__control-cluster">
+                  <div class="map-card__zoom-controls">
+                    <button class="button button--secondary map-card__zoom-button" type="button" data-map-zoom-out>
+                      −
+                    </button>
+                    <button class="button button--secondary map-card__zoom-button" type="button" data-map-zoom-reset>
+                      Fit
+                    </button>
+                    <button class="button button--secondary map-card__zoom-button" type="button" data-map-zoom-in>
+                      +
+                    </button>
+                  </div>
+                  <button
+                    class="button button--secondary map-card__reset-button"
+                    type="button"
+                    data-map-reset-all
+                    hidden
+                  >
+                    Reset To Base 1
+                  </button>
+                </div>
+                <p class="map-card__status" data-map-hover-status>Hover a tile</p>
+              </div>
+            </div>
+
+            <div class="hex-map-viewport" data-hex-map-viewport>
+              <div class="hex-map-scale" data-hex-map-scale>
+                <div class="hex-map" data-hex-map role="grid" aria-label="Interactive hex map"></div>
+              </div>
+            </div>
+          </section>
+
+          <article class="card map-selection-card" data-map-selection-card>
+            <p class="card__label">Selected Tile</p>
+            <h2 data-map-selection-title>Waiting For Selection</h2>
+            <p class="map-selection-card__meta" data-map-selection-meta>
+              Click any tile on the map to pin a description here.
+            </p>
+            <p class="map-selection-card__copy" data-map-selection-copy>
+              Click any tile on the map to inspect it or open the terrain picker for that coordinate.
+            </p>
+            <p class="map-selection-card__save-status" data-map-save-status>
+              Waiting for a tile edit.
+            </p>
+          </article>
+        </section>
+
+        <div class="map-picker" data-map-picker hidden>
+          <button
+            class="map-picker__backdrop"
+            type="button"
+            aria-label="Close terrain picker"
+            data-map-picker-dismiss
+          ></button>
+          <div class="map-picker__dialog" role="dialog" aria-modal="true" aria-labelledby="map-picker-title">
+            <div class="map-picker__header">
+              <div>
+                <p class="card__label">Change Terrain</p>
+                <h2 id="map-picker-title" data-map-picker-title>Select A Tile</h2>
+                <p class="map-picker__copy" data-map-picker-copy>
+                  Choose a replacement tile from the Basic category or switch tabs to another terrain set.
+                </p>
+              </div>
+              <button
+                class="button button--secondary map-picker__close"
+                type="button"
+                aria-label="Close terrain picker"
+                data-map-picker-dismiss
+              >
+                ×
+              </button>
+            </div>
+            <div class="map-picker__tabs" data-map-picker-tabs></div>
+            <div class="map-picker__subtabs" data-map-picker-subtabs hidden></div>
+            <div class="map-picker__grid" data-map-picker-grid></div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="sidebar.js"></script>
+    <script src="script.js?v=2026-04-03-9"></script>
+    <script src="map.js?v=2026-04-03-12"></script>
+  </body>
+</html>

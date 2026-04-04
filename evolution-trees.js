@@ -73,6 +73,8 @@
   var selectedNodeKey = "";
   var resizeFrame = 0;
   var allMonstersMarkup = "";
+  var pendingFocusRestore = null;
+  var pendingScrollRestore = null;
 
   if (!chartContent || !selectionTitle || !selectionCopy || !selectionCards) {
     return;
@@ -379,6 +381,121 @@
     for (index = 0; index < sidebarLinks.length; index += 1) {
       sidebarLinks[index].classList.toggle("is-active", sidebarLinks[index].dataset.treeSidebarTarget === slug);
     }
+  }
+
+  function buildFocusSelector(descriptor) {
+    if (!descriptor) {
+      return "";
+    }
+
+    if (descriptor.type === "node") {
+      return (
+        '.tree-node[data-tree-line="' +
+        descriptor.line +
+        '"][data-tree-node-step="' +
+        descriptor.step +
+        '"][data-tree-node-logical="' +
+        descriptor.logical +
+        '"][data-tree-node-name="' +
+        descriptor.name +
+        '"]'
+      );
+    }
+
+    if (descriptor.type === "line-link") {
+      return descriptor.selector || "";
+    }
+
+    return "";
+  }
+
+  function queueFocusRestoreFromElement(element) {
+    var slug;
+
+    pendingFocusRestore = null;
+
+    if (!element) {
+      return;
+    }
+
+    if (element.hasAttribute("data-tree-node-name")) {
+      pendingFocusRestore = {
+        type: "node",
+        line: element.dataset.treeLine || "",
+        step: element.dataset.treeNodeStep || "",
+        logical: element.dataset.treeNodeLogical || "",
+        name: element.dataset.treeNodeName || "",
+      };
+      return;
+    }
+
+    slug = element.dataset.treeLineTarget || element.dataset.treeSidebarTarget || "";
+
+    if (slug) {
+      pendingFocusRestore = {
+        type: "line-link",
+        selector:
+          '[data-tree-line-target="' +
+          slug +
+          '"], [data-tree-sidebar-target="' +
+          slug +
+          '"]',
+      };
+    }
+  }
+
+  function restoreQueuedFocus() {
+    var descriptor = pendingFocusRestore;
+    var selector;
+
+    pendingFocusRestore = null;
+
+    if (!descriptor) {
+      return;
+    }
+
+    selector = buildFocusSelector(descriptor);
+
+    if (!selector) {
+      return;
+    }
+
+    window.requestAnimationFrame(function () {
+      var target = document.querySelector(selector);
+
+      if (!target || typeof target.focus !== "function") {
+        return;
+      }
+
+      try {
+        target.focus({ preventScroll: true });
+      } catch (error) {
+        target.focus();
+      }
+    });
+  }
+
+  function queueScrollRestore() {
+    pendingScrollRestore = {
+      x: window.scrollX || window.pageXOffset || 0,
+      y: window.scrollY || window.pageYOffset || 0,
+    };
+  }
+
+  function restoreQueuedScroll() {
+    var position = pendingScrollRestore;
+
+    pendingScrollRestore = null;
+
+    if (!position) {
+      return;
+    }
+
+    window.requestAnimationFrame(function () {
+      window.requestAnimationFrame(function () {
+        window.scrollTo(position.x, position.y);
+      });
+    });
   }
 
   function renderStageHeadings(target) {
@@ -861,12 +978,15 @@
     nodesLayer.innerHTML = nodeMarkup;
 
     window.requestAnimationFrame(function () {
-      var contentHeight = scaleLayer.scrollHeight;
       var wrapWidth = diagramWrap.clientWidth || tree.width;
       var scale = Math.min(1, wrapWidth / tree.width);
 
       scaleLayer.style.setProperty("--tree-scale", scale);
-      diagramWrap.style.height = contentHeight * scale + "px";
+
+      window.requestAnimationFrame(function () {
+        var scaledRect = scaleLayer.getBoundingClientRect();
+        diagramWrap.style.height = Math.ceil(scaledRect.height) + "px";
+      });
     });
   }
 
@@ -1207,10 +1327,14 @@
 
     if (currentLineSlug === allViewSlug || !line) {
       renderAllView();
+      restoreQueuedFocus();
+      restoreQueuedScroll();
       return;
     }
 
     renderSingleLineView(line);
+    restoreQueuedFocus();
+    restoreQueuedScroll();
   }
 
   function setLine(slug) {
@@ -1221,7 +1345,11 @@
     renderCurrentView();
 
     if (window.location.hash !== "#" + slug) {
-      window.location.hash = slug;
+      if (window.history && typeof window.history.replaceState === "function") {
+        window.history.replaceState(null, "", "#" + slug);
+      } else {
+        window.location.hash = slug;
+      }
     }
   }
 
@@ -1268,8 +1396,16 @@
     var index;
 
     for (index = 0; index < collection.length; index += 1) {
+      collection[index].addEventListener("mousedown", function (event) {
+        if (event.button === 0) {
+          event.preventDefault();
+        }
+      });
+
       collection[index].addEventListener("click", function (event) {
         event.preventDefault();
+        queueScrollRestore();
+        queueFocusRestoreFromElement(this);
         setLine(this.dataset[dataKey]);
       });
     }
@@ -1277,6 +1413,20 @@
 
   bindLineLinks(lineButtons, "treeLineTarget");
   bindLineLinks(sidebarLinks, "treeSidebarTarget");
+
+  chartContent.addEventListener("mousedown", function (event) {
+    var trigger;
+
+    if (event.button !== 0) {
+      return;
+    }
+
+    trigger = event.target.closest("[data-tree-node-name], [data-tree-group-jump]");
+
+    if (trigger) {
+      event.preventDefault();
+    }
+  });
 
   selectionCards.addEventListener("click", function (event) {
     var trigger = event.target.closest("[data-tree-chart-jump]");
@@ -1286,6 +1436,7 @@
       return;
     }
 
+    event.preventDefault();
     targetChart = chartContent.querySelector('[data-tree-chart-id="' + trigger.dataset.treeChartJump + '"]');
 
     if (targetChart) {
@@ -1307,6 +1458,7 @@
     var pairedVariant;
 
     if (jumpTrigger) {
+      event.preventDefault();
       targetGroup = selectionCards.querySelector('[data-tree-group-id="' + jumpTrigger.dataset.treeGroupJump + '"]');
 
       if (targetGroup) {
@@ -1319,6 +1471,10 @@
     if (!trigger) {
       return;
     }
+
+    event.preventDefault();
+    queueScrollRestore();
+    queueFocusRestoreFromElement(trigger);
 
     line = getLine(trigger.dataset.treeLine);
 

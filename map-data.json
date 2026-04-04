@@ -1,0 +1,7266 @@
+{
+  "columns": 30,
+  "rows": 30,
+  "tiles": [
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ],
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ],
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ],
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ],
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ],
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Tropics/Tiles/hexBog02.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ],
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexDirt02.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ],
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ],
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": "Map/Water/Rivers/hexRiver000001-00.png",
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ],
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ],
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ],
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ],
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ],
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ],
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ],
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ],
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ],
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ],
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ],
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ],
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ],
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ],
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ],
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ],
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ],
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ],
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ],
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ],
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ],
+    [
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      },
+      {
+        "baseKey": "Map/Basic/Tiles/hexBase00.png",
+        "overlays": {
+          "roads": null,
+          "rivers": null,
+          "coasts": null
+        }
+      }
+    ]
+  ]
+}
