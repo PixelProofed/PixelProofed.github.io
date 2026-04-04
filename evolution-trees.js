@@ -2,6 +2,7 @@
   var treeData = window.evolutionTreeData || [];
   var monsterGuideData = window.monsterGuideData || [];
   var allViewSlug = "all";
+  var stageLabels = ["Origin", "First Stage", "Second Stage", "Third Stage"];
   var lineButtons = document.querySelectorAll("[data-tree-line-target]");
   var sidebarLinks = document.querySelectorAll("[data-tree-sidebar-target]");
   var treeWorkspace = document.querySelector(".tree-workspace");
@@ -12,9 +13,17 @@
   var selectionCopy = document.querySelector("[data-tree-selection-copy]");
   var selectionTraits = document.querySelector("[data-tree-selection-traits]");
   var selectionCards = document.querySelector("[data-tree-selected-cards]");
-  var stageLabels = ["Origin", "First Stage", "Second Stage", "Third Stage"];
   var monsterCardUtils = window.monsterCardUtils || {};
   var textFormatter = window.siteTextFormatter || {};
+  var resizeFrame = 0;
+  var currentLineSlug = allViewSlug;
+  var selectedNodeKey = "";
+  var allViewRoot = null;
+  var allViewContexts = {};
+  var singleViewRoot = null;
+  var singleViewContext = null;
+  var allMonstersMarkup = "";
+  var lineMonsterIndexMarkupCache = {};
   var demonVariantOptions = {
     "Sin Demon": [
       "Sin Demon of Pride",
@@ -69,16 +78,22 @@
       Principality: "",
     },
   };
-  var currentLineSlug = "";
-  var selectedNodeKey = "";
-  var resizeFrame = 0;
-  var allMonstersMarkup = "";
-  var pendingFocusRestore = null;
-  var pendingScrollRestore = null;
+  var lineDetailsBySlug = {};
+  var monsterLookupBySlug = {};
 
   if (!chartContent || !selectionTitle || !selectionCopy || !selectionCards) {
     return;
   }
+
+  monsterGuideData.forEach(function (line) {
+    var lookup = {};
+
+    lineDetailsBySlug[line.slug] = line;
+    (line.monsters || []).forEach(function (monster) {
+      lookup[monster.name] = monster;
+    });
+    monsterLookupBySlug[line.slug] = lookup;
+  });
 
   function escapeHtml(value) {
     return String(value)
@@ -123,20 +138,24 @@
     return result;
   }
 
-  function parseSelectedNodeKey() {
+  function parseNodeKey(value) {
     var parts;
 
-    if (!selectedNodeKey) {
+    if (!value) {
       return null;
     }
 
-    parts = selectedNodeKey.split(":");
+    parts = String(value).split(":");
 
     return {
       slug: parts[0],
       pathIndex: Number(parts[1]),
       stepIndex: Number(parts[2]),
     };
+  }
+
+  function getSelectedNode() {
+    return parseNodeKey(selectedNodeKey);
   }
 
   function getLine(slug) {
@@ -151,9 +170,17 @@
     return null;
   }
 
+  function getLineDetails(slug) {
+    return lineDetailsBySlug[slug] || null;
+  }
+
+  function getMonster(slug, name) {
+    var lookup = monsterLookupBySlug[slug] || {};
+    return lookup[name] || null;
+  }
+
   function getRequestedMonsterName() {
-    var params = new URLSearchParams(window.location.search);
-    return params.get("monster") || "";
+    return new URLSearchParams(window.location.search).get("monster") || "";
   }
 
   function findSelectionForMonster(line, monsterName) {
@@ -202,49 +229,12 @@
     return null;
   }
 
-  function getLineDetails(slug) {
-    var index;
-
-    for (index = 0; index < monsterGuideData.length; index += 1) {
-      if (monsterGuideData[index].slug === slug) {
-        return monsterGuideData[index];
-      }
-    }
-
-    return null;
-  }
-
-  function getMonster(slug, name) {
-    var line = getLineDetails(slug);
-    var index;
-
-    if (!line) {
-      return null;
-    }
-
-    for (index = 0; index < line.monsters.length; index += 1) {
-      if (line.monsters[index].name === name) {
-        return line.monsters[index];
-      }
-    }
-
-    return null;
-  }
-
   function isDemonVariantBase(name) {
     return Boolean(demonVariantOptions[name]);
   }
 
-  function getDemonVariantSelection(baseName) {
-    return demonVariantState.selectedByBase[baseName] || "";
-  }
-
   function isAngelVariantBase(name) {
     return Boolean(angelVariantOptions[name]);
-  }
-
-  function getAngelVariantSelection(baseName) {
-    return angelVariantState.selectedByBase[baseName] || "";
   }
 
   function getMatchingVariant(baseName, sourceName) {
@@ -273,20 +263,14 @@
 
   function getDisplayNameForNode(lineSlug, logicalName) {
     if (lineSlug === "demon-line" && isDemonVariantBase(logicalName)) {
-      return getDemonVariantSelection(logicalName) || logicalName;
+      return demonVariantState.selectedByBase[logicalName] || logicalName;
     }
 
     if (lineSlug === "angel-line" && isAngelVariantBase(logicalName)) {
-      return getAngelVariantSelection(logicalName) || logicalName;
+      return angelVariantState.selectedByBase[logicalName] || logicalName;
     }
 
     return logicalName;
-  }
-
-  function getDisplayPath(line, pathIndex, stepIndex) {
-    return line.paths[pathIndex].slice(0, stepIndex + 1).map(function (name) {
-      return getDisplayNameForNode(line.slug, name);
-    });
   }
 
   function getNodeLabel(lineSlug, logicalName, displayName) {
@@ -301,6 +285,12 @@
     return displayName;
   }
 
+  function getDisplayPath(line, pathIndex, stepIndex) {
+    return line.paths[pathIndex].slice(0, stepIndex + 1).map(function (name) {
+      return getDisplayNameForNode(line.slug, name);
+    });
+  }
+
   function getDisplayPaths(line) {
     var displayPaths = line.paths.map(function (path, pathIndex) {
       return {
@@ -311,12 +301,6 @@
         }),
       };
     });
-
-    if (line.slug !== "demon-line" || !demonVariantState.expandedBase) {
-      if (line.slug !== "angel-line" || !angelVariantState.expandedBase) {
-        return displayPaths;
-      }
-    }
 
     if (line.slug === "demon-line" && demonVariantState.expandedBase === "Sin Demon") {
       return demonVariantOptions["Sin Demon"].map(function (variantName) {
@@ -336,7 +320,7 @@
           names: [
             "Imp",
             "Demon",
-            getDemonVariantSelection("Sin Demon") || "Sin Demon",
+            demonVariantState.selectedByBase["Sin Demon"] || "Sin Demon",
             variantName,
           ],
         };
@@ -361,7 +345,7 @@
           names: [
             "Cherub",
             "Angel",
-            getAngelVariantSelection("Virtue") || "Virtue",
+            angelVariantState.selectedByBase.Virtue || "Virtue",
             variantName,
           ],
         };
@@ -383,148 +367,24 @@
     }
   }
 
-  function buildFocusSelector(descriptor) {
-    if (!descriptor) {
-      return "";
-    }
-
-    if (descriptor.type === "node") {
-      return (
-        '.tree-node[data-tree-line="' +
-        descriptor.line +
-        '"][data-tree-node-step="' +
-        descriptor.step +
-        '"][data-tree-node-logical="' +
-        descriptor.logical +
-        '"][data-tree-node-name="' +
-        descriptor.name +
-        '"]'
-      );
-    }
-
-    if (descriptor.type === "line-link") {
-      return descriptor.selector || "";
-    }
-
-    return "";
-  }
-
-  function queueFocusRestoreFromElement(element) {
-    var slug;
-
-    pendingFocusRestore = null;
-
-    if (!element) {
-      return;
-    }
-
-    if (element.hasAttribute("data-tree-node-name")) {
-      pendingFocusRestore = {
-        type: "node",
-        line: element.dataset.treeLine || "",
-        step: element.dataset.treeNodeStep || "",
-        logical: element.dataset.treeNodeLogical || "",
-        name: element.dataset.treeNodeName || "",
-      };
-      return;
-    }
-
-    slug = element.dataset.treeLineTarget || element.dataset.treeSidebarTarget || "";
-
-    if (slug) {
-      pendingFocusRestore = {
-        type: "line-link",
-        selector:
-          '[data-tree-line-target="' +
-          slug +
-          '"], [data-tree-sidebar-target="' +
-          slug +
-          '"]',
-      };
-    }
-  }
-
-  function restoreQueuedFocus() {
-    var descriptor = pendingFocusRestore;
-    var selector;
-
-    pendingFocusRestore = null;
-
-    if (!descriptor) {
-      return;
-    }
-
-    selector = buildFocusSelector(descriptor);
-
-    if (!selector) {
-      return;
-    }
-
-    window.requestAnimationFrame(function () {
-      var target = document.querySelector(selector);
-
-      if (!target || typeof target.focus !== "function") {
-        return;
-      }
-
-      try {
-        target.focus({ preventScroll: true });
-      } catch (error) {
-        target.focus();
-      }
-    });
-  }
-
-  function queueScrollRestore() {
-    pendingScrollRestore = {
-      x: window.scrollX || window.pageXOffset || 0,
-      y: window.scrollY || window.pageYOffset || 0,
-    };
-  }
-
-  function restoreQueuedScroll() {
-    var position = pendingScrollRestore;
-
-    pendingScrollRestore = null;
-
-    if (!position) {
-      return;
-    }
-
-    window.requestAnimationFrame(function () {
-      window.requestAnimationFrame(function () {
-        window.scrollTo(position.x, position.y);
-      });
-    });
-  }
-
   function renderStageHeadings(target) {
-    var markup = "";
-    var index;
-
-    for (index = 0; index < stageLabels.length; index += 1) {
-      markup += "<span>" + escapeHtml(stageLabels[index]) + "</span>";
-    }
-
-    target.innerHTML = markup;
+    target.innerHTML = stageLabels
+      .map(function (label) {
+        return "<span>" + escapeHtml(label) + "</span>";
+      })
+      .join("");
   }
 
   function buildTree(line) {
     var nodesByKey = {};
     var nodes = [];
     var edges = [];
-    var pathIndex;
-    var displayPaths = getDisplayPaths(line);
 
-    for (pathIndex = 0; pathIndex < displayPaths.length; pathIndex += 1) {
-      var path = displayPaths[pathIndex].names;
-      var logicalPath = displayPaths[pathIndex].logical;
-      var basePathIndex = displayPaths[pathIndex].pathIndex;
+    getDisplayPaths(line).forEach(function (displayPath) {
       var previousNode = null;
-      var stepIndex;
 
-      for (stepIndex = 0; stepIndex < path.length; stepIndex += 1) {
-        var name = path[stepIndex];
+      displayPath.names.forEach(function (name, stepIndex) {
+        var logicalName = displayPath.logical[stepIndex];
         var key = stepIndex + "::" + name;
         var node = nodesByKey[key];
 
@@ -532,14 +392,13 @@
           node = {
             key: key,
             name: name,
-            logicalName: logicalPath[stepIndex],
-            label: getNodeLabel(line.slug, logicalPath[stepIndex], name),
+            logicalName: logicalName,
+            label: getNodeLabel(line.slug, logicalName, name),
             depth: stepIndex,
             parents: [],
             children: [],
-            pathRefs: [],
             pathIndices: [],
-            firstPathIndex: basePathIndex,
+            firstPathIndex: displayPath.pathIndex,
             firstSeenOrder: nodes.length,
             layoutX: 0,
             layoutY: 0,
@@ -548,8 +407,7 @@
           nodes.push(node);
         }
 
-        node.pathRefs.push({ pathIndex: basePathIndex, stepIndex: stepIndex });
-        node.pathIndices.push(basePathIndex);
+        node.pathIndices.push(displayPath.pathIndex);
 
         if (previousNode) {
           var edgeKey = previousNode.key + "->" + node.key;
@@ -571,16 +429,14 @@
               pathIndices: [],
             };
             edges.push(edge);
-            previousNode.children.push(node.key);
-            node.parents.push(previousNode.key);
           }
 
-          edge.pathIndices.push(basePathIndex);
+          edge.pathIndices.push(displayPath.pathIndex);
         }
 
         previousNode = node;
-      }
-    }
+      });
+    });
 
     nodes.sort(function (left, right) {
       if (left.depth !== right.depth) {
@@ -608,35 +464,22 @@
     var usableWidth = availableWidth - leftPadding * 2;
     var columnGap = Math.max(16, Math.min(26, usableWidth * 0.03));
     var nodeWidth = Math.floor((usableWidth - columnGap * (stageLabels.length - 1)) / stageLabels.length);
-    var columnWidth = nodeWidth;
     var nodeHeight = 46;
     var rowGap = 9;
     var topPadding = 10;
-    var nodeIndex;
     var nodesByDepth = {};
-    var depthKeys;
     var maxRows = 1;
 
-    for (nodeIndex = 0; nodeIndex < tree.nodes.length; nodeIndex += 1) {
-      var node = tree.nodes[nodeIndex];
-
+    tree.nodes.forEach(function (node) {
       if (!nodesByDepth[node.depth]) {
         nodesByDepth[node.depth] = [];
       }
 
       nodesByDepth[node.depth].push(node);
-    }
+    });
 
-    depthKeys = Object.keys(nodesByDepth)
-      .map(function (key) {
-        return Number(key);
-      })
-      .sort(function (left, right) {
-        return left - right;
-      });
-
-    depthKeys.forEach(function (depth) {
-      maxRows = Math.max(maxRows, nodesByDepth[depth].length);
+    Object.keys(nodesByDepth).forEach(function (depthKey) {
+      maxRows = Math.max(maxRows, nodesByDepth[depthKey].length);
     });
 
     function sortByPathAverage(nodes) {
@@ -660,36 +503,33 @@
       });
     }
 
-    function placeDepthOnGrid(depth) {
-      var nodes = nodesByDepth[depth] || [];
-      var totalBlockHeight = nodes.length * nodeHeight + Math.max(0, nodes.length - 1) * rowGap;
+    Object.keys(nodesByDepth).forEach(function (depthKey) {
+      var depth = Number(depthKey);
+      var depthNodes = nodesByDepth[depth] || [];
+      var totalBlockHeight = depthNodes.length * nodeHeight + Math.max(0, depthNodes.length - 1) * rowGap;
       var availableBlockHeight = maxRows * nodeHeight + Math.max(0, maxRows - 1) * rowGap;
       var startOffset = topPadding + Math.max(0, (availableBlockHeight - totalBlockHeight) / 2);
-      var idx;
 
-      sortByPathAverage(nodes);
+      sortByPathAverage(depthNodes);
 
-      for (idx = 0; idx < nodes.length; idx += 1) {
-        nodes[idx].layoutY = startOffset + idx * (nodeHeight + rowGap) + nodeHeight / 2;
-      }
-    }
+      depthNodes.forEach(function (node, index) {
+        node.layoutY = startOffset + index * (nodeHeight + rowGap) + nodeHeight / 2;
+      });
+    });
 
-    for (nodeIndex = 0; nodeIndex < tree.nodes.length; nodeIndex += 1) {
-      tree.nodes[nodeIndex].layoutX = leftPadding + tree.nodes[nodeIndex].depth * (columnWidth + columnGap);
-    }
+    tree.nodes.forEach(function (node) {
+      node.layoutX = leftPadding + node.depth * (nodeWidth + columnGap);
+    });
 
-    depthKeys.forEach(placeDepthOnGrid);
-
-    tree.width = leftPadding * 2 + stageLabels.length * columnWidth + (stageLabels.length - 1) * columnGap;
+    tree.width = leftPadding * 2 + stageLabels.length * nodeWidth + (stageLabels.length - 1) * columnGap;
     tree.height = topPadding * 2 + maxRows * nodeHeight + Math.max(0, maxRows - 1) * rowGap;
     tree.nodeWidth = nodeWidth;
     tree.nodeHeight = nodeHeight;
-    tree.columnWidth = columnWidth;
     tree.columnGap = columnGap;
   }
 
   function isNodeActive(node, line) {
-    var selected = parseSelectedNodeKey();
+    var selected = getSelectedNode();
     var path;
     var displayName;
 
@@ -709,7 +549,7 @@
   }
 
   function isNodeSelected(node, line) {
-    var selected = parseSelectedNodeKey();
+    var selected = getSelectedNode();
     var path;
     var displayName;
 
@@ -728,62 +568,8 @@
     );
   }
 
-  function getResolvedPathIndex(line, nodeName, stepIndex, logicalName) {
-    var candidatePathIndices = [];
-    var pathIndex;
-    var selected = parseSelectedNodeKey();
-    var selectedPath;
-    var selectedStepIndex;
-    var bestPathIndex = -1;
-    var bestScore = -1;
-
-    for (pathIndex = 0; pathIndex < line.paths.length; pathIndex += 1) {
-      if (line.paths[pathIndex][stepIndex] === (logicalName || nodeName)) {
-        candidatePathIndices.push(pathIndex);
-      }
-    }
-
-    if (!candidatePathIndices.length) {
-      return -1;
-    }
-
-    if (!selected || selected.slug !== line.slug) {
-      return candidatePathIndices[0];
-    }
-
-    selectedPath = line.paths[selected.pathIndex];
-    selectedStepIndex = selected.stepIndex;
-
-    candidatePathIndices.forEach(function (candidateIndex) {
-      var candidatePath = line.paths[candidateIndex];
-      var compareDepth = Math.min(stepIndex, selectedStepIndex);
-      var score = 0;
-      var compareIndex;
-
-      for (compareIndex = 0; compareIndex <= compareDepth; compareIndex += 1) {
-        if (candidatePath[compareIndex] !== selectedPath[compareIndex]) {
-          break;
-        }
-
-        score += 1;
-      }
-
-      if (score > bestScore) {
-        bestScore = score;
-        bestPathIndex = candidateIndex;
-        return;
-      }
-
-      if (score === bestScore && bestPathIndex !== -1 && candidateIndex < bestPathIndex) {
-        bestPathIndex = candidateIndex;
-      }
-    });
-
-    return bestPathIndex === -1 ? candidatePathIndices[0] : bestPathIndex;
-  }
-
   function isEdgeActive(edge, line, tree) {
-    var selected = parseSelectedNodeKey();
+    var selected = getSelectedNode();
     var path;
     var parentNode;
     var childNode;
@@ -806,15 +592,52 @@
     );
   }
 
-  function renderTreeChartInto(line, target, options) {
-    var tree = buildTree(line);
-    var nodeMarkup = "";
-    var lineMarkup = "";
-    var nodeIndex;
-    var edgeIndex;
-    var segmentMap = {};
+  function getResolvedPathIndex(line, nodeName, stepIndex, logicalName) {
+    var candidatePathIndices = [];
+    var selected = getSelectedNode();
+    var bestPathIndex = -1;
+    var bestScore = -1;
+
+    line.paths.forEach(function (path, index) {
+      if (path[stepIndex] === (logicalName || nodeName)) {
+        candidatePathIndices.push(index);
+      }
+    });
+
+    if (!candidatePathIndices.length) {
+      return -1;
+    }
+
+    if (!selected || selected.slug !== line.slug) {
+      return candidatePathIndices[0];
+    }
+
+    candidatePathIndices.forEach(function (candidateIndex) {
+      var candidatePath = line.paths[candidateIndex];
+      var selectedPath = line.paths[selected.pathIndex];
+      var compareDepth = Math.min(stepIndex, selected.stepIndex);
+      var score = 0;
+      var compareIndex;
+
+      for (compareIndex = 0; compareIndex <= compareDepth; compareIndex += 1) {
+        if (candidatePath[compareIndex] !== selectedPath[compareIndex]) {
+          break;
+        }
+
+        score += 1;
+      }
+
+      if (score > bestScore || (score === bestScore && bestPathIndex !== -1 && candidateIndex < bestPathIndex)) {
+        bestScore = score;
+        bestPathIndex = candidateIndex;
+      }
+    });
+
+    return bestPathIndex === -1 ? candidatePathIndices[0] : bestPathIndex;
+  }
+
+  function createChartContext(line, target, options) {
     var showHeader = Boolean(options && options.showHeader);
-    var availableWidth = options && options.availableWidth;
 
     target.innerHTML =
       (showHeader
@@ -841,12 +664,34 @@
       "</div>" +
       "</div>";
 
-    function addSegment(x1, y1, x2, y2, isActive) {
-      var startX = Math.min(x1, x2);
-      var startY = Math.min(y1, y2);
-      var endX = Math.max(x1, x2);
-      var endY = Math.max(y1, y2);
-      var key = [startX, startY, endX, endY].join(":");
+    return {
+      line: line,
+      target: target,
+      showHeader: showHeader,
+      scaleLayer: target.querySelector("[data-tree-scale]"),
+      stageHeadings: target.querySelector("[data-tree-stage-headings]"),
+      diagramWrap: target.querySelector(".tree-diagram-wrap"),
+      diagram: target.querySelector("[data-tree-diagram]"),
+      lineSvg: target.querySelector("[data-tree-lines]"),
+      nodesLayer: target.querySelector("[data-tree-nodes]"),
+      tree: null,
+      nodeButtons: [],
+      edgeElements: [],
+    };
+  }
+
+  function renderChartContext(context, availableWidth) {
+    var tree = buildTree(context.line);
+    var lineMarkup = "";
+    var nodeMarkup = "";
+    var segmentMap = {};
+
+    context.line = context.line;
+    renderStageHeadings(context.stageHeadings);
+    layoutTree(tree, availableWidth || context.diagramWrap);
+
+    function addSegment(x1, y1, x2, y2) {
+      var key = [Math.min(x1, x2), Math.min(y1, y2), Math.max(x1, x2), Math.max(y1, y2)].join(":");
 
       if (!segmentMap[key]) {
         segmentMap[key] = {
@@ -854,38 +699,11 @@
           y1: y1,
           x2: x2,
           y2: y2,
-          isActive: Boolean(isActive),
         };
-        return;
-      }
-
-      if (isActive) {
-        segmentMap[key].isActive = true;
       }
     }
 
-    var stageHeadings = target.querySelector("[data-tree-stage-headings]");
-    var diagram = target.querySelector("[data-tree-diagram]");
-    var diagramWrap = target.querySelector(".tree-diagram-wrap");
-    var scaleLayer = target.querySelector("[data-tree-scale]");
-    var lineSvg = target.querySelector("[data-tree-lines]");
-    var nodesLayer = target.querySelector("[data-tree-nodes]");
-    var compactConnectorLayout = false;
-
-    renderStageHeadings(stageHeadings);
-    layoutTree(tree, availableWidth || diagramWrap);
-    compactConnectorLayout = (diagramWrap.clientWidth || availableWidth || tree.width) <= 640;
-
-    diagram.style.width = tree.width + "px";
-    diagram.style.height = tree.height + "px";
-    stageHeadings.style.width = tree.width + "px";
-    stageHeadings.style.gridTemplateColumns = "repeat(" + stageLabels.length + ", " + tree.columnWidth + "px)";
-    stageHeadings.style.columnGap = tree.columnGap + "px";
-    lineSvg.setAttribute("viewBox", "0 0 " + tree.width + " " + tree.height);
-    scaleLayer.style.width = tree.width + "px";
-
-    for (edgeIndex = 0; edgeIndex < tree.edges.length; edgeIndex += 1) {
-      var edge = tree.edges[edgeIndex];
+    tree.edges.forEach(function (edge) {
       var fromNode = tree.nodesByKey[edge.from];
       var toNode = tree.nodesByKey[edge.to];
       var startX = fromNode.layoutX + tree.nodeWidth;
@@ -893,53 +711,45 @@
       var endX = toNode.layoutX;
       var endY = toNode.layoutY;
       var connectorGap = endX - startX;
-      var branchOffset = compactConnectorLayout
+      var compactLayout = (context.diagramWrap.clientWidth || availableWidth || tree.width) <= 640;
+      var branchOffset = compactLayout
         ? connectorGap / 2
         : Math.min(22, Math.max(14, connectorGap / 2));
       var branchX = startX + Math.max(6, Math.min(connectorGap - 6, branchOffset));
-      var isActive = isEdgeActive(edge, line, tree);
 
-      addSegment(startX, startY, branchX, startY, isActive);
-      addSegment(branchX, startY, branchX, endY, isActive);
-      addSegment(branchX, endY, endX, endY, isActive);
-    }
+      addSegment(startX, startY, branchX, startY);
+      addSegment(branchX, startY, branchX, endY);
+      addSegment(branchX, endY, endX, endY);
+    });
 
-    Object.keys(segmentMap)
-      .map(function (key) {
-        return segmentMap[key];
-      })
-      .sort(function (left, right) {
-        if (left.isActive === right.isActive) {
-          return 0;
-        }
+    Object.keys(segmentMap).forEach(function (key) {
+      var segment = segmentMap[key];
+      lineMarkup +=
+        '<line class="tree-connector" data-edge-key="' +
+        escapeHtml(key) +
+        '" x1="' +
+        segment.x1 +
+        '" y1="' +
+        segment.y1 +
+        '" x2="' +
+        segment.x2 +
+        '" y2="' +
+        segment.y2 +
+        '"></line>';
+    });
 
-        return left.isActive ? 1 : -1;
-      })
-      .forEach(function (segment) {
-        lineMarkup +=
-          '<line class="tree-connector' +
-          (segment.isActive ? " is-active" : "") +
-          '" x1="' +
-          segment.x1 +
-          '" y1="' +
-          segment.y1 +
-          '" x2="' +
-          segment.x2 +
-          '" y2="' +
-          segment.y2 +
-          '"></line>';
-      });
-
-    for (nodeIndex = 0; nodeIndex < tree.nodes.length; nodeIndex += 1) {
-      var node = tree.nodes[nodeIndex];
-      var active = isNodeActive(node, line);
-      var selected = isNodeSelected(node, line);
+    tree.nodes.forEach(function (node) {
+      var variantBase =
+        (context.line.slug === "demon-line" && isDemonVariantBase(node.logicalName)) ||
+        (context.line.slug === "angel-line" && isAngelVariantBase(node.logicalName))
+          ? node.logicalName
+          : "";
+      var variantOption =
+        (context.line.slug === "demon-line" && demonVariantState.expandedBase === node.logicalName) ||
+        (context.line.slug === "angel-line" && angelVariantState.expandedBase === node.logicalName);
 
       nodeMarkup +=
-        '<button class="tree-node' +
-        (active ? " is-in-path" : "") +
-        (selected ? " is-selected" : "") +
-        '" type="button" style="left:' +
+        '<button class="tree-node" type="button" style="left:' +
         node.layoutX +
         "px;top:" +
         (node.layoutY - tree.nodeHeight / 2) +
@@ -948,23 +758,17 @@
         "px;height:" +
         tree.nodeHeight +
         'px" data-tree-line="' +
-        escapeHtml(line.slug) +
+        escapeHtml(context.line.slug) +
+        '" data-tree-node-key="' +
+        escapeHtml(node.key) +
         '" data-tree-node-name="' +
         escapeHtml(node.name) +
         '" data-tree-node-logical="' +
         escapeHtml(node.logicalName) +
         '" data-tree-variant-base="' +
-        escapeHtml(
-          (line.slug === "demon-line" && isDemonVariantBase(node.logicalName)) ||
-            (line.slug === "angel-line" && isAngelVariantBase(node.logicalName))
-            ? node.logicalName
-            : "",
-        ) +
+        escapeHtml(variantBase) +
         '" data-tree-variant-option="' +
-        ((line.slug === "demon-line" && demonVariantState.expandedBase === node.logicalName) ||
-        (line.slug === "angel-line" && angelVariantState.expandedBase === node.logicalName)
-          ? "true"
-          : "false") +
+        (variantOption ? "true" : "false") +
         '" data-tree-node-step="' +
         node.depth +
         '">' +
@@ -972,34 +776,188 @@
         escapeHtml(node.label || node.name) +
         "</span>" +
         "</button>";
-    }
+    });
 
-    lineSvg.innerHTML = lineMarkup;
-    nodesLayer.innerHTML = nodeMarkup;
+    context.tree = tree;
+    context.diagram.style.width = tree.width + "px";
+    context.diagram.style.height = tree.height + "px";
+    context.stageHeadings.style.width = tree.width + "px";
+    context.stageHeadings.style.gridTemplateColumns = "repeat(" + stageLabels.length + ", " + tree.nodeWidth + "px)";
+    context.stageHeadings.style.columnGap = tree.columnGap + "px";
+    context.scaleLayer.style.width = tree.width + "px";
+    context.lineSvg.setAttribute("viewBox", "0 0 " + tree.width + " " + tree.height);
+    context.lineSvg.innerHTML = lineMarkup;
+    context.nodesLayer.innerHTML = nodeMarkup;
+    context.nodeButtons = Array.prototype.slice.call(context.nodesLayer.querySelectorAll(".tree-node"));
+    context.edgeElements = Array.prototype.slice.call(context.lineSvg.querySelectorAll(".tree-connector"));
+    applySelectionStateToChart(context);
 
     window.requestAnimationFrame(function () {
-      var wrapWidth = diagramWrap.clientWidth || tree.width;
+      var wrapWidth = context.diagramWrap.clientWidth || tree.width;
       var scale = Math.min(1, wrapWidth / tree.width);
 
-      scaleLayer.style.setProperty("--tree-scale", scale);
+      context.scaleLayer.style.setProperty("--tree-scale", scale);
 
       window.requestAnimationFrame(function () {
-        var scaledRect = scaleLayer.getBoundingClientRect();
-        diagramWrap.style.height = Math.ceil(scaledRect.height) + "px";
+        var scaledRect = context.scaleLayer.getBoundingClientRect();
+        context.diagramWrap.style.height = Math.ceil(scaledRect.height) + "px";
       });
     });
   }
 
-  function renderSelectionPrompt(title, copy) {
-    selectionTitle.textContent = title;
-    selectionCopy.textContent = copy;
-
-    if (selectionTraits) {
-      selectionTraits.innerHTML = "";
+  function applySelectionStateToChart(context) {
+    if (!context || !context.tree) {
+      return;
     }
 
-    if (textFormatter.apply) {
-      textFormatter.apply(selectionTitle.parentNode);
+    context.nodeButtons.forEach(function (button) {
+      var node = context.tree.nodesByKey[button.dataset.treeNodeKey];
+
+      button.classList.toggle("is-in-path", Boolean(node && isNodeActive(node, context.line)));
+      button.classList.toggle("is-selected", Boolean(node && isNodeSelected(node, context.line)));
+    });
+
+    context.edgeElements.forEach(function (lineElement) {
+      var edgeKey = lineElement.dataset.edgeKey || "";
+      var parts = edgeKey.split(":");
+      var segment = {
+        from: null,
+        to: null,
+      };
+      var matchingEdge = null;
+
+      if (parts.length < 4) {
+        lineElement.classList.remove("is-active");
+        return;
+      }
+
+      context.tree.edges.some(function (edge) {
+        var fromNode = context.tree.nodesByKey[edge.from];
+        var toNode = context.tree.nodesByKey[edge.to];
+        var startX = fromNode.layoutX + context.tree.nodeWidth;
+        var startY = fromNode.layoutY;
+        var endX = toNode.layoutX;
+        var endY = toNode.layoutY;
+        var connectorGap = endX - startX;
+        var compactLayout = (context.diagramWrap.clientWidth || context.tree.width) <= 640;
+        var branchOffset = compactLayout
+          ? connectorGap / 2
+          : Math.min(22, Math.max(14, connectorGap / 2));
+        var branchX = startX + Math.max(6, Math.min(connectorGap - 6, branchOffset));
+        var edgeSegments = [
+          [Math.min(startX, branchX), Math.min(startY, startY), Math.max(startX, branchX), Math.max(startY, startY)],
+          [Math.min(branchX, branchX), Math.min(startY, endY), Math.max(branchX, branchX), Math.max(startY, endY)],
+          [Math.min(branchX, endX), Math.min(endY, endY), Math.max(branchX, endX), Math.max(endY, endY)],
+        ];
+
+        return edgeSegments.some(function (segmentValues) {
+          var key = segmentValues.join(":");
+
+          if (key === edgeKey) {
+            matchingEdge = edge;
+            return true;
+          }
+
+          return false;
+        });
+      });
+
+      lineElement.classList.toggle("is-active", Boolean(matchingEdge && isEdgeActive(matchingEdge, context.line, context.tree)));
+    });
+  }
+
+  function getCurrentChartWidth() {
+    return chartContent.clientWidth || chartContent.offsetWidth || 0;
+  }
+
+  function ensureAllViewRoot() {
+    if (allViewRoot) {
+      return;
+    }
+
+    allViewRoot = document.createElement("div");
+    allViewRoot.className = "tree-chart-stack";
+    allViewContexts = {};
+
+    treeData.forEach(function (line) {
+      var block = document.createElement("section");
+      var context;
+
+      block.className = "tree-chart-block";
+      block.setAttribute("data-tree-chart-block", line.slug);
+      allViewRoot.appendChild(block);
+      context = createChartContext(line, block, { showHeader: true });
+      allViewContexts[line.slug] = context;
+    });
+  }
+
+  function renderAllViewCharts() {
+    var width = getCurrentChartWidth();
+
+    ensureAllViewRoot();
+    Object.keys(allViewContexts).forEach(function (slug) {
+      renderChartContext(allViewContexts[slug], width);
+    });
+  }
+
+  function ensureSingleViewRoot() {
+    if (!singleViewRoot) {
+      singleViewRoot = document.createElement("section");
+      singleViewRoot.className = "tree-chart-block";
+    }
+  }
+
+  function renderSingleViewChart(line) {
+    var width = getCurrentChartWidth();
+
+    ensureSingleViewRoot();
+    if (!singleViewContext) {
+      singleViewContext = createChartContext(line, singleViewRoot, { showHeader: false });
+    } else {
+      singleViewContext.line = line;
+    }
+    renderChartContext(singleViewContext, width);
+  }
+
+  function updateVisibleChartSelection(previousSelectionKey) {
+    var previous = parseNodeKey(previousSelectionKey);
+    var current = getSelectedNode();
+    var slugs = {};
+
+    if (currentLineSlug === allViewSlug) {
+      if (previous && previous.slug) {
+        slugs[previous.slug] = true;
+      }
+
+      if (current && current.slug) {
+        slugs[current.slug] = true;
+      }
+
+      Object.keys(slugs).forEach(function (slug) {
+        if (allViewContexts[slug]) {
+          applySelectionStateToChart(allViewContexts[slug]);
+        }
+      });
+      return;
+    }
+
+    if (singleViewContext) {
+      applySelectionStateToChart(singleViewContext);
+    }
+  }
+
+  function rerenderVisibleLine(slug) {
+    var width = getCurrentChartWidth();
+
+    if (currentLineSlug === allViewSlug) {
+      if (allViewContexts[slug]) {
+        renderChartContext(allViewContexts[slug], width);
+      }
+      return;
+    }
+
+    if (singleViewContext && singleViewContext.line.slug === slug) {
+      renderChartContext(singleViewContext, width);
     }
   }
 
@@ -1023,11 +981,21 @@
     return lines.join("\n").trim() || "---";
   }
 
+  function renderSelectionPrompt(title, copy) {
+    selectionTitle.textContent = title;
+    selectionCopy.textContent = copy;
+    if (selectionTraits) {
+      selectionTraits.innerHTML = "";
+    }
+    if (textFormatter.apply) {
+      textFormatter.apply(selectionTitle.parentNode);
+    }
+  }
+
   function renderSelectionTraitSummary(line, pathIndex, stepIndex) {
     var logicalPath;
     var path;
     var markup = "";
-    var index;
 
     if (!selectionTraits) {
       return;
@@ -1035,14 +1003,13 @@
 
     logicalPath = line.paths[pathIndex].slice(0, stepIndex + 1);
     path = getDisplayPath(line, pathIndex, stepIndex);
-
     markup += '<div class="tree-selection__trait-list">';
 
-    for (index = 0; index < path.length; index += 1) {
+    path.forEach(function (name, index) {
       var monster =
-        getMonster(line.slug, path[index]) ||
+        getMonster(line.slug, name) ||
         getMonster(line.slug, logicalPath[index]) || {
-          name: path[index],
+          name: name,
           traits: "---",
         };
 
@@ -1050,7 +1017,7 @@
         '<div class="tree-selection__trait-copy" data-format-skip="true">' +
         formatSelectionTraitHtml(stripInheritedTraitSummary(monster.traits || "---")) +
         "</div>";
-    }
+    });
 
     markup += "</div>";
     selectionTraits.innerHTML = markup;
@@ -1058,9 +1025,8 @@
 
   function renderSelectionDetails(line, pathIndex, stepIndex) {
     var path = getDisplayPath(line, pathIndex, stepIndex);
-    var title = path[path.length - 1];
 
-    selectionTitle.textContent = title + " Path";
+    selectionTitle.textContent = path[path.length - 1] + " Path";
     selectionCopy.textContent = path.join(" -> ");
     renderSelectionTraitSummary(line, pathIndex, stepIndex);
 
@@ -1081,11 +1047,15 @@
     var logicalPath = line.paths[pathIndex].slice(0, stepIndex + 1);
     var path = getDisplayPath(line, pathIndex, stepIndex);
     var markup = '<div class="monster-card-grid">';
-    var index;
+    var mode = "path:" + line.slug + ":" + pathIndex + ":" + stepIndex;
 
-    for (index = 0; index < path.length; index += 1) {
-      var monster = getMonster(line.slug, path[index]) || getMonster(line.slug, logicalPath[index]) || {
-        name: path[index],
+    if (selectionCards.dataset.mode === mode) {
+      return;
+    }
+
+    path.forEach(function (name, index) {
+      var monster = getMonster(line.slug, name) || getMonster(line.slug, logicalPath[index]) || {
+        name: name,
         rarity: "---",
         commonality: "---",
         tags: [],
@@ -1094,10 +1064,10 @@
       };
 
       markup += buildMonsterCardMarkup(monster);
-    }
+    });
 
     markup += "</div>";
-    selectionCards.dataset.mode = "path";
+    selectionCards.dataset.mode = mode;
     selectionCards.innerHTML = markup;
 
     if (textFormatter.apply) {
@@ -1152,37 +1122,33 @@
     var detailLine = getLineDetails(line.slug);
     var orderMap = getLineMonsterOrder(line);
     var stageGroups = [[], [], [], []];
-    var monsters;
     var markup = "";
 
     if (!detailLine) {
       return "";
     }
 
-    monsters = detailLine.monsters.slice().sort(function (left, right) {
-      var leftOrder = orderMap[getOrderLookupName(line, left.name)] || { depth: 99, order: 999 };
-      var rightOrder = orderMap[getOrderLookupName(line, right.name)] || { depth: 99, order: 999 };
+    detailLine.monsters
+      .slice()
+      .sort(function (left, right) {
+        var leftOrder = orderMap[getOrderLookupName(line, left.name)] || { depth: 99, order: 999 };
+        var rightOrder = orderMap[getOrderLookupName(line, right.name)] || { depth: 99, order: 999 };
 
-      if (leftOrder.depth !== rightOrder.depth) {
-        return leftOrder.depth - rightOrder.depth;
-      }
+        if (leftOrder.depth !== rightOrder.depth) {
+          return leftOrder.depth - rightOrder.depth;
+        }
 
-      if (leftOrder.order !== rightOrder.order) {
-        return leftOrder.order - rightOrder.order;
-      }
+        if (leftOrder.order !== rightOrder.order) {
+          return leftOrder.order - rightOrder.order;
+        }
 
-      return left.name.localeCompare(right.name);
-    });
+        return left.name.localeCompare(right.name);
+      })
+      .forEach(function (monster) {
+        var meta = orderMap[getOrderLookupName(line, monster.name)] || { depth: 0 };
 
-    monsters.forEach(function (monster) {
-      var meta = orderMap[getOrderLookupName(line, monster.name)] || { depth: 0 };
-
-      if (!stageGroups[meta.depth]) {
-        stageGroups[meta.depth] = [];
-      }
-
-      stageGroups[meta.depth].push(monster);
-    });
+        stageGroups[meta.depth].push(monster);
+      });
 
     if (includeHeader) {
       markup +=
@@ -1199,8 +1165,6 @@
     }
 
     stageGroups.forEach(function (group, depth) {
-      var index;
-
       if (!group.length) {
         return;
       }
@@ -1212,9 +1176,9 @@
         "</p>" +
         '<div class="monster-card-grid">';
 
-      for (index = 0; index < group.length; index += 1) {
-        markup += buildMonsterCardMarkup(group[index]);
-      }
+      group.forEach(function (monster) {
+        markup += buildMonsterCardMarkup(monster);
+      });
 
       markup += "</div></div>";
     });
@@ -1227,37 +1191,70 @@
   }
 
   function renderAllMonsterIndex() {
-    var markup = "";
-
     if (!allMonstersMarkup) {
       treeData.forEach(function (line) {
-        markup += buildLineMonsterIndexMarkup(line, true);
+        allMonstersMarkup += buildLineMonsterIndexMarkup(line, true);
       });
-
-      allMonstersMarkup = markup;
     }
 
-    if (selectionCards.dataset.mode !== "all") {
-      selectionCards.dataset.mode = "all";
-      selectionCards.innerHTML = allMonstersMarkup;
+    if (selectionCards.dataset.mode === "all") {
+      return;
     }
+
+    selectionCards.dataset.mode = "all";
+    selectionCards.innerHTML = allMonstersMarkup;
 
     if (textFormatter.apply) {
       textFormatter.apply(selectionCards);
     }
   }
 
-  function clearSelectedCards() {
-    selectionCards.dataset.mode = "empty";
-    selectionCards.innerHTML = "";
+  function renderSingleLineMonsterIndex(line) {
+    var mode = "line:" + line.slug;
+    var markup = lineMonsterIndexMarkupCache[line.slug];
+
+    if (!markup) {
+      markup = buildLineMonsterIndexMarkup(line, false);
+      lineMonsterIndexMarkupCache[line.slug] = markup;
+    }
+
+    if (selectionCards.dataset.mode === mode) {
+      return;
+    }
+
+    selectionCards.dataset.mode = mode;
+    selectionCards.innerHTML = markup;
+
+    if (textFormatter.apply) {
+      textFormatter.apply(selectionCards);
+    }
   }
 
-  function renderAllView() {
-    var selected = parseSelectedNodeKey();
-    var selectedLine = selected ? getLine(selected.slug) : null;
-    var stack = document.createElement("div");
-    var sharedChartWidth = chartContent.clientWidth || chartContent.offsetWidth || 0;
+  function updateSelectionPanelAndCards() {
+    var selected = getSelectedNode();
+    var line = getLine(currentLineSlug);
 
+    if (currentLineSlug === allViewSlug || !line) {
+      if (selected && getLine(selected.slug)) {
+        renderSelectionDetails(getLine(selected.slug), selected.pathIndex, selected.stepIndex);
+      } else {
+        renderSelectionPrompt("All Lines", "Click any node on any tree to load that branch up to the selected stage.");
+      }
+      renderAllMonsterIndex();
+      return;
+    }
+
+    if (!selected || selected.slug !== line.slug) {
+      renderSelectionPrompt(line.name, "Click any node on the tree to load that branch up to the selected stage.");
+      renderSingleLineMonsterIndex(line);
+      return;
+    }
+
+    renderSelectionDetails(line, selected.pathIndex, selected.stepIndex);
+    renderSelectedPathCards(line, selected.pathIndex, selected.stepIndex);
+  }
+
+  function showAllView() {
     currentLineSlug = allViewSlug;
     if (treeWorkspace) {
       treeWorkspace.classList.add("is-all-view");
@@ -1265,36 +1262,16 @@
     updateActiveLinks(allViewSlug);
     chartTitle.textContent = "All Lines";
     chartCount.textContent = treeData.length + " Lines";
-    chartContent.innerHTML = "";
-    stack.className = "tree-chart-stack";
-
-    treeData.forEach(function (line) {
-      var block = document.createElement("section");
-
-      block.className = "tree-chart-block";
-      renderTreeChartInto(line, block, { showHeader: true, availableWidth: sharedChartWidth });
-      stack.appendChild(block);
-    });
-
-    chartContent.appendChild(stack);
-
-    if (selected && selectedLine) {
-      renderSelectionDetails(selectedLine, selected.pathIndex, selected.stepIndex);
-    } else {
-      renderSelectionPrompt("All Lines", "Click any node on any tree to load that branch up to the selected stage.");
+    ensureAllViewRoot();
+    if (chartContent.firstChild !== allViewRoot) {
+      chartContent.innerHTML = "";
+      chartContent.appendChild(allViewRoot);
     }
-
-    renderAllMonsterIndex();
-
-    if (textFormatter.apply) {
-      textFormatter.apply(treeWorkspace || document.body);
-    }
+    renderAllViewCharts();
+    updateSelectionPanelAndCards();
   }
 
-  function renderSingleLineView(line) {
-    var selected = parseSelectedNodeKey();
-    var sharedChartWidth = chartContent.clientWidth || chartContent.offsetWidth || 0;
-
+  function showSingleLine(line) {
     currentLineSlug = line.slug;
     if (treeWorkspace) {
       treeWorkspace.classList.remove("is-all-view");
@@ -1302,47 +1279,32 @@
     updateActiveLinks(line.slug);
     chartTitle.textContent = line.name;
     chartCount.textContent = line.paths.length + " Paths";
-    renderTreeChartInto(line, chartContent, { showHeader: false, availableWidth: sharedChartWidth });
-
-    if (!selected || selected.slug !== line.slug) {
-      renderSelectionPrompt(line.name, "Click any node on the tree to load that branch up to the selected stage.");
-      selectionCards.dataset.mode = "line";
-      selectionCards.innerHTML = buildLineMonsterIndexMarkup(line, false);
-      if (textFormatter.apply) {
-        textFormatter.apply(treeWorkspace || document.body);
-      }
-      return;
+    ensureSingleViewRoot();
+    if (chartContent.firstChild !== singleViewRoot) {
+      chartContent.innerHTML = "";
+      chartContent.appendChild(singleViewRoot);
     }
-
-    renderSelectionDetails(line, selected.pathIndex, selected.stepIndex);
-    renderSelectedPathCards(line, selected.pathIndex, selected.stepIndex);
-
-    if (textFormatter.apply) {
-      textFormatter.apply(treeWorkspace || document.body);
-    }
+    renderSingleViewChart(line);
+    updateSelectionPanelAndCards();
   }
 
-  function renderCurrentView() {
+  function renderVisibleView() {
     var line = getLine(currentLineSlug);
 
     if (currentLineSlug === allViewSlug || !line) {
-      renderAllView();
-      restoreQueuedFocus();
-      restoreQueuedScroll();
+      showAllView();
       return;
     }
 
-    renderSingleLineView(line);
-    restoreQueuedFocus();
-    restoreQueuedScroll();
+    showSingleLine(line);
   }
 
   function setLine(slug) {
     selectedNodeKey = "";
-    currentLineSlug = slug;
     demonVariantState.expandedBase = "";
     angelVariantState.expandedBase = "";
-    renderCurrentView();
+    currentLineSlug = slug;
+    renderVisibleView();
 
     if (window.location.hash !== "#" + slug) {
       if (window.history && typeof window.history.replaceState === "function") {
@@ -1353,30 +1315,23 @@
     }
   }
 
-  function syncFromHash() {
+  function syncFromLocation() {
     var hash = window.location.hash.replace("#", "");
-    var line = getLine(hash);
     var requestedMonster = getRequestedMonsterName();
+    var line = getLine(hash);
 
     selectedNodeKey = "";
     demonVariantState.expandedBase = "";
     angelVariantState.expandedBase = "";
 
-    if (hash === allViewSlug || !hash) {
-      if (requestedMonster) {
-        line = findLineForMonster(requestedMonster);
-
-        if (line) {
-          currentLineSlug = line.slug;
-          selectedNodeKey = findSelectionForMonster(line, requestedMonster);
-          renderSingleLineView(line);
-          return;
-        }
+    if ((!hash || hash === allViewSlug) && requestedMonster) {
+      line = findLineForMonster(requestedMonster);
+      if (line) {
+        currentLineSlug = line.slug;
+        selectedNodeKey = findSelectionForMonster(line, requestedMonster);
+        showSingleLine(line);
+        return;
       }
-
-      currentLineSlug = allViewSlug;
-      renderAllView();
-      return;
     }
 
     if (line) {
@@ -1384,51 +1339,26 @@
       if (requestedMonster) {
         selectedNodeKey = findSelectionForMonster(line, requestedMonster);
       }
-      renderSingleLineView(line);
+      showSingleLine(line);
       return;
     }
 
     currentLineSlug = allViewSlug;
-    renderAllView();
+    showAllView();
   }
 
   function bindLineLinks(collection, dataKey) {
     var index;
 
     for (index = 0; index < collection.length; index += 1) {
-      collection[index].addEventListener("mousedown", function (event) {
-        if (event.button === 0) {
-          event.preventDefault();
-        }
-      });
-
       collection[index].addEventListener("click", function (event) {
         event.preventDefault();
-        queueScrollRestore();
-        queueFocusRestoreFromElement(this);
         setLine(this.dataset[dataKey]);
       });
     }
   }
 
-  bindLineLinks(lineButtons, "treeLineTarget");
-  bindLineLinks(sidebarLinks, "treeSidebarTarget");
-
-  chartContent.addEventListener("mousedown", function (event) {
-    var trigger;
-
-    if (event.button !== 0) {
-      return;
-    }
-
-    trigger = event.target.closest("[data-tree-node-name], [data-tree-group-jump]");
-
-    if (trigger) {
-      event.preventDefault();
-    }
-  });
-
-  selectionCards.addEventListener("click", function (event) {
+  function handleSelectionCardsClick(event) {
     var trigger = event.target.closest("[data-tree-chart-jump]");
     var targetChart;
 
@@ -1442,20 +1372,21 @@
     if (targetChart) {
       targetChart.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-  });
+  }
 
-  chartContent.addEventListener("click", function (event) {
+  function handleChartClick(event) {
     var jumpTrigger = event.target.closest("[data-tree-group-jump]");
     var trigger = event.target.closest("[data-tree-node-name]");
     var line;
     var stepIndex;
     var pathIndex;
     var nextSelectionKey;
-    var targetGroup;
     var logicalName;
     var variantBase;
     var variantOption;
     var pairedVariant;
+    var previousSelectionKey = selectedNodeKey;
+    var targetGroup;
 
     if (jumpTrigger) {
       event.preventDefault();
@@ -1464,7 +1395,6 @@
       if (targetGroup) {
         targetGroup.scrollIntoView({ behavior: "smooth", block: "start" });
       }
-
       return;
     }
 
@@ -1473,9 +1403,6 @@
     }
 
     event.preventDefault();
-    queueScrollRestore();
-    queueFocusRestoreFromElement(trigger);
-
     line = getLine(trigger.dataset.treeLine);
 
     if (!line) {
@@ -1497,15 +1424,15 @@
         }
 
         if (variantBase === "Demon Lord") {
-          demonVariantState.selectedByBase["Sin Demon"] =
-            getMatchingVariant("Sin Demon", trigger.dataset.treeNodeName);
+          demonVariantState.selectedByBase["Sin Demon"] = getMatchingVariant("Sin Demon", trigger.dataset.treeNodeName);
         }
 
         demonVariantState.expandedBase = "";
+        rerenderVisibleLine(line.slug);
       } else if (trigger.dataset.treeNodeName === variantBase) {
-        demonVariantState.expandedBase =
-          demonVariantState.expandedBase === variantBase ? "" : variantBase;
-        renderCurrentView();
+        demonVariantState.expandedBase = demonVariantState.expandedBase === variantBase ? "" : variantBase;
+        rerenderVisibleLine(line.slug);
+        updateSelectionPanelAndCards();
         return;
       }
     }
@@ -1520,15 +1447,15 @@
         }
 
         if (variantBase === "Principality") {
-          angelVariantState.selectedByBase.Virtue =
-            getMatchingVariant("Virtue", trigger.dataset.treeNodeName);
+          angelVariantState.selectedByBase.Virtue = getMatchingVariant("Virtue", trigger.dataset.treeNodeName);
         }
 
         angelVariantState.expandedBase = "";
+        rerenderVisibleLine(line.slug);
       } else if (trigger.dataset.treeNodeName === variantBase) {
-        angelVariantState.expandedBase =
-          angelVariantState.expandedBase === variantBase ? "" : variantBase;
-        renderCurrentView();
+        angelVariantState.expandedBase = angelVariantState.expandedBase === variantBase ? "" : variantBase;
+        rerenderVisibleLine(line.slug);
+        updateSelectionPanelAndCards();
         return;
       }
     }
@@ -1545,11 +1472,12 @@
       line.slug === "demon-line" &&
       variantBase &&
       !variantOption &&
-      trigger.dataset.treeNodeName === getDemonVariantSelection(variantBase) &&
+      trigger.dataset.treeNodeName === getDisplayNameForNode(line.slug, variantBase) &&
       selectedNodeKey === nextSelectionKey
     ) {
       demonVariantState.expandedBase = variantBase;
-      renderCurrentView();
+      rerenderVisibleLine(line.slug);
+      updateSelectionPanelAndCards();
       return;
     }
 
@@ -1557,38 +1485,50 @@
       line.slug === "angel-line" &&
       variantBase &&
       !variantOption &&
-      trigger.dataset.treeNodeName === getAngelVariantSelection(variantBase) &&
+      trigger.dataset.treeNodeName === getDisplayNameForNode(line.slug, variantBase) &&
       selectedNodeKey === nextSelectionKey
     ) {
       angelVariantState.expandedBase = variantBase;
-      renderCurrentView();
+      rerenderVisibleLine(line.slug);
+      updateSelectionPanelAndCards();
       return;
     }
 
     if (selectedNodeKey === nextSelectionKey) {
       selectedNodeKey = "";
-      renderCurrentView();
-      return;
+    } else {
+      selectedNodeKey = nextSelectionKey;
     }
 
-    selectedNodeKey = nextSelectionKey;
-    renderCurrentView();
-  });
+    updateVisibleChartSelection(previousSelectionKey);
+    updateSelectionPanelAndCards();
+  }
 
-  window.addEventListener("hashchange", syncFromHash);
-  window.addEventListener("resize", function () {
-    if (!currentLineSlug) {
-      return;
-    }
-
+  function handleResize() {
     if (resizeFrame) {
       window.cancelAnimationFrame(resizeFrame);
     }
 
     resizeFrame = window.requestAnimationFrame(function () {
-      renderCurrentView();
-    });
-  });
+      resizeFrame = 0;
 
-  syncFromHash();
+      if (currentLineSlug === allViewSlug) {
+        renderAllViewCharts();
+        return;
+      }
+
+      if (singleViewContext) {
+        renderSingleViewChart(singleViewContext.line);
+      }
+    });
+  }
+
+  bindLineLinks(lineButtons, "treeLineTarget");
+  bindLineLinks(sidebarLinks, "treeSidebarTarget");
+  selectionCards.addEventListener("click", handleSelectionCardsClick);
+  chartContent.addEventListener("click", handleChartClick);
+  window.addEventListener("hashchange", syncFromLocation);
+  window.addEventListener("resize", handleResize);
+
+  syncFromLocation();
 })();
