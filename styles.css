@@ -1,39 +1,23 @@
 :root {
-  color-scheme: light dark;
+  color-scheme: dark !important;
   --font-display: "Fraunces", "Times New Roman", serif;
   --font-body: "Manrope", "Segoe UI", sans-serif;
   --sidebar-width: 19rem;
   --radius-lg: 10px;
   --radius-md: 1rem;
   --radius-sm: 0.8rem;
-  --shadow-soft: 0 20px 60px rgba(19, 24, 38, 0.12);
-  --bg: #f6f2ea;
-  --bg-elevated: rgba(255, 255, 255, 0.7);
-  --bg-strong: rgba(255, 255, 255, 0.84);
-  --text: #1f2431;
-  --text-soft: #5a6173;
-  --line: rgba(59, 69, 94, 0.16);
-  --accent: #2a7a72;
-  --accent-strong: #15514b;
-  --accent-soft: rgba(42, 122, 114, 0.14);
-  --hero-glow: rgba(223, 175, 114, 0.22);
+  --shadow-soft: 0 24px 80px rgba(0, 0, 0, 0.35);
+  --bg: #11161f;
+  --bg-elevated: rgba(17, 22, 31, 0.72);
+  --bg-strong: rgba(23, 30, 43, 0.88);
+  --text: #edf1f7;
+  --text-soft: #a6b0c1;
+  --line: rgba(190, 202, 223, 0.16);
+  --accent: #77d0c5;
+  --accent-strong: #c8f1eb;
+  --accent-soft: rgba(119, 208, 197, 0.12);
+  --hero-glow: rgba(93, 129, 176, 0.16);
   --scrollbar-reserve: 0px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #11161f;
-    --bg-elevated: rgba(17, 22, 31, 0.72);
-    --bg-strong: rgba(23, 30, 43, 0.88);
-    --text: #edf1f7;
-    --text-soft: #a6b0c1;
-    --line: rgba(190, 202, 223, 0.16);
-    --accent: #77d0c5;
-    --accent-strong: #c8f1eb;
-    --accent-soft: rgba(119, 208, 197, 0.12);
-    --hero-glow: rgba(93, 129, 176, 0.16);
-    --shadow-soft: 0 24px 80px rgba(0, 0, 0, 0.35);
-  }
 }
 
 * {
@@ -47,6 +31,7 @@ html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  forced-color-adjust: none;
   background:
     radial-gradient(circle at top left, var(--hero-glow), transparent 28%),
     radial-gradient(circle at right 20% top 10%, var(--accent-soft), transparent 26%),
@@ -62,6 +47,7 @@ body {
   margin: 0;
   font-family: var(--font-body);
   color: var(--text);
+  forced-color-adjust: none;
   background:
     radial-gradient(circle at top left, var(--hero-glow), transparent 28%),
     radial-gradient(circle at right 20% top 10%, var(--accent-soft), transparent 26%),
@@ -2155,4 +2141,11 @@ color: var(--text-soft);
   .tree-node__name {
     font-size: clamp(0.74rem, 2.2vw, 0.88rem);
   }
+}
+.button,
+button,
+input,
+select,
+textarea {
+  forced-color-adjust: none;
 }
